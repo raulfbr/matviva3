@@ -1,61 +1,131 @@
-# Matemática Viva (V3)
+<p align="center">
+  <img src="https://img.shields.io/badge/Vers%C3%A3o-3.5%20Sovereign%20Positive%20Gold-D4A84B?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-8B7355?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Pedagogia-Charlotte%20Mason-7B68B8?style=flat-square" alt="Pedagogy">
+</p>
 
-> "A Matemática não é uma coleção de truques abstratos, é a linguagem com a qual Deus escreveu o Universo." — *Visão do Projeto*
+<h1 align="center">🦁 Matemática Viva</h1>
 
-Bem-vindo ao repositório oficial do **Matemática Viva**, um projeto de educação matemática vivo, inspirado na filosofia de Charlotte Mason e na pedagogia clássica, focado em trazer a beleza, a verdade e a bondade dos números para a vida das famílias educadoras.
+<p align="center">
+  <strong>Uma jornada de 0 a 18 anos através do Reino Contado</strong><br>
+  <em>"A Matemática não é uma coleção de truques abstratos — é a linguagem com a qual o Rei escreveu o Universo."</em>
+</p>
 
-## 📚 Sobre o Projeto
+---
 
-Este portal (`dist/web`) é gerado a partir de um "Jardim Digital" de arquivos Markdown, processados por um motor customizado em Python ("Gutenberg Engine") para criar uma experiência de navegação fluida, bela e focada no conteúdo.
+## 👑 O Que é o Matemática Viva?
 
-### Estrutura do Repositório
+O **Matemática Viva** é um currículo de educação matemática domiciliar que transforma números frios em **Ideias Vivas**. Inspirado em **Charlotte Mason** e na pedagogia clássica, o projeto convida a criança a entrar no **Reino Contado** — um mundo onde os números falam, as formas têm nomes e a beleza matemática aponta para a Ordem do Criador.
 
-*   `curriculo/`: O coração do projeto. Contém todas as lições, narrativas e rituais escritos em Markdown.
-*   `scripts/`: O motor "Gutenberg". Scripts Python que transformam o conteúdo bruto em um site HTML estático.
-*   `assets/`: Imagens, estilos (CSS) e recursos visuais.
-*   `docs/`: Documentação técnica e de governança do projeto.
+> *"O Reino Contado não é Nárnia nem a Terra Média. É a Realidade Vista com Óculos de Maravilhar."*
+
+### 🌿 Filosofia Central
+
+*   **A Criança é uma Pessoa** (Princípio 1 de Charlotte Mason).
+*   **Things Before Signs**: Tocamos a verdade com as mãos antes de capturá-la com símbolos (Método CPA de Singapura).
+*   **Banquete de Ideias**: Apresentamos, nunca explicamos demais. O aprendizado é sempre um convite, nunca uma ordem.
+*   **Zero Telas até os 10 anos** (recomendação): O digital serve ao pai, não ao filho.
+
+---
+
+## 🏰 O Reino Contado: Arquitetura da Jornada
+
+O currículo acompanha o Viajante desde o berço até a maestria:
+
+| Fase | Anos | Arquétipo | Foco Narrativo |
+| :--- | :--- | :--- | :--- |
+| 🌱 **Sementes** | 4-6 | Filho Herdeiro | A Realidade Saborosa. A história *é* a jornada. |
+| 🌳 **Raízes** | 7-10 | Ajudante Construtor | O Contexto Vital. Matemática como ferramenta. |
+| 🛡️ **Lógica** | 11-14 | Investigador Lógico | O Propósito Elevado. A clareza da razão. |
+| 👑 **Legado** | 15-18 | Parceiro Mordomo | A Mordomia Real. O governo através da Ordem. |
+
+### 🦉 Os Guardiões do Reino
+
+Cinco personagens arquetípicos guiam o Viajante:
+
+| Guardião | Símbolo | Virtude | Cor |
+| :--- | :--- | :--- | :--- |
+| **Melquior** | ☀️ Sol | Sabedoria | `#D4A84B` |
+| **Noé** | 🌙 Lua | Paciência | `#7B68B8` |
+| **Celeste** | ⭐ Estrela | Curiosidade | `#E8A87C` |
+| **Bernardo** | 🪨 Pedra | Persistência | `#8B7355` |
+| **Íris** | 🌸 Flor | Atenção | `#7EC8C8` |
+
+---
 
 ## 🛠️ Tecnologia
 
-O projeto utiliza uma arquitetura simples e robusta de **Geração de Site Estático (SSG)**:
+O site é gerado por um motor customizado em Python (o **Gutenberg Engine**) que transforma arquivos Markdown em páginas HTML estáticas.
 
-*   **Linguagem**: Python 3.10+
-*   **Template Engine**: Jinja2
-*   **Conteúdo**: Markdown + Frontmatter (Metadados)
-*   **Deploy**: Vercel (Build Automático via `requirements.txt`)
+### Estrutura do Repositório
 
-## 🚀 Como Rodar Localmente
+```
+├── curriculo/          # Lições em Markdown (o coração do projeto)
+├── scripts/
+│   └── gutenberg.py    # Motor de geração
+├── assets/             # Imagens e estilos
+├── GOVERNANCA/         # Documentos de governança (O Pentateuco de Ouro)
+└── dist/web/           # Site gerado (output)
+```
 
-1.  Clone o repositório:
-    ```bash
-    git clone https://github.com/raulfbr/matematica-viva-v3.git
-    cd matematika-viva-v3
-    ```
+### Rodar Localmente
 
-2.  Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+# 1. Clone o repositório
+git clone https://github.com/raulfbr/matematica-viva-v3.git
+cd matematica-viva-v3
 
-3.  Gere o site:
-    ```bash
-    python scripts/gutenberg.py
-    ```
+# 2. Instale as dependências
+pip install -r requirements.txt
 
-4.  O site gerado estará na pasta `dist/web`.
+# 3. Gere o site
+python scripts/gutenberg.py
+```
+
+O site estará em `dist/web/`.
+
+---
+
+## 🚀 Deploy Automático (Vercel)
+
+Este repositório está configurado para deploy automático no **Vercel**:
+
+*   **Build Command:** `pip install -r requirements.txt && python scripts/gutenberg.py`
+*   **Output Directory:** `dist/web`
+
+Cada `git push` dispara uma nova build.
+
+---
 
 ## 📜 Licenciamento
 
 ### Conteúdo Educacional
-Todo o conteúdo original do portal (textos, roteiros, lições e narrativas em `curriculo/`) é disponibilizado sob a **Licença Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)**.
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Isso permite que você:
-*   **Compartilhe**: copie e redistribua o material em qualquer suporte ou formato.
-*   **Adapte**: remix, transforme e crie a partir do material para qualquer fim, mesmo que comercial.
-*   **Sob a condição**: Você deve dar o crédito apropriado, prover um link para a licença e indicar se mudanças foram feitas.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+Todo o conteúdo original (lições, narrativas, rituais em `curriculo/`) é disponibilizado sob a **Licença Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)**.
+
+Você pode compartilhar e adaptar o material, desde que dê o crédito apropriado ao **Matemática Viva**.
 
 ### Código Fonte
-Os scripts de geração (`scripts/`) e o código fonte da infraestrutura são disponibilizados sob a licença **MIT**, garantindo liberdade total para uso técnico e derivação da tecnologia.
+
+Os scripts de geração (`scripts/`) são disponibilizados sob a licença **MIT**.
 
 ---
-*Construído com ❤️ para o florescimento das famílias.*
+
+## 🏛️ Patronos Intelectuais
+
+O projeto se apoia em gigantes:
+
+*   **Charlotte Mason** — A Mestra Chefe. Filosofia e ritmo.
+*   **Singapore Math** — Rigor técnico e progressão CPA.
+*   **C.S. Lewis** — Afeições Ordenadas.
+*   **J.R.R. Tolkien** — A Sub-criação e a Consistência Interna.
+*   **Makoto Fujimura** — Culture Care e a Beleza Gratuita.
+
+---
+
+<p align="center">
+  <em>Construído com ❤️ para o florescimento das famílias.</em><br>
+  <strong>Família Rodrigues | Selo Gold+</strong>
+</p>
