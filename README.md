@@ -41,15 +41,15 @@ O currículo acompanha o Viajante desde o berço até a maestria:
 
 ### 🦉 Os Guardiões do Reino
 
-Cinco personagens arquetípicos guiam o Viajante:
+Cinco personagens arquetípicos guiam o Viajante através de sua jornada:
 
-| Guardião | Símbolo | Virtude | Cor |
-| :--- | :--- | :--- | :--- |
-| **Melquior** | ☀️ Sol | Sabedoria | `#D4A84B` |
-| **Noé** | 🌙 Lua | Paciência | `#7B68B8` |
-| **Celeste** | ⭐ Estrela | Curiosidade | `#E8A87C` |
-| **Bernardo** | 🪨 Pedra | Persistência | `#8B7355` |
-| **Íris** | 🌸 Flor | Atenção | `#7EC8C8` |
+| Guardião | Animal | Virtude | Cor | Domínio |
+| :--- | :--- | :--- | :--- | :--- |
+| **Melquior** | 🦁 Leão | Sabedoria | `#D4A84B` | Filosofia / Axiomas |
+| **Noé** | 🦉 Coruja | Paciência | `#7B68B8` | Tempo / Cálculo |
+| **Celeste** | 🦊 Raposa | Curiosidade | `#E8A87C` | Álgebra / Padrões |
+| **Bernardo** | 🐻 Urso | Persistência | `#8B7355` | Geometria / Esforço |
+| **Íris** | 🐦 Pardal | Atenção | `#7EC8C8` | Dados / Estatística |
 
 ---
 
@@ -109,7 +109,7 @@ Você pode compartilhar e adaptar o material, desde que dê o crédito apropriad
 
 ### Código Fonte
 
-Os scripts de geração (`scripts/`) são disponibilizados sob a licença **MIT**.
+Os scripts de geração (`scripts/`) são disponibilizados sob a licença **MIT** (ver [LICENSE-CODE](LICENSE-CODE)).
 
 ---
 
@@ -126,6 +126,7 @@ O projeto se apoia em gigantes:
 ---
 
 <p align="center">
-  <em>Construído com ❤️ para o florescimento das famílias.</em><br>
-  <strong>Família Rodrigues | Selo Gold+</strong>
+  <em>"A educação é o caminho para o conhecimento de Deus, e Charlotte Mason é o nosso Guia neste caminho."</em><br><br>
+  Construído com ❤️ para o florescimento das famílias.<br>
+  <strong>Família Rodrigues | Selo Gold+ | v3.5</strong>
 </p>

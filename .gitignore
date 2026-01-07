@@ -31,5 +31,10 @@ wheels/
 .DS_Store
 Thumbs.db
 
+# Privacy & Cleanup
+_LEGADO/
+_Assistente_Pessoal/
+Arrumar/
+
 # Logs
 *.log
