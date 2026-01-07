@@ -65,6 +65,23 @@ Embora chamemos carinhosamente todos os aprendizes de **Viajante** ao longo de t
 
 ---
 
+## 🦅 III. ESCALA DE AUTONOMIA (O Protocolo de Transição)
+> *Ajudamos a família a transicionar de "Mãe que faz" para "Filho que busca". Flexibilidade é a chave, mas sem abandono.*
+
+| Fase | Quem Guia? | Papel do Pai/Mãe | Papel da Criança |
+|:-----|:-----------|:-----------------|:-----------------|
+| **Sementes** (4-6) | **100% Pai** | **O Narrador.** Lê tudo, prepara o material, guia a mão. | **O Viajante.** Ouve, toca, responde oralmente. |
+| **Raízes I** (6-8) | **80% Pai** | **O Co-Piloto.** Lê a história, mas deixa a criança ler o "Desafio". | Começa a ler instruções curtas ("Conte 5 pedras"). |
+| **Raízes II** (8-10) | **50/50** | **O Mentor.** Introduz o conceito, sai para o café, volta para a Narração. | Lê a história do Guardião sozinha. Faz a prática. Chama para revisar. |
+| **Lógica** (11-14) | **20% Pai** | **O Consultor.** Disponível para dúvidas e debate socrático final. | **O Aprendiz.** Gere a própria agenda. Lê, executa, autocorrige. |
+| **Legado** (15+) | **Autônomo** | **O Investidor.** Fornece recursos e discute grandes ideias no jantar. | **O Arquiteto.** Constrói seu próprio currículo e projetos. |
+
+### 🔄 Flexibilidade (O "Modo Híbrido")
+1. **Para a mãe ocupada:** A partir do **Raízes II (8 anos)**, o material é escrito dirigindo-se DIRETAMENTE à criança ("Olá, Jovem Construtor"), permitindo que ela faça sozinha se necessário.
+2. **A Regra da Narração:** Mesmo que a criança faça sozinha (autonomia), a **Narração Final** ("Conte-me o que aprendeu") NUNCA deve ser dispensada. É o laço relacional que valida o aprendizado.
+
+---
+
 ## 🤖 PROTOCOLO "NORTE DA IA" (Prompt Master)
 
 > [!IMPORTANT]
@@ -219,8 +236,8 @@ Este capítulo é a âncora operacional suprema. Ele unifica o Espírito (Teolog
 *   **O ESPÍRITO (Ideia Viva):** **"O Deus da Vastidão e do Sustento."** A matemática como mapa da Providência.
 *   **A ALMA (Identidade & Lore):**
     *   **Identidade:** **Ajudante Construtor** (Pleno).
-    *   **Guardião:** Noé (Paciência e Ritmo).
-    *   **Narrativa:** Expedições de mapeamento. Onde estamos no Reino hoje?
+    *   **Guardião:** Celeste (Navegadora das Distâncias).
+    *   **Narrativa:** Expedições de mapeamento e uso da Bússola. Onde estamos no Reino?
 *   **O CORPO (Liturgia & Operação):**
     *   **Artefato:** **Bússola e Cordel de Medir.** Ferramentas de exploração.
     *   **Ritual:** 🧭 **Relato do Explorador.** Localização e narrativa técnica.

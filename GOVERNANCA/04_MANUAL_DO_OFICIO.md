@@ -104,5 +104,129 @@ Para garantir o "Zero Atrito" e a Beleza Gratuita (Plussing):
 - **Soberania Terminológica:** Definições de Guardiões e Ciclos pertencem à Governança. Não re-explique; aponte o link.
 
 ---
+
+## 📜 PARTE IV: SINTAXE DO REINO (Custom Blocks)
+*O Gutenberg Pipeline reconhece e renderiza estes blocos especiais.*
+
+### 🎭 Blocos Semânticos (Markdown → HTML)
+
+O sistema lê Markdowns e processa Regex customizado, gerando cards CSS distintos:
+
+| Bloco Markdown | Classe CSS | Cor de Borda | Uso |
+|:---------------|:-----------|:-------------|:----|
+| `> [!RITUAL]` | `.card-ritual` | `#D4A84B` (Dourado Melquior) | Momentos sagrados de abertura/fechamento |
+| `> [!ACTIVITY]` | `.card-atividade` | `#8B7355` (Marrom Bernardo) | Ação prática, mãos na massa |
+| `> [!NARRATIVE]` | `.card-narrativa` | `#7EC8C8` (Azul Íris) | História, Lore, voz do Guardião |
+| `> [!DOXOLOGY]` | `.card-doxologia` | `#7B68B8` (Púrpura Noé) | Elevação final, conexão com o Logos |
+| `> [!GUIDE]` | `.card-guia` | `#304837` (Verde Floresta) | Instruções para o Portador da Tocha |
+
+### ✍️ Exemplo de Uso
+
+```markdown
+> [!RITUAL]
+> Acenda a vela. Respire. O Reino está abrindo suas portas.
+
+> [!NARRATIVE]
+> Melquior sorri ao ver você chegar. "Hoje", ele sussurra, 
+> "vamos aprender o segredo que os números guardam."
+
+> [!ACTIVITY]
+> Pegue 5 pedras. Coloque-as em uma fileira sobre a mesa.
+> Agora... conte-as em voz alta.
+
+> [!DOXOLOGY]
+> Os números não são apenas símbolos. Eles são a assinatura 
+> da Ordem — o eco de uma Inteligência que sustenta tudo.
+```
+
+---
+
+## 📋 PARTE V: FRONTMATTER CANÔNICO
+*Campos obrigatórios no topo de cada arquivo de lição.*
+
+### Campos Obrigatórios
+
+```yaml
+---
+id: MV-S-001              # Padrão: MV-[CICLO]-[NÚMERO]
+titulo: "O Segredo do Um"  # Título humano da lição
+guardiao: Melquior         # Guardião que lidera a missão
+ciclo: Sementes            # Sementes | Raízes | Lógica | Legado
+unidade: 1                 # Número da unidade temática
+tempo_estimado: 15         # Minutos (Hard Stop)
+tgtb_ref: "Lesson 1"       # Referência ao TGTB original
+status: Rascunho           # Rascunho | Revisão | Aprovado | Gold+
+---
+```
+
+### Campos Opcionais
+
+```yaml
+guardiao_apoio: Bernardo   # Guardião secundário
+materiais:                 # Lista de materiais necessários
+  - 5 pedras ou feijões
+  - Vela e fósforos
+  - Caderno de Maravilhas
+prerequisito: MV-S-000     # ID da lição anterior necessária
+variacao_clima: Ensolarado # Ensolarado | Nublado | Ventoso
+```
+
+---
+
+## 🎒 PARTE VI: KIT ESSENCIAL POR CICLO
+*O Arsenal Básico para iniciar cada fase.*
+
+### 🍃 Sementes (4-6 anos)
+| Item | Propósito | Guardião |
+|:-----|:----------|:---------|
+| **Vela + Fósforos** | Ritual de abertura | Melquior |
+| **Ampulheta (3 min)** | Visualizar o tempo | Noé |
+| **Lupa de Vidro** | Investigar o mundo | Celeste |
+| **Pedras/Sementes (20)** | Concreto para contagem | Bernardo |
+| **Caderno de Maravilhas** | Registro pictórico | Íris |
+| **Lápis Verde** | Correção com esperança | Bernardo |
+
+### 🌳 Raízes (7-10 anos)
+| Item | Propósito | Guardião |
+|:-----|:----------|:---------|
+| **Diário do Reino** | Narração escrita | Todos |
+| **Régua de 30cm** | Medição precisa | Bernardo |
+| **Compasso Escolar** | Geometria | Noé |
+| **Balança de Dois Pratos** | Justiça/Igualdade | Celeste |
+| **Cronômetro** | Hábito da Atenção | Noé |
+
+---
+
+## 📐 PARTE VII: GLOSSÁRIO TÉCNICO (Singapura CPA)
+*O dialeto técnico que garante a precisão.*
+
+| Termo | Definição | Exemplo Prático |
+|:------|:----------|:----------------|
+| **CPA (Concreto)** | **Coisa Real.** O estágio tangível. | 3 maçãs reais na mão. |
+| **CPA (Pictórico)** | **Imagem Representativa.** O estágio desenhado. | 3 círculos vermelhos no papel. |
+| **CPA (Abstrato)** | **Símbolo Numérico.** O estágio final. | O algarismo "3". |
+| **Bond Number** | **Laço Numérico (Parte-Todo).** Diagrama de 3 círculos mostrando que 5 é feito de 2 e 3. | "Quebre o 5. O que sobrou?" |
+| **Ten Frame** | **Quadro de Dez.** Uma grade 2x5 para visualizar números em relação ao 10. | Ver o 7 como "5 + 2" ou "10 - 3". |
+| **Subitizing** | **Subitização.** Reconhecer quantidade sem contar "um por um". | Olhar um dado (5) e saber instantaneamente. |
+| **Bar Model** | **Modelo de Barras.** Desenhar retângulos proporcionais para resolver problemas de palavra. | Barras: [João (---|---)] vs [Maria (---|---|---)]. |
+| **Ordinal vs Cardinal** | Posição (1º, 2º) vs Quantidade (1, 2). | "Quem é o terceiro?" vs "Quantos há?" |
+
+---
+
+## 🔮 PARTE VIII: LITURGIA DOS ARTEFATOS (Âncoras de Lore)
+*O uso sistemático dos itens de poder para criar memória emocional (K-12).*
+
+> **Regra do Arquiteto:** Não invente magia; use o artefato consolidado. Isso cria continuidade. Se o aluno viu a Bússola aos 6 anos, ele entenderá a "Busca pelo X" aos 14.
+
+| Guardião | Artefato Mestre | Poder Simbólico | Uso em Lição (Trigger) |
+|:---------|:----------------|:----------------|:-----------------------|
+| 🌙 **Noé** | **O Manto das Estações** | Paciência Cíclica | Quando a criança quer pressa. *"Vista o Manto; espere o tempo da semente."* |
+| ⭐ **Celeste** | **A Bússola Quebrada** | Coragem de Errar | Quando o aluno se perde. *"A Bússola aponta para o Novo. Estar perdido é o começo."* |
+| 🪨 **Bernardo** | **A Viga de Gelo (Cicatriz)** | Resistência/Carga | Quando é difícil/pesado. *"Apoie o peso na Viga. A força cresce na tensão."* |
+| 🌸 **Íris** | **O Monóculo da Verdade** | Visão do Invisível | Quando o detalhe é ignorado. *"Use o Monóculo. O que está escondido no cantinho?"* |
+| ☀️ **Melquior** | **A Vela da Verdade** | Iluminação do Logos | No início/fim. *"A luz revela o que a escuridão esconde."* |
+
+---
+
 **[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md) | [Reino](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md) | [Ofício](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md)**
 *Arquiteto (v3.5 Sovereign Positive Gold).*

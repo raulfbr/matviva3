@@ -49,6 +49,20 @@ O Matemática Viva não é um material secular com "etiquetas cristãs". É uma 
 
 ---
 
+### 🔒 CLÁUSULA DE SEGURANÇA (Confissão Interna)
+
+> [!IMPORTANT]
+> **Artigo Constitucional — Uso Interno do Autor/Desenvolvedor**
+>
+> *Embora o aluno veja a "Beleza Universal" e a "Ordem", o autor/desenvolvedor DEVE confessar a Verdade Particular: Cristo é o Logos, a razão de tudo (Col 1:17). Não escondemos Deus por vergonha, mas O revelamos por meio da excelência da Sua obra, sem precisar usar "etiquetas gospel" artificiais.*
+
+**Implicações Práticas:**
+1. **Na Escrita:** O autor escreve com consciência de que a Ordem matemática é reflexo do Logos, mesmo quando não fala explicitamente de Cristo.
+2. **Na Linguagem:** Usamos "Maravilhamento", "Ordem", "Verdade" — não por ocultação, mas porque a Beleza é a apologética mais elegante.
+3. **Na Hospitalidade:** O Banquete está aberto. A criança de qualquer lar encontra Verdade; se buscar a Fonte, encontrará o Rei.
+
+---
+
 ## 🏛️ II. ONTOLOGIA NOBRE (Papéis e Autoridade)
 
 Para evitar o Caos e a Confusão, os papéis no Reino são divididos entre **Gestão Real** e **Liturgia Narrativa**:
@@ -88,6 +102,33 @@ Charlotte Mason detém o **Veto Pedagógico**. Ela decide se um conteúdo é dig
 
 4.  **Protocolo de Conciliação:** CM (A Mestra da Atmosfera) governa o ritual e o ritmo. Ela adapta o **TGTB** (A Âncora de Conteúdo) para que a verdade técnica seja apresentada como uma "Ideia Viva" através dos Guardiões.
 5.  **Protocolo de Invocação de Especialistas:** Em caso de conflito, a hierarquia é: 1. Cosmovisão -> 2. CM (Atmosfera/Ritmo) -> 3. TGTB (Verdade/Conteúdo) -> 4. **O Mentor Melquior** (Harmonização Narrativa).
+
+### 📜 Os 20 Princípios de Charlotte Mason (SSOT Canônico)
+
+> **Fonte:** *A Philosophy of Education*, Vol. 6. Estes princípios são a bússola que orienta toda decisão pedagógica.
+
+| # | Princípio | Aplicação no Matemática Viva |
+|:--|:----------|:-----------------------------|
+| 1 | *"Children are born persons."* | A criança é pessoa completa, não recipiente vazio. |
+| 2 | *"They are not born either good or bad..."* | Educação forma; não apenas informa. |
+| 3 | *"Authority and obedience are natural..."* | Pais têm autoridade legítima. |
+| 4 | *"Authority is not license."* | Autoridade respeita a pessoa da criança. |
+| 5 | *"Education is an atmosphere, a discipline, a life."* | **Os 3 instrumentos:** ambiente, hábitos, ideias vivas. |
+| 6 | *"By 'atmosphere' we do not mean..."* | Atmosfera é natural, não artificial. |
+| 7 | *"By 'discipline' we mean the discipline of habits..."* | Formar hábitos mentais e morais. |
+| 8 | *"By 'life' we mean ideas, living ideas..."* | Alimentar com **IDEIAS VIVAS**, não fatos mortos. |
+| 9 | *"The mind feeds on ideas..."* | A mente digere ideias como o corpo digere comida. |
+| 10 | *"Curriculum should be generous and varied."* | Currículo amplo e rico. |
+| 11 | *"Knowledge comes through the curriculum."* | Currículo é veículo, não entretenimento. |
+| 12 | *"Education is the science of relations."* | Conectar matemática com criação, arte, vida. |
+| 13 | *"Short lessons."* | **Lições CURTAS** (15-20 min para Sementes). |
+| 14 | *"Narration is the art of knowing."* | **Narração:** criança reconta com suas palavras. |
+| 15 | *"A single careful reading..."* | Uma leitura atenta > repetições mecânicas. |
+| 16 | *"No rewards, no prizes, no competition."* | Valorizar o saber, não o prêmio. |
+| 17 | *"No rivalry."* | Cooperação > Competição. |
+| 18 | *"Examination through narration, not testing."* | Avaliar por narração, não por provas. |
+| 19 | *"Children should be given time..."* | Respeitar o ritmo individual. |
+| 20 | *"The child does the work."* | **A CRIANÇA trabalha**; o pai facilita. |
 
 ---
 

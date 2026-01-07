@@ -78,6 +78,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 #### 🌙 NOÉ (A Coruja -> O Cronista)
 *   **Quem é:** O guardião do tempo e do silêncio. Calmo, lento, nunca corre. Ele observa o que os outros ignoram na pressa.
+*   **O Manto das Estações:** Noé veste um manto que nunca é da mesma cor. Ele foi tecido com fios de auroras e crepúsculos antigos. Dizem que ele trocou sua própria voz jovial pelo segredo de ouvir o sussurro das pedras. Por isso, ele fala baixo e devagar.
 *   **História:** Noé conhece o silêncio das estrelas e o ritmo das grandes águas. Ele é aquele que espera a tempestade passar para contar as gotas. (Cor: `#7B68B8`)
 *   **Papel:** Ensina o Hábito da Atenção e a Paciência do Cálculo.
 *   **Fase Sementes (4-6):** Uma Coruja sábia na **Árvore do Silêncio**. Ensina a esperar o momento certo de contar.
@@ -87,6 +88,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 #### ⭐ CELESTE (A Raposa -> A Navegadora)
 *   **Quem é:** A exploradora ágil. Cheia de perguntas ("E se?"). Detetive de padrões.
+*   **A Bússola Quebrada:** Celeste carrega uma bússola que não aponta para o Norte, mas para o "Novo". Ela a quebrou propositalmente quando percebeu que os mapas antigos não mostravam os tesouros escondidos. Ela navega pelo instinto da curiosidade, ensinando que, às vezes, é preciso se perder para achar o caminho.
 *   **História:** O rastro oculto e o mapa das terras distantes. (Cor: `#E8A87C`)
 *   **Papel:** Ensina a Busca pelo Padrão e o Maravilhamento.
 *   **Fase Sementes (4-6):** Uma Raposa esperta na **Clareira das Perguntas**. Caça pistas.
@@ -108,6 +110,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 #### 🌸 ÍRIS (A Pardal -> Guardiã da ATENÇÃO)
 *   **Quem é:** A mestre dos detalhes. Vê o infinito num grão de areia.
+*   **O Monóculo da Verdade:** Íris usa um monóculo de cristal lapidado por Melquior. Ele não aumenta as coisas, mas revela sua essência matemática. Com ele, ela vê a simetria numa flor murcha e a ordem numa pilha de feno. Ela ensina que a beleza não grita; ela espera ser vista.
 *   **História:** A beleza do invisível e a geometria do detalhe. (Cor: `#7EC8C8`)
 *   **Papel:** Ensina a Precisão Estética e a Maravilha do Infinitésimo.
 *   **Fase Sementes (4-6):** Uma Pardal veloz no **Ninho do Mirante**. Acha o diferente.
@@ -145,7 +148,9 @@ O tom de voz amadurece com o Viajante:
 
 ### 🌳 No nível RAÍZES (A Aventura):
 *   **Bernardo:** *"Pedra sobre pedra, coração sobre o dever. Vamos erguer o que o Caos derrubou!"*
-*   **Celeste:** *"O Reino é vasto e as pistas são muitas. Prepare seu Diário, a jornada vai começar!"*
+*   **Celeste (Raízes II & III):** *"O Reino é vasto e as pistas são muitas. Prepare seu Diário, a jornada vai começar!"*
+*   **Noé (Raízes IV):** *"O tempo é um rio, e a matemática é a represa. Vamos medir o fluxo antes que a noite caia."*
+*   **Íris (Raízes V):** *"Cada peça importa. O Mosaico do Reino só brilha se o menor fragmento estiver em seu lugar sagrado."*
 
 ### 🛡️ No nível LÓGICA (O Rigor):
 *   **Melquior:** *"O Trono da Verdade exige clareza. Você está pronto para o duelo da razão?"*
