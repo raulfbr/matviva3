@@ -45,4 +45,46 @@ Nossos filhos não são "cobaias"; são a inspiração e o propósito. Cada "Uau
 
 ---
 
-### [🏰 O Convite Real](convite_real.html) | [📜 O Manifesto](manifesto.html) | [🗺️ Voltar ao Mapa](index.html)
+## 📅 Nossa Jornada
+
+> [!NOTE]
+> **A Linha do Tempo do Reino Contado:**
+
+| Ano | Marco |
+|-----|-------|
+| **2022** | 🌱 *A Semente*: Primeiro esboço em um guardanapo. A frustração com currículos secos vira ação. |
+| **2023** | 🔬 *O Laboratório*: Testes em casa. Os filhos são os primeiros aprendizes. Erros, ajustes, descobertas. |
+| **2024** | 🏛️ *A Estrutura*: Nasce a Tríade de Ouro. Charlotte Mason + Singapura + Beleza. |
+| **2025** | 🚀 *O Portal*: Matemática Viva se torna público. O Reino agora tem portões abertos. |
+| **2026** | 🌳 *A Expansão*: Raízes, Lógica, Legado. A visão K-12 completa começa a tomar forma. |
+
+---
+
+## 📚 Por que Confiamos Nisso?
+
+> [!TIP]
+> **Não inventamos a roda. Estamos sobre ombros de gigantes.**
+
+Nosso método é uma síntese cuidadosa de três tradições pedagógicas comprovadas:
+
+### Charlotte Mason (1842-1923)
+*"A criança é uma pessoa."*
+- **Ideias Vivas**: Aprendizado através de narrativas ricas, não fichas secas.
+- **Educação como Atmosfera**: O ambiente ensina mais que o currículo.
+- [📖 Leia mais sobre Charlotte Mason](https://charlottemasonwiki.org/)
+
+### Método Singapura (Desde 1980)
+*"Do concreto ao abstrato."*
+- **CPA**: Concreto → Pictórico → Abstrato. Sem saltos mortais.
+- **Resultados PISA**: Singapura lidera o ranking mundial em matemática.
+- [📊 Pesquisa sobre Método Singapura](https://www.nifdi.org/)
+
+### The Good and The Beautiful
+*"A Beleza aponta para a Verdade."*
+- **Estética como Pedagogia**: Materiais belos respeitam a dignidade da criança.
+- **Integração Moral**: Matemática não é neutra; serve a um propósito maior.
+- [🎨 Conheça o TGTB](https://www.goodandbeautiful.com/)
+
+---
+
+### [🏰 O Convite Real](convite_real.html) | [📜 O Manifesto](manifesto.html) | [🗺️ Voltar ao Mapa](../index.html)
