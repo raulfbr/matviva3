@@ -571,6 +571,14 @@ def main():
 
     # 5. Build Index (K-12 Family Home)
     build_index(all_lessons)
+    
+    # 6. Copy Landing Page (Static HTML from Template)
+    landing_src = os.path.join(TEMPLATE_DIR, "layout_landing.html")
+    if os.path.exists(landing_src):
+        landing_dest = os.path.join(DIST_DIR, "pages", "landing.html")
+        shutil.copy(landing_src, landing_dest)
+        print("🚀 [LANDING] Página de Vendas Copiada.")
+    
     print("🚀 Portal v3.6 Concluído!")
 
 if __name__ == "__main__":
