@@ -4,50 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Reino Contado | Home</title>
+    <title>O Reino Contado | Matemática Viva</title>
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Hero Section: A Promessa -->
     <header class="hero">
         <div class="container">
-            <span
-                style="display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-gold);">Matemática
-                Viva</span>
-            <h1 style="font-size: 3.5rem; margin-top: 0.5rem;">O Reino Contado</h1>
-            <p>Um currículo vivo onde os números falam e as formas têm nomes.</p>
+            <span class="hero-subtitle">Matemática Viva</span>
+            <h1>O Reino Contado</h1>
+            <p>Resgate o olhar de maravilha do seu filho. Uma jornada matemática que começa no coração, não no papel.
+            </p>
+            <a href="sementes/000_INTRODUCAO_REINO_CONTADO.html" class="btn-cta">Começar a Jornada</a>
         </div>
     </header>
 
-    <main class="container">
+    <!-- Seção 1: Os Guardiões -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2>Os Guardiões do Reino</h2>
+                <p>Quem guiará seu filho nesta aventura?</p>
+            </div>
 
-        <h2>🌱 Fase Sementes (4-6 Anos)</h2>
-        <p style="color: #666; margin-bottom: 2rem;">O despertar da maravilha. Lições curtas de 15 minutos.</p>
-
-        <div class="card-grid">
-            {% for licao in licoes %}
-            <a href="sementes/{{ licao.filename }}" class="card">
-                <span
-                    style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-green); font-weight: bold;">{{
-                    licao.id }}</span>
-                <h3>{{ licao.titulo }}</h3>
-                <p style="font-size: 0.95rem; color: #555;">{{ licao.meta }}</p>
-                <div class="meta">
-                    <span>🛡️ {{ licao.guardia }}</span>
-                    <span>⏱️ {{ licao.tempo }}</span>
+            <div class="guardians-grid">
+                <!-- Melquior -->
+                <div class="guardian-card">
+                    <div class="guardian-avatar">🦁</div>
+                    <h3>Melquior</h3>
+                    <p>O Leão da Sabedoria. Guarda a Ordem e as Leis Eternas.</p>
                 </div>
-            </a>
-            {% endfor %}
+                <!-- Celeste -->
+                <div class="guardian-card">
+                    <div class="guardian-avatar">🦊</div>
+                    <h3>Celeste</h3>
+                    <p>A Raposa da Curiosidade. Fareja padrões e faz perguntas.</p>
+                </div>
+                <!-- Bernardo -->
+                <div class="guardian-card">
+                    <div class="guardian-avatar">🐻</div>
+                    <h3>Bernardo</h3>
+                    <p>O Urso da Persistência. Ensina que errar faz parte de aprender.</p>
+                </div>
+                <!-- Íris -->
+                <div class="guardian-card">
+                    <div class="guardian-avatar">🐦</div>
+                    <h3>Íris</h3>
+                    <p>O Pássaro da Atenção. Vê os detalhes que ninguém vê.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </main>
+    <!-- Arco 1: O Despertar -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="arc-header">
+                <span
+                    style="color: var(--color-gold); font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">Prólogo</span>
+                <h2>O Despertar</h2>
+                <p>As primeiras lições para consagrar o ambiente e conhecer as ferramentas.</p>
+            </div>
+            <div class="card-grid">
+                {{ arco_despertar }}
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <p>Construído pelo <strong>Motor Gutenberg</strong> • {{ data_build }}</p>
+    <!-- Arco 2: O Ritmo -->
+    <section class="section">
+        <div class="container">
+            <div class="arc-header">
+                <span
+                    style="color: var(--color-gold); font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">Livro
+                    I</span>
+                <h2>O Ritmo do Mundo (0 a 10)</h2>
+                <p>Descobrindo os números fundamentais e a dança da contagem.</p>
+            </div>
+            <div class="card-grid">
+                {{ arco_ritmo }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Arco 3: A Plenitude -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="arc-header">
+                <span
+                    style="color: var(--color-gold); font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">Livro
+                    II</span>
+                <h2>A Plenitude (11 a 20)</h2>
+                <p>Expandindo os horizontes para números maiores e o sistema decimal.</p>
+            </div>
+            <div class="card-grid">
+                {{ arco_plenitude }}
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p><strong>Matemática Viva</strong> • O Reino Contado v3.6</p>
+        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.7;">
+            Feito para pais, educadores e pequenos guardiões.<br>
+            <em>Inevitable Gold Standard</em>
+        </p>
+        <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.5;">
+            Build: {{ data_build }}
+        </p>
     </footer>
 
 </body>

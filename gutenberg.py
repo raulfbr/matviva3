@@ -13,15 +13,19 @@ DIST_SEMENTES = os.path.join(DIST_DIR, "sementes")
 def clean_dist():
     """Limpa a pasta dist para um build fresco."""
     if os.path.exists(DIST_DIR):
-        shutil.rmtree(DIST_DIR)
-    os.makedirs(DIST_SEMENTES)
-    print(f"🧹 [CLEAN] Pasta {DIST_DIR} recriada.")
+        try:
+            shutil.rmtree(DIST_DIR)
+            print(f"🧹 [CLEAN] Pasta {DIST_DIR} removida.")
+        except Exception as e:
+            print(f"⚠️ [WARN] Não foi possível remover completamente {DIST_DIR}: {e}")
+    
+    os.makedirs(DIST_SEMENTES, exist_ok=True)
+    print(f"✨ [INIT] Pasta {DIST_DIR} pronta.")
 
 def copy_assets():
-    """Copia o CSS e Assets."""
+    """Copia o CSS."""
     shutil.copy(os.path.join(TEMPLATE_DIR, "style.css"), os.path.join(DIST_DIR, "style.css"))
-    # Copiar Assets (Se existirem - placeholder por enquanto)
-    # shutil.copytree("assets", os.path.join(DIST_DIR, "assets"))
+    # shutil.copytree("assets", os.path.join(DIST_DIR, "assets")) # Assets placeholder
     print(f"🎨 [ASSETS] style.css copiado.")
 
 def parse_markdown(filepath):
@@ -47,12 +51,14 @@ def parse_markdown(filepath):
     # Converter Markdown para HTML
     html_content = markdown.markdown(body_md, extensions=['fenced_code', 'tables', 'admonition'])
     
-    # Processar Admonitions Customizados do Reino (ex: > [!RITUAL])
-    # Simples replace para transformar em blockquotes estilizados
+    # Processar Admonitions Customizados (Classes CSS)
     html_content = html_content.replace("<blockquote>\n<p>[!RITUAL]", "<blockquote class='ritual'>\n<p><strong>🕯️ RITUAL</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!MESTRA]", "<blockquote class='mestra'>\n<p><strong>👩‍🏫 MESTRA</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!NARRATIVA]", "<blockquote class='narrativa'>\n<p><strong>📖 NARRATIVA</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!ATIVIDADE]", "<blockquote class='atividade'>\n<p><strong>🛠️ ATIVIDADE</strong>")
+    html_content = html_content.replace("<blockquote>\n<p>[!CONCEITO]", "<blockquote class='conceito'>\n<p><strong>💡 CONCEITO</strong>")
+    html_content = html_content.replace("<blockquote>\n<p>[!TIP]", "<blockquote class='tip'>\n<p><strong>🦋 SE QUISER VOAR</strong>")
+    html_content = html_content.replace("<blockquote>\n<p>[!NOTE]", "<blockquote class='note'>\n<p><strong>📝 NOTA</strong>")
     
     return metadata, html_content
 
@@ -61,17 +67,12 @@ def build_lesson(filename):
     filepath = os.path.join(SOURCE_DIR, filename)
     metadata, body_html = parse_markdown(filepath)
     
-    # Filtro de Versão (Apenas V3.6+ e Canônico)
-    # version = metadata.get("versao", "0")
-    # if "3.6" not in version or metadata.get("status") != "Canônico":
-    #     print(f"⏩ [SKIP] {filename} (Versão: {version})")
-    #     return None
-
-    # Ler Template Base
+    # Filter: Process only valid lessons (skip templates/drafts if needed)
+    
     with open(os.path.join(TEMPLATE_DIR, "layout_base.html"), "r", encoding="utf-8") as f:
         template = f.read()
     
-    # Injetar Dados (Jinja2 primitivo com replace)
+    # Injetar Dados
     output_html = template
     output_html = output_html.replace("{{ titulo }}", metadata.get("titulo", "Sem Título"))
     output_html = output_html.replace("{{ fase }}", metadata.get("fase", "Sementes"))
@@ -82,7 +83,6 @@ def build_lesson(filename):
     output_html = output_html.replace("{{ versao }}", metadata.get("versao", "3.6"))
     output_html = output_html.replace("{{ conteudo }}", body_html)
     
-    # Salvar
     output_filename = filename.replace(".md", ".html")
     with open(os.path.join(DIST_SEMENTES, output_filename), "w", encoding="utf-8") as f:
         f.write(output_html)
@@ -90,54 +90,72 @@ def build_lesson(filename):
     print(f"✅ [BUILD] {output_filename}")
     
     metadata['filename'] = output_filename
+    metadata['original_filename'] = filename
     return metadata
 
-def build_index(lessons):
-    """Constrói a página inicial."""
-    with open(os.path.join(TEMPLATE_DIR, "layout_index.html"), "r", encoding="utf-8") as f:
-        template = f.read()
-
-    # Construir lista de cards (Lógica Jinja2 simulada)
-    # O template espera {% for %} mas nosso script é simples.
-    # Vamos recriar o bloco de cards manualmente.
-    
-    cards_html = ""
-    for licao in lessons:
+def render_card_grid(lessons_subset):
+    """Gera o HTML do Grid de Cards para um subconjunto de lições."""
+    html = ""
+    for licao in lessons_subset:
         card = f"""
         <a href="sementes/{licao['filename']}" class="card">
-            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-green); font-weight: bold;">{licao.get('id', '???')}</span>
-            <h3>{licao.get('titulo')}</h3>
-            <p style="font-size: 0.95rem; color: #555;">{licao.get('meta')}</p>
-            <div class="meta">
+            <span class="card-id">{licao.get('id', 'MV-S-???')}</span>
+            <h3 class="card-title">{licao.get('titulo')}</h3>
+            <p class="card-desc">{licao.get('meta')}</p>
+            <div class="card-footer">
                 <span>🛡️ {licao.get('guardia')}</span>
                 <span>⏱️ {licao.get('tempo')}</span>
             </div>
         </a>
         """
-        cards_html += card
+        html += card
+    return html
 
-    # Replace no template (Hack para substituir o bloco jinja)
-    # Assumindo que o template tem um placeholder ou vamos substituir o bloco todo
-    # Como escrevi o template com Jinja, vou usar regex para substituir o bloco.
+def build_index(lessons):
+    """Constrói a Landing Page com Arcos."""
+    with open(os.path.join(TEMPLATE_DIR, "layout_index.html"), "r", encoding="utf-8") as f:
+        template = f.read()
+
+    # Buckets (Arcos)
+    arco_despertar = []  # 000 - 003
+    arco_ritmo = []      # 004 - 010
+    arco_plenitude = []  # 011 +
     
-    pattern = r"{% for licao in licoes %}(.*?){% endfor %}"
-    # Não vamos usar regex complexo. Vamos simplesmente substituir um placeholder que vou criar agora se não existir.
-    # Mas como já escrevi o arquivo com {% %}, vou sobrescrever o arquivo na memória.
-    
-    # Recarregando template como string crua
+    # Simple sorting logic based on filename prefix (000, 001...)
+    for licao in lessons:
+        fname = licao['original_filename']
+        try:
+            num = int(fname.split('_')[0])
+            if num <= 3:
+                arco_despertar.append(licao)
+            elif num <= 10:
+                arco_ritmo.append(licao)
+            else:
+                arco_plenitude.append(licao)
+        except ValueError:
+            # Fallback for non-numbered files
+            arco_plenitude.append(licao)
+
+    # Render Grids
+    html_despertar = render_card_grid(arco_despertar)
+    html_ritmo = render_card_grid(arco_ritmo)
+    html_plenitude = render_card_grid(arco_plenitude)
+
+    # Inject
     final_index = template
-    # Remover o loop Jinja
-    final_index = re.sub(pattern, cards_html, final_index, flags=re.DOTALL)
+    final_index = final_index.replace("{{ arco_despertar }}", html_despertar)
+    final_index = final_index.replace("{{ arco_ritmo }}", html_ritmo)
+    final_index = final_index.replace("{{ arco_plenitude }}", html_plenitude)
     
     final_index = final_index.replace("{{ data_build }}", datetime.now().strftime("%d/%m/%Y %H:%M"))
 
     with open(os.path.join(DIST_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(final_index)
     
-    print(f"🏠 [INDEX] Home page gerada com {len(lessons)} lições.")
+    print(f"🏠 [INDEX] Landing Page gerada. (Despertar: {len(arco_despertar)}, Ritmo: {len(arco_ritmo)}, Plenitude: {len(arco_plenitude)})")
 
 def main():
-    print("🦁 Iniciando Gutenberg Engine v1.0...")
+    print("🦁 Gutenberg Engine v2.0 (Exponential)...")
     clean_dist()
     copy_assets()
     
@@ -147,13 +165,15 @@ def main():
     files = sorted(os.listdir(SOURCE_DIR))
     for filename in files:
         if filename.endswith(".md"):
-            # Ignorar templates e drafts se houver
+             # Simple skip for templates inside the lesson folder if any
+            if "TEMPLATE" in filename: continue
+            
             meta = build_lesson(filename)
             if meta:
                 lessons.append(meta)
     
     build_index(lessons)
-    print("🚀 Build Concluído! Pasta /dist pronta para deploy.")
+    print("🚀 Build Exponencial Concluído!")
 
 if __name__ == "__main__":
     main()
