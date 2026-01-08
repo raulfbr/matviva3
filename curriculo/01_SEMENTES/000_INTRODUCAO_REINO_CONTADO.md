@@ -26,14 +26,7 @@ tgtb: "N/A (Introdução Proprietária)"
 
 ## 📜 1. A Bancada (Mise-en-place)
 
-> [!MESTRA]
-> **A Liturgia da Ordem:**
-> *   **O Conceito:** "Mise-en-place" significa "tudo no lugar". Se você levantar para buscar a vela, o **fio da atenção** se rompe. A bancada pronta é uma extensão da sua mente calma. O caos físico gera caos mental.
->
-> 🎯 **A Ideia Viva (O Segredo):**
-> Pertencimento. A criança precisa sentir que foi *Chamada* — que este lugar foi preparado para ela desde antes de nascer.
->
-> 📦 **Vivência (Exploração Sensorial):**
+> [!MATERIAL]
 > *   [ ] **1. O Concreto:** **O Passaporte do Reino** (Um caderno especial ou folha nobre virgem).
 > *   [ ] **2. O Belo:** Uma bandeja ou toalha limpa para dispor os elementos.
 > *   [ ] **3. O Elo:** O silêncio e o olhar nos olhos.
@@ -42,33 +35,35 @@ tgtb: "N/A (Introdução Proprietária)"
 ---
 
 ## 🎧 2. Áudio-Script (Somente para o Pai)
-*Opção A (Imersão): Coloque o fone e ouça.*
-*Opção B (Leitura): Leia para si mesmo antes de chamar seu filho.*
 
-*"Sossegue o coração. Hoje, você é o embaixador do Rei. A Ideia Viva é o CHAMADO. Lembre-se: o brilho no seu olho vale mais que a explicação perfeita."*
+> [!PAI]
+> *Opção A (Imersão): Coloque o fone e ouça.*
+> *Opção B (Leitura): Leia para si mesmo antes de chamar seu filho.*
+>
+> *"Sossegue o coração. Hoje, você é o embaixador do Rei. A Ideia Viva é o CHAMADO. Lembre-se: o brilho no seu olho vale mais que a explicação perfeita."*
 
 ---
 
 ## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
+
+> [!RITUAL]
+> *[Ação: Acenda a vela, ligue a luz ou abra a cortina. A LUZ deve ser o foco.]*
 >
-> > [!RITUAL]
-> > *[Ação: Acenda a vela, ligue a luz ou abra a cortina. A LUZ deve ser o foco.]*
-> >
-> > **Você diz:**
-> > `[tom de segredo — voz baixa e grave]`
-> > "Eu sou o Portador da Tocha... E hoje, trago esta luz para você."
-> >
-> > "Respire devagar... Deixe as pálpebras pesarem... Pode fechar os olhos."
-> >
-> > *[pausa de 3 segundos — deixe o silêncio pesar]*
-> >
-> > "Imagine um grande teatro silencioso. Leve e calmo."
-> > "Quando o holofote acende, o mundo lá fora silencia. Só existe o aqui e o agora."
-> > "Nossa vela é esse holofote. O Reino Contado vai começar."
-> >
-> > "Quando abrir os olhos... você já estará no **Jardim da Criação**."
-> >
-> > "Pode abrir."
+> **Você diz:**
+> `[tom de segredo — voz baixa e grave]`
+> "Eu sou o Portador da Tocha... E hoje, trago esta luz para você."
+>
+> "Respire devagar... Deixe as pálpebras pesarem... Pode fechar os olhos."
+>
+> *[pausa de 3 segundos — deixe o silêncio pesar]*
+>
+> "Imagine um grande teatro silencioso. Leve e calmo."
+> "Quando o holofote acende, o mundo lá fora silencia. Só existe o aqui e o agora."
+> "Nossa vela é esse holofote. O Reino Contado vai começar."
+>
+> "Quando abrir os olhos... você já estará no **Jardim da Criação**."
+>
+> "Pode abrir."
 
 ---
 
@@ -135,6 +130,7 @@ tgtb: "N/A (Introdução Proprietária)"
 > *"Esta é Íris. Ela rega a semente da **Atenção**."*
 > *"Quando você estiver distraído, ela canta: 'Olha aqui. Só aqui.' e traz você de volta."*
 >
+> [!PAI]
 > **VOCÊ FAZ (O Toque da Matéria):**
 > 1. Peça para a criança **apontar** para cada Guardião no Card assim que Melquior falar o nome.
 > 2. Diga: "Toque no Noé. Toque na Celeste." (Conexão visual-tátil).

@@ -76,29 +76,101 @@ def parse_markdown(filepath):
     html_content = markdown.markdown(body_md, extensions=['fenced_code', 'tables', 'admonition'])
     
     # Processar Admonitions Customizados (Classes CSS)
-    html_content = html_content.replace("<blockquote>\n<p>[!RITUAL]", "<blockquote class='ritual'>\n<p><strong>🕯️ RITUAL</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!MESTRA]", "<blockquote class='mestra'>\n<p><strong>👩‍🏫 MESTRA</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!NARRATIVA]", "<blockquote class='narrativa'>\n<p><strong>📖 NARRATIVA</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!ATIVIDADE]", "<blockquote class='atividade'>\n<p><strong>🛠️ ATIVIDADE</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!CONCEITO]", "<blockquote class='conceito'>\n<p><strong>💡 CONCEITO</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!TIP]", "<blockquote class='tip'>\n<p><strong>🦋 SE QUISER VOAR</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!NOTE]", "<blockquote class='note'>\n<p><strong>📝 NOTA</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!IMPORTANT]", "<blockquote class='important'>\n<p><strong>⚠️ IMPORTANTE</strong>")
+    # Note: simple replace assumes specific structure. 
+    # For robust handling, we target the pattern <blockquote>\n<p>[!TYPE] 
+    # and variations (sometimes no newline if source was tight).
     
-    # Custom Admonitions V3.6
-    html_content = html_content.replace("<blockquote>\n<p>[!MATERIAL]", "<div class='material-card'>\n<h4>🎒 MATERIAL NECESSÁRIO</h4>")
-    html_content = html_content.replace("<blockquote>\n<p>[!FECHAMENTO]", "<blockquote class='fechamento'>\n<p><strong>🏁 FECHAMENTO</strong>")
-    html_content = html_content.replace("<blockquote>\n<p>[!PAI]", "<blockquote class='pai-action'>\n<p><strong>👨‍👧 AÇÃO DO PAI</strong>")
+    replacements = {
+        "[!RITUAL]": ("ritual", "🕯️ RITUAL"),
+        "[!MESTRA]": ("mestra", "👩‍🏫 MESTRA"),
+        "[!NARRATIVA]": ("narrativa", "📖 NARRATIVA"),
+        "[!ATIVIDADE]": ("atividade", "🛠️ ATIVIDADE"),
+        "[!CONCEITO]": ("conceito", "💡 CONCEITO"),
+        "[!TIP]": ("tip", "🦋 SE QUISER VOAR"),
+        "[!NOTE]": ("note", "📝 NOTA"),
+        "[!IMPORTANT]": ("important", "⚠️ IMPORTANTE"),
+        "[!MATERIAL]": ("material-card", "🎒 MATERIAL NECESSÁRIO"),
+        "[!FECHAMENTO]": ("fechamento", "🏁 FECHAMENTO"),
+        "[!PAI]": ("pai-action", "👨‍👧 AÇÃO DO PAI")
+    }
 
-    # Fix: Close div if it was a material card (This is tricky with simple replace, assuming Markdown blockquote closing ends with </blockquote>)
-    # Actually, Markdown converts > content into <blockquote>content</blockquote>.
-    # So if we replace <blockquote>...[!MATERIAL] with <div...> we need to replace the closing </blockquote> with </div> if it matches.
-    # Simple regex won't handle nesting well, but for simple cards it works.
-    # Better approach: Regex sub for the whole block if possible, or just style blockquote.material
-    # Let's use blockquote class='material' for safety instead of Div, then style it in CSS.
-    html_content = html_content.replace("<blockquote>\n<p>[!MATERIAL]", "<blockquote class='material-card'>\n<p><strong>🎒 MATERIAL NECESSÁRIO</strong>")
+    for tag, (cls, title) in replacements.items():
+        # Regex finds <blockquote> followed optionally by newline, then <p> then tag
+        pattern = r"(<blockquote>\s*<p>)" + re.escape(tag)
+        replacement = f"<blockquote class='{cls}'>\n<p><strong>{title}</strong>"
+        html_content = re.sub(pattern, replacement, html_content)
     
     return metadata, html_content
+
+import glob
+import shutil
+from datetime import datetime
+
+# --- BUILD LOGIC ---
+# ... (rest of code)
+
+def build_index(lessons, nav_bar=""):
+    print("🏠 [INDEX] Gerando Home Page K-12...")
+    
+    with open(os.path.join(TEMPLATES_DIR, "layout_index.html"), "r", encoding="utf-8") as f:
+        layout = f.read()
+        
+    final_index = layout
+    
+    # Generate Sections HTML
+    # We will iterate over K12_PHASES
+    
+    # 4. Hero Logic: Resume Button (Mockup)
+    # Inject into hero if possible or replace a placeholder.
+    # Let's verify layout_index placeholders.
+    # Assuming layout has proper structure.
+    # We will inject a Resume Button in the hero paragraph or after h1.
+    
+    sections_html = ""
+    for phase in K12_PHASES:
+        # Filtrar lições desta fase
+        # phase['id'] was inserted into lesson meta
+        p_lessons = [l for l in lessons if l['phase_id'] == phase['id']]
+        
+        # Se for dummy, tratar como empty para mostrar Coming Soon
+        real_lessons = [l for l in p_lessons if "DUMMY" not in l['filename']]
+        
+        is_coming_soon = len(real_lessons) == 0
+        
+        # Progress Logic (Mockup or Calc)
+        total_lessons = 40 if phase['id'] == 'sementes' else 120 # Mock totals for visuals
+        current_count = len(real_lessons)
+        progress_pct = (current_count / total_lessons) * 100
+        
+        progress_html = f"""
+        <div class="phase-progress-container">
+            <div class="phase-progress-bar" style="width: {progress_pct}%;"></div>
+        </div>
+        <div class="phase-stats">
+            <span>{current_count} Lições Disponíveis</span>
+            <span>Meta: {total_lessons}</span>
+        </div>
+        """ if not is_coming_soon else ""
+
+        # Accordion Logic
+        details_open = "open" if phase['id'] in ["vivencia", "sementes"] else "" 
+        
+        sections_html += f"""
+        <details class="phase-accordion" {details_open} id="{phase['id']}">
+            <summary class="phase-summary">
+                <div class="arc-header" style="border-left: 4px solid {phase['color']};">
+                    <span style="color: {phase['color']}; font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">{phase['icon']} FASE {phase['id'].upper()}</span>
+                    <h2>{phase['title']}</h2>
+                    <p>{phase['desc']}</p>
+                    {progress_html}
+                    <span class="accordion-arrow">&#9660;</span>
+                </div>
+            </summary>
+            <div class="accordion-content">
+                {render_card_grid(real_lessons, is_coming_soon)}
+            </div>
+        </details>
+        """
 
 import glob
 
@@ -419,6 +491,21 @@ def build_index(lessons):
         
         is_coming_soon = len(real_lessons) == 0
         
+        # Progress Logic (Mockup or Calc)
+        total_lessons = 40 if phase['id'] == 'sementes' else 120 # Mock totals for visuals
+        current_count = len(real_lessons)
+        progress_pct = (current_count / total_lessons) * 100
+        
+        progress_html = f"""
+        <div class="phase-progress-container">
+            <div class="phase-progress-bar" style="width: {progress_pct}%;"></div>
+        </div>
+        <div class="phase-stats">
+            <span>{current_count} Lições Disponíveis</span>
+            <span>Meta: {total_lessons}</span>
+        </div>
+        """ if not is_coming_soon else ""
+
         # Accordion Logic
         details_open = "open" if phase['id'] in ["vivencia", "sementes"] else "" 
         
@@ -429,6 +516,7 @@ def build_index(lessons):
                     <span style="color: {phase['color']}; font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">{phase['icon']} FASE {phase['id'].upper()}</span>
                     <h2>{phase['title']}</h2>
                     <p>{phase['desc']}</p>
+                    {progress_html}
                     <span class="accordion-arrow">&#9660;</span>
                 </div>
             </summary>
