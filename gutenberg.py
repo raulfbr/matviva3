@@ -217,26 +217,121 @@ def build_index(lessons):
     
     print(f"🏠 [INDEX] Home Page Gerada.")
 
+def collect_metadata():
+    """Passo 1: Coletar metadados de todas as lições."""
+    lessons_data = []
+    if not os.path.exists(SOURCE_DIR):
+        print(f"❌ [ERR] Pasta fonte não encontrada: {SOURCE_DIR}")
+        return []
+
+    files = sorted(os.listdir(SOURCE_DIR))
+    for filename in files:
+        if filename.endswith(".md") and "TEMPLATE" not in filename:
+            filepath = os.path.join(SOURCE_DIR, filename)
+            meta, _ = parse_markdown(filepath) # Só precisamos do meta agora
+            
+            # Adicionar campos extras derivados
+            meta['filename'] = filename.replace(".md", ".html")
+            meta['original_filename'] = filename
+            meta['clean_id'] = meta.get('id', '').replace('MV-S-', 'Lição ')
+            
+            lessons_data.append(meta)
+    
+    # Ordenar por ID ou Filename para garantir sequencia
+    # Assumindo filename "001_..." funciona bem
+    return lessons_data
+
+def render_lesson(meta, prev_meta, next_meta):
+    """Passo 2: Renderizar HTML com links de navegação."""
+    filepath = os.path.join(SOURCE_DIR, meta['original_filename'])
+    _, body_html = parse_markdown(filepath) # Ler corpo novamente (poderia otimizar, mas ok para SSG)
+    
+    with open(os.path.join(TEMPLATE_DIR, "layout_base.html"), "r", encoding="utf-8") as f:
+        template = f.read()
+    
+    # Injetar Dados Básicos
+    output_html = template
+    output_html = output_html.replace("{{ titulo }}", meta.get("titulo", "Sem Título"))
+    output_html = output_html.replace("{{ fase }}", meta.get("fase", "Sementes"))
+    output_html = output_html.replace("{{ meta }}", meta.get("meta", ""))
+    output_html = output_html.replace("{{ guardia }}", meta.get("guardia", "Misterioso"))
+    output_html = output_html.replace("{{ tempo }}", meta.get("tempo", "15 min"))
+    output_html = output_html.replace("{{ local }}", meta.get("local", "O Reino"))
+    output_html = output_html.replace("{{ versao }}", meta.get("versao", "3.6"))
+    output_html = output_html.replace("{{ conteudo }}", body_html)
+    
+    # TGTB Logic
+    tgtb_ref = meta.get("tgtb", "")
+    output_html = output_html.replace("{{ tgtb }}", tgtb_ref)
+
+    # Images Logic
+    guardian_name = meta.get("guardia", "Misterioso").split(" ")[0]
+    image_map = {
+        "Melquior": "melquior-leao.webp",
+        "Celeste": "celeste-raposa.webp",
+        "Bernardo": "bernardo-urso.webp",
+        "Íris": "iris-passarinho-colar.webp",
+        "Noé": "noe-coruja.webp"
+    }
+    
+    loc_name = meta.get("local", "O Reino").lower()
+    loc_img = "local-jardim-central.webp" # Default
+    if "árvore" in loc_name or "arvore" in loc_name: loc_img = "local-arvore-silencio.webp"
+    elif "caverna" in loc_name: loc_img = "local-caverna-recomeco.webp"
+    elif "clareira" in loc_name: loc_img = "local-clareira-perguntas.webp"
+    elif "ninho" in loc_name: loc_img = "local-ninho-mirante.webp"
+    elif "floresta" in loc_name: loc_img = "local-arvore-silencio.webp"
+
+    output_html = output_html.replace("{{ guardia_img }}", f"../assets/img/{image_map.get(guardian_name, 'melquior-leao.webp')}")
+    output_html = output_html.replace("{{ local_img }}", f"../assets/img/{loc_img}")
+
+    # --- NAVIGATION LOGIC ---
+    # Prev Link
+    if prev_meta:
+        prev_html = f'<a href="{prev_meta["filename"]}" class="nav-btn prev">← Anterior: {prev_meta["clean_id"]}</a>'
+    else:
+        prev_html = '<span class="nav-btn disabled">← Início</span>'
+    
+    # Next Link
+    if next_meta:
+        next_html = f'<a href="{next_meta["filename"]}" class="nav-btn next">Próxima: {next_meta["clean_id"]} →</a>'
+    else:
+        next_html = '<a href="../index.html" class="nav-btn next">Concluir Jornada 🏁</a>'
+
+    output_html = output_html.replace("{{ nav_prev }}", prev_html)
+    output_html = output_html.replace("{{ nav_next }}", next_html)
+
+
+    output_path = os.path.join(DIST_SEMENTES, meta['filename'])
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(output_html)
+        
+    print(f"✅ [LESSON] {meta['filename']}")
+
+
 def main():
-    print("🦁 Gutenberg Engine v3.0 (Portal Edition)...")
+    print("🦁 Gutenberg Engine v3.6 (Portal + Visuals + Nav)...")
     clean_dist()
     copy_assets()
     
-    lessons = []
-    # Build Lessons
-    if os.path.exists(SOURCE_DIR):
-        files = sorted(os.listdir(SOURCE_DIR))
-        for filename in files:
-            if filename.endswith(".md"):
-                meta = build_lesson(filename)
-                if meta: lessons.append(meta)
+    # Build Lessons (Two Pass)
+    print("🔄 [PASS 1] Coletando Metadados...")
+    all_lessons = collect_metadata()
+    
+    print(f"🔄 [PASS 2] Renderizando {len(all_lessons)} lições com navegação...")
+    for i, meta in enumerate(all_lessons):
+        prev_meta = all_lessons[i-1] if i > 0 else None
+        next_meta = all_lessons[i+1] if i < len(all_lessons) - 1 else None
+        
+        render_lesson(meta, prev_meta, next_meta)
+
     
     # Build Static Pages
     build_static_pages()
 
     # Build Index
-    build_index(lessons)
-    print("🚀 Portal v3.0 Concluído!")
+    build_index(all_lessons)
+    print("🚀 Portal v3.6 Concluído!")
 
 if __name__ == "__main__":
     main()
