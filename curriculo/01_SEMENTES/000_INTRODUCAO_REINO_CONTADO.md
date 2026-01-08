@@ -100,7 +100,7 @@ tgtb: "N/A (Introdução Proprietária)"
 >
 > *[Vocês caminham até uma árvore enorme. Uma coruja espera.]*
 >
-> ![CARD: Noé](file:///C:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/assets/imagens/cards/web/guardioes/noe-coruja.png)
+> ![CARD: Noé](../assets/img/noe-coruja.webp)
 >
 > **Melquior:**
 > *"Este é Noé. Ele nunca tem pressa. Ele rega a semente da **Paciência**."*
@@ -108,7 +108,7 @@ tgtb: "N/A (Introdução Proprietária)"
 >
 > *[Mais adiante, uma raposa cor de fogo fareja o ar.]*
 >
-> ![CARD: Celeste](file:///C:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/assets/imagens/cards/web/guardioes/celeste-raposa.png)
+> ![CARD: Celeste](../assets/img/celeste-raposa.webp)
 >
 > **Melquior:**
 > *"Esta é Celeste. Ela rega a semente da **Curiosidade**."*
@@ -116,7 +116,7 @@ tgtb: "N/A (Introdução Proprietária)"
 >
 > *[Numa caverna fresca, um urso forte está sentado.]*
 >
-> ![CARD: Bernardo](file:///C:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/assets/imagens/cards/web/guardioes/bernardo-urso.png)
+> ![CARD: Bernardo](../assets/img/bernardo-urso.webp)
 >
 > **Melquior:**
 > *"Este é Bernardo. Ele rega a semente da **Persistência**."*
@@ -124,7 +124,7 @@ tgtb: "N/A (Introdução Proprietária)"
 >
 > *[Um passarinho colorido desce e pousa no ombro de Melquior.]*
 >
-> ![CARD: Íris](file:///C:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/assets/imagens/cards/web/guardioes/iris-passarinho.png)
+> ![CARD: Íris](../assets/img/iris-passarinho-colar.webp)
 >
 > **Melquior:**
 > *"Esta é Íris. Ela rega a semente da **Atenção**."*
