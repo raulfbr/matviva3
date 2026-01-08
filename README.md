@@ -36,6 +36,13 @@ A "carne" do projeto. Milhares de ativos educacionais organizados por ciclos de 
 
 ---
 
+### 🦁 O Motor (Gutenberg v3.6)
+O projeto roda sobre um gerador de sites estático customizado (`gutenberg.py`) que:
+1.  **Converte Markdown para HTML:** Preservando a semântica e acessibilidade.
+2.  **Visuals Engine:** Mapeia automaticamente Guardiões e Locais para assets otimizados.
+3.  **Image Optimizer:** Converte uploads brutos para WebP automaticamente.
+4.  **Family Dashboard:** Gera o "Painel do Lar" para gestão de atmosfera e ritmo.
+
 ## 💻 Tech Stack & Pipeline (Vercel Ready)
 Este projeto utiliza uma abordagem **"Doc-as-Code"**:
 1.  **Input:** Todo o conteúdo é escrito em **Markdown** puro.
