@@ -3,12 +3,13 @@ id: MV-S-002
 titulo: "As Janelas do Castelo (Ordem e Espaço)"
 fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
-versao: 3.5 (Sovereign Positive)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "Bernardo"
 local: "O Muro da Fortaleza"
 tempo: "15 min"
 meta: "🏰 Habitar as Janelas da Fortaleza e instaurar a Ordem Real nas pedras preciosas."
+tgtb: "Math K, Lesson 4 (Adaptado)"
 ---
 
 # 🌿 As Janelas do Castelo (Ordem e Espaço)

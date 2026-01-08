@@ -122,5 +122,159 @@ meta: "🏰 Conquistar o equilíbrio do Oito e a persistência do Nove através 
 ---
 ### ✅ Auditoria da Mestra (Veredito CM)
 - [ ] Houve a caminhada no 8 (Steiner)?
-- [ ] O conceito de persistência de Bernardo foi vivenciado?
+- [ ] O conceito de persistência de Bernardo fotgtb: "Math K, Lesson 8"
+---
+
+# 🌿 A Dança dos Pares (Par e Ímpar)
+
+> [!IMPORTANT]
+> **Para o Pai/Mãe (Leia antes de tudo):**
+> Você não precisa ser um ator de teatro nem um professor perfeito. O "Reino" acontece no brilho dos olhos do seu filho, não na sua performance. Se você errar ou gaguejar, ria junto. A graça vale mais que a técnica.
+>
+> > [!NOTE]
+> > **Protocolo de Impecabilidade:**
+> > Este roteiro foi desenhado para ser lido com **Alma**. Não corra. Respeite as pausas. Você é o Portador da Tocha, não um leitor de notícias. A "Ideia Viva" não é um dado, é um *encontro*.
+
+---
+
+## 📜 1. A Bancada (Mise-en-place)
+
+> [!MESTRA]
+> **A Liturgia da Ordem:**
+> *   **O Conceito:** O par é a amizade; o ímpar é o "um-que-sobra" (e procura par).
+>
+> 🎯 **A Ideia Viva:**
+> A dança social dos números. Alguns andam de mãos dadas (2, 4, 6), outros têm um líder (1, 3, 5).
+>
+> 📦 **Vivência (Exploração Sensorial):**
+> *   [ ] **1. O Concreto:** 8 meias (4 pares) ou 8 sapatos.
+> *   [ ] **2. O Belo:** Música suave de fundo (opcional).
+> *   [ ] **3. O Sagrado:** A vela.
+
+---
+
+## 🎧 2. Áudio-Script (Somente para o Pai)
+*Opção A (Imersão): Coloque o fone e ouça.*
+*Opção B (Leitura Rápida): Leia para si mesmo.*
+
+*"Respire. Bernardo gosta de firmeza. A lição hoje é sobre estrutura. Par e Ímpar não é apenas matemática; é sobre companheirismo e singularidade. Antes de chamar o Viajante, deixe os pares de meias misturados. O segredo deste encontro está na 'união'... prepare-se para encontrar os pares com ele."*
+
+---
+
+## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
+
+> [!RITUAL]
+> *[Ação: Acenda a vela.]*
+>
+> **Você diz:**
+> "Eu sou o Portador da Tocha. Hoje, Bernardo nos chama para a Fortaleza de Pedra."
+>
+> `[tom de segredo]`
+> "Feche os olhos... Respire forte como um urso... Sinta a rocha firme sob os pés..."
+>
+> "Abra os olhos. Bernardo está sorrindo."
+
+---
+
+## 🗺️ 4. A Jornada (A Dança do Salão)
+
+> [!NARRATIVA]
+> *[Cenário: Um grande salão de pedra com música alegre. Bernardo, o urso, está tentando organizar sapatos de dança.]*
+>
+> **Narrador:**
+> "Você abre os olhos. Bernardo está uma confusão! Ele tem muitos sapatos, mas eles estão todos misturados. Ele precisa ir para o Baile do Reino, mas não consegue achar os parceiros."
+>
+> ![CARD: Bernardo e os Sapatos](bernardo-sapatos.png)
+>
+> **Bernardo:**
+> `[tom de voz grosso e amigável]`
+> *"Ho, ho, Viajante! Ajude este velho urso. No Reino, ninguém dança sozinho. O Dois dança com o Dois. O Quatro dança em duas duplas. Mas eu tenho um sapato aqui que está chorando porque está sem par. Você consegue achar o amigo dele?"*
+
+---
+
+## 💡 5. A Ideia Viva (O Abraço dos Números)
+
+> [!CONCEITO]
+> **Bernardo:**
+> *"Olhe para o Número 2: são dois amigos abraçados. Olhe para o Número 3: dois abraçados e um olhando para cima esperando alguém. Quando todos têm par, chamamos de PAR. Quando sobra um, chamamos de ÍMPAR (sem-par)."*
+>
+> `[pausa de entendimento]`
+>
+> **VOCÊ FAZ (O Teste do Abraço):**
+> 1. Pegue 3 meias. Tente formar casais. "Ops! Sobrou uma! O 3 é ÍMPAR."
+> 2. Pegue 4 meias. Forme dois casais. "Perfeito! O 4 é PAR."
+
+---
+
+## 🧱 6. O Caminho Dourado (Mãos na Massa)
+
+> [!ATIVIDADE]
+> **A Missão Concreta:**
+> *"Viajante, vamos organizar o Baile das Meias?"*
+>
+> 1.  **Fase 1 (Ação):** Jogue todas as 8 meias no chão. Peça para a criança fazer os "casamentos" e contar os pares (1 par, 2 pares, 3 pares, 4 pares).
+> 2.  **Fase 2 (Pictórico):**
+>     ![CARD: O Baile dos Números](baile-numeros.png)
+>     Desenhe 5 bolinhas. Circule-as de duas em duas. Mostre a bolinha que sobrou sozinha.
+> 3.  **Fase 3 (Abstrato - Desafio):** "O número 5 é Par ou Ímpar? Use os dedos para ver se sobra um!"
+
+---
+
+## 🦋 7. Se Quiser Voar (Opcional)
+
+> [!TIP]
+> **O Corpo Par:**
+> Pergunte: "Nós temos coisas pares no corpo?" (Olhos, Orelhas, Mãos, Pés).
+> "E coisas ímpares?" (Nariz, Boca, Umbigo).
+
+---
+
+## 🗣️ 8. Momento de Conversa (Narração da Alma)
+
+> [!NARRAÇÃO]
+> **Bernardo pergunta:**
+> *"É bom ter um amigo para dançar, não é? Mas também é bom ser único como o nariz. O que você prefere ser hoje: um par abraçado ou um ímpar aventureiro?"*
+>
+> `[pausa - respeite a resposta]`
+
+---
+
+## 🕊️ 9. Despedida & Bênção
+
+> [!FECHAMENTO]
+> **Bernardo:**
+> *"Obrigado pela ordem, Viajante. Agora o baile pode começar!"*
+>
+> **(Entrega do Token):** *"Leve este par de sementes coladas (ou duas cerejas). Elas nunca se separam."*
+>
+> *"Na próxima jornada, vamos encontrar formas mágicas na floresta."*
+
+---
+
+## 🌌 10. Ritual de Encerramento (Ordem & Bênção)
+
+> [!RITUAL]
+> **Você diz:**
+> "O Reino adormece na alegria da dança."
+>
+> *[Ação: Apague a vela.]*
+
+---
+
+## 🏛️ 11. Por que isso importa? (A Cátedra dos Pais)
+
+> [!NOTE]
+> **A Autoridade para o Portador da Tocha:**
+>
+> 🧠 **O Cérebro da Criança:**
+> Distinguir Par/Ímpar é a base para a divisão por 2 (metades). É uma propriedade fundamental da Teoria dos Números.
+>
+> 🌌 **A Ordem do Reino:**
+> Deus fez o homem e a mulher (Par). Fez os animais em pares na Arca. A dualidade é parte da estrutura da vida, mas a Unidade (Deus) é singular.
+
+---
+
+## 🛡️ 12. Auditoria da Mestra (Veredito CM)
+- [ ] O conceito de "sobra um" foi visualizado?
+- [ ] A atividade das meias foi realizada?
 - [ ] O gancho narrativo aponta corretamente para a Lição 009?

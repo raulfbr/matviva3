@@ -264,7 +264,73 @@ def render_lesson(meta, prev_meta, next_meta):
     tgtb_ref = meta.get("tgtb", "")
     output_html = output_html.replace("{{ tgtb }}", tgtb_ref)
 
-    # Images Logic
+    # --- CARD SYSTEM (Inline Image Processor) ---
+    # Encontra todas as tags <img src="..."> e reescreve para Assets Dist
+    # Regex para capturar src="algo"
+    import re
+    def replace_img_src(match):
+        src = match.group(1)
+        alt = match.group(2) if match.group(2) else ""
+        
+        # Se for link externo (http), ignora
+        if src.startswith("http") and "placeholder" not in src:
+            return f'<img src="{src}" alt="{alt}" class="lesson-card">'
+            
+        # Tenta extrair apenas o nome do arquivo
+        filename = os.path.basename(src)
+        
+        # Remove extensão antiga e põe .webp
+        base_name = os.path.splitext(filename)[0]
+        webp_name = f"{base_name}.webp"
+        
+        # Caminho final no Dist
+        dist_path = f"../assets/img/{webp_name}"
+        
+        # Verifica se existe no source (para saber se o optimizer gerou)
+        # O optimizer roda antes, então checamos se o arquivo existe em dist/assets/img
+        # (Mas aqui estamos rodando o script, então podemos checar dist/assets/img diretamente)
+        real_dist_path_abs = os.path.join(DIST_IMG, webp_name)
+        
+        img_html = ""
+        if os.path.exists(real_dist_path_abs):
+            img_html = f'<div class="card-image-container"><img src="{dist_path}" alt="{alt}" class="lesson-card"></div>'
+        else:
+            # Fallback Card
+            img_html = f'''
+            <div class="card-missing">
+                <span class="missing-icon">🖼️</span>
+                <p><strong>Arte Faltante:</strong> {base_name}</p>
+                <small>Adicione "{base_name}.png" em <code>curriculo/_SISTEMA/imagens</code></small>
+            </div>
+            '''
+        return img_html
+
+    # Regex para substituir <img src="X" alt="Y" /> gerado pelo Markdown
+    # Padrão do python-markdown é <img alt="alt" src="src" /> ou <img src="src" alt="alt" />
+    # Vamos usar uma abordagem mais robusta: processar o markdown raw antes? ou o html depois?
+    # O HTML é mais fácil se o regex for bom.
+    
+    # Regex simplificado para capturar imagens
+    # Padrão 1: src="..." alt="..."
+    body_html = re.sub(r'<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>', replace_img_src, body_html)
+    
+    # Padrão 2: alt="..." src="..." (Markdown as vezes gera assim)
+    def replace_img_alt_first(match):
+        # Neste caso group(1) é alt, group(2) é src
+        # Criamos um objeto fake compatível com replace_img_src que espera (src, alt)
+        alt = match.group(1)
+        src = match.group(2)
+        
+        # Chamamos a função original mas simulando o match group
+        class MatchMock:
+            def group(self, n):
+                return src if n == 1 else alt
+        
+        return replace_img_src(MatchMock())
+
+    body_html = re.sub(r'<img[^>]+alt="([^"]*)"[^>]*src="([^"]+)"[^>]*>', replace_img_alt_first, body_html)
+
+    output_html = output_html.replace("{{ conteudo }}", body_html)
     guardian_name = meta.get("guardia", "Misterioso").split(" ")[0]
     image_map = {
         "Melquior": "melquior-leao.webp",

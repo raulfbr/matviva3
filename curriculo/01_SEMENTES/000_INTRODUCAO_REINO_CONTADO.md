@@ -9,6 +9,7 @@ guardia: "Melquior"
 local: "O Grande Portão (Jardim da Criação)"
 tempo: "15-20 min"
 meta: "🕯️ Receber a herança do Reino e conhecer os Guardiões."
+tgtb: "N/A (Introdução Proprietária)"
 ---
 
 # 🌿 O Início de Tudo (A Criação)

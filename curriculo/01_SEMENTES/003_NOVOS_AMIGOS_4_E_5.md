@@ -91,7 +91,7 @@ tgtb: "Lesson 3 (Números iniciais)"
 > **Íris:**
 > *"Olhe aquela árvore: Quatro folhas formam um quadrado perfeito... e uma quinta folha abraça todas elas. Agora, olhe para a sua mão."*
 >
-> ![CARD: A Mão das 5 Sementes](https://via.placeholder.com/800x400/B89B5E/FFFFFF?text=Mao+com+5+Sementes)
+> ![CARD: A Mão das 5 Sementes](mao-com-5-sementes.png)
 >
 > `[pausa de maravilha - 5 segundos]`
 >

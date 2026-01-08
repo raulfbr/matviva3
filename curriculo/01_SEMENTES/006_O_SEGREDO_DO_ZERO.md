@@ -121,7 +121,21 @@ meta: "🌑 Habitar o Silêncio de Noé e contemplar o mistério do Zero como or
 > *[Ação: Apague a vela.]*
 
 ---
-### ✅ Auditoria da Mestra (Veredito CM)
+
+## 🏛️ 11. Por que isso importa? (A Cátedra dos Pais)
+
+> [!NOTE]
+> **A Autoridade para o Portador da Tocha:**
+>
+> 🧠 **O Cérebro da Criança:**
+> Zero é o conceito abstrato mais difícil. Historicamente, civilizações inteiras (como os romanos) não tinham o zero. Ensinar o Zero como "conjunto vazio" (algo que existe, mas não tem elementos) é vital para a álgebra futura.
+>
+> 🌌 **A Ordem do Reino:**
+> Deus criou o mundo *Ex Nihilo* (do nada). O Zero nos lembra da nossa dependência total. Sem Ele, somos Zero. Com Ele, somos infinitos.
+
+---
+
+## 🛡️ 12. Auditoria da Mestra (Veredito CM)
 - [ ] O Zero foi apresentado como 'descanso' e não apenas 'nada'?
 - [ ] Houve experiência rítmica de respiração?
 - [ ] O gancho narrativo aponta corretamente para a Lição 007?

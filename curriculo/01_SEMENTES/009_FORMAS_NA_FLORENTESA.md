@@ -118,11 +118,39 @@ meta: "🦁 Celebrar a Plenitude do Dez e sentir a força da dezena no Grande Sa
 > [!RITUAL]
 > **Você diz:**
 > "O Reino adormece na abundância do Dez."
+> **Celeste:**
+> *"Seus olhos agora são de detetive. O mundo nunca mais será apenas 'coisas'. Agora são Formas!"*
+>
+> **(Entrega do Token):** *"Leve este botão (círculo). Ele fecha sua roupa com um abraço sem fim."*
+>
+> *"Na próxima jornada, vamos seguir o Caminho das Estrelas até o Dez!"*
+
+---
+
+## 🌌 10. Ritual de Encerramento (Ordem & Bênção)
+
+> [!RITUAL]
+> **Você diz:**
+> "O Reino adormece na perfeição das formas."
 >
 > *[Ação: Apague a vela.]*
 
 ---
-### ✅ Auditoria da Mestra (Veredito CM)
-- [ ] O 10 foi celebrado como uma conquista solene?
-- [ ] Houve a experiência física de '2 mãos'?
+
+## 🏛️ 11. Por que isso importa? (A Cátedra dos Pais)
+
+> [!NOTE]
+> **A Autoridade para o Portador da Tocha:**
+>
+> 🧠 **O Cérebro da Criança:**
+> Reconhecimento de padrões (Pattern Recognition) é a base da leitura (letras são formas) e da matemática. Distinguir um 'b' de um 'd' é geometria (rotação/espelhamento).
+>
+> 🌌 **A Ordem do Reino:**
+> Deus é o Arquiteto. "Ele traçou um círculo sobre a face do abismo" (Provérbios 8:27). As formas não são invenções humanas; são descobertas divinas.
+
+---
+
+## 🛡️ 12. Auditoria da Mestra (Veredito CM)
+- [ ] O conceito de "sem pontas" vs "com pontas" foi sentido?
+- [ ] A caça ao tesouro das formas foi realizada?
 - [ ] O gancho narrativo aponta corretamente para a Lição 010?
