@@ -69,6 +69,10 @@ def parse_markdown(filepath):
                 metadata[key.strip()] = value.strip().replace('"', '')
 
     # Converter Markdown para HTML
+    # Remove HUB Footer Leak (Raw Markdown)
+    body_md = re.sub(r'\*\*\[00_HUB\].*', '', body_md)
+    body_md = re.sub(r'\*Lição Canônica.*', '', body_md)
+    
     html_content = markdown.markdown(body_md, extensions=['fenced_code', 'tables', 'admonition'])
     
     # Processar Admonitions Customizados (Classes CSS)
@@ -80,6 +84,19 @@ def parse_markdown(filepath):
     html_content = html_content.replace("<blockquote>\n<p>[!TIP]", "<blockquote class='tip'>\n<p><strong>🦋 SE QUISER VOAR</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!NOTE]", "<blockquote class='note'>\n<p><strong>📝 NOTA</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!IMPORTANT]", "<blockquote class='important'>\n<p><strong>⚠️ IMPORTANTE</strong>")
+    
+    # Custom Admonitions V3.6
+    html_content = html_content.replace("<blockquote>\n<p>[!MATERIAL]", "<div class='material-card'>\n<h4>🎒 MATERIAL NECESSÁRIO</h4>")
+    html_content = html_content.replace("<blockquote>\n<p>[!FECHAMENTO]", "<blockquote class='fechamento'>\n<p><strong>🏁 FECHAMENTO</strong>")
+    html_content = html_content.replace("<blockquote>\n<p>[!PAI]", "<blockquote class='pai-action'>\n<p><strong>👨‍👧 AÇÃO DO PAI</strong>")
+
+    # Fix: Close div if it was a material card (This is tricky with simple replace, assuming Markdown blockquote closing ends with </blockquote>)
+    # Actually, Markdown converts > content into <blockquote>content</blockquote>.
+    # So if we replace <blockquote>...[!MATERIAL] with <div...> we need to replace the closing </blockquote> with </div> if it matches.
+    # Simple regex won't handle nesting well, but for simple cards it works.
+    # Better approach: Regex sub for the whole block if possible, or just style blockquote.material
+    # Let's use blockquote class='material' for safety instead of Div, then style it in CSS.
+    html_content = html_content.replace("<blockquote>\n<p>[!MATERIAL]", "<blockquote class='material-card'>\n<p><strong>🎒 MATERIAL NECESSÁRIO</strong>")
     
     return metadata, html_content
 
@@ -168,12 +185,37 @@ def render_lesson_template(meta, body_content, prev_link=None, next_link=None):
     elif "clareira" in loc_name: loc_img = "local-clareira-perguntas.webp"
     elif "ninho" in loc_name: loc_img = "local-ninho-mirante.webp"
     
+    # Remove HUB Footer Leak
+    body_content = re.sub(r'\*\*\[00_HUB\].*', '', body_content)
+    body_content = re.sub(r'\*Lição Canônica.*', '', body_content)
+    
     # --- NAVIGATION LOGIC ---
+    # Top Breadcrumb (Voltar ao Reino) - Redesign
+    home_link = '../index.html'
+    
+    # Determine Hub (Sementes, Raizes etc)
+    phase_id = meta.get("phase_id", "sementes") # We might not have phase_id in meta dict here unless scanned? 
+    # scan_markdown_files injected it into lesson_data, not meta dict directly? 
+    # Ah, in scan_markdown_files: lesson_data = { "meta": meta, "phase_id": ... }
+    # But parse_markdown returns (meta, body). 
+    # render_lesson_template receives meta. 
+    # We need to ensure phase_id is passed to or available in render_lesson_template or meta.
+    # scan_markdown_files puts it in lesson_data. build_lessons calls render_lesson_template.
+    # Let's rely on standard Breadcrumb for now.
+    
+    nav_header = f"""
+    <nav class="lesson-breadcrumb">
+        <a href="{home_link}" class="breadcrumb-item">🏰 O Reino</a>
+        <span class="separator">/</span>
+        <span class="current">{meta.get('fase', 'Lição')}</span>
+    </nav>
+    """
+
     # Prev Link
     if prev_link:
         nav_prev = f'<a href="{prev_link}" class="nav-btn prev">← Anterior</a>'
     else:
-        nav_prev = '<a href="../index.html" class="nav-btn prev">🏠 Início</a>'
+        nav_prev = f'<a href="{home_link}" class="nav-btn prev">🏠 Início</a>'
         
     # Next Link
     if next_link:
@@ -185,7 +227,11 @@ def render_lesson_template(meta, body_content, prev_link=None, next_link=None):
     html = template
     html = html.replace("{{ titulo }}", meta.get("titulo", "Sem Título"))
     html = html.replace("{{ meta }}", meta.get("meta", ""))
-    html = html.replace("{{ conteudo }}", body_content)
+    
+    # Inject Breadcrumb at top of content (or body start)
+    # The layout_base doesn't have a slot for it? 
+    # Let's prepend it to CONTENT if no slot.
+    html = html.replace("{{ conteudo }}", nav_header + body_content)
     
     # Inject Nav (Manually if template doesn't support placeholders yet, but let's try injecting into wrapper)
     # Hack: Inject nav buttons at end of content if placeholders missing
@@ -300,7 +346,17 @@ def render_card_grid(lessons_list, is_coming_soon=False):
         guardian = meta.get('guardia', 'Reino')
         time = meta.get('tempo', 'N/A')
         tgtb_ref = meta.get('tgtb', '')
-        lid = meta.get('id', '')
+        raw_id = meta.get('id', '')
+        
+        # Clean ID Logic
+        clean_id = raw_id.replace("MV-S-", "").replace("_", " ").strip()
+        # Optionally, if it's just a number like 001, keep it. 
+        # For Vivencia 00_VIVENCIA... -> "Guia do Pai" is better? 
+        # User wants "encolher", maybe shorten the text?
+        # Let's just make it cleaner for now.
+        if clean_id.startswith("00 "): clean_id = clean_id[3:]
+        
+        lid = clean_id
         
         # Badge Logic
         badge_html = ""
@@ -363,17 +419,23 @@ def build_index(lessons):
         
         is_coming_soon = len(real_lessons) == 0
         
+        # Accordion Logic
+        details_open = "open" if phase['id'] in ["vivencia", "sementes"] else "" 
+        
         sections_html += f"""
-        <section class="section" id="{phase['id']}">
-            <div class="container">
-                <div class="arc-header" style="border-left: 4px solid {phase['color']}; padding-left: 1rem; margin-bottom:1.5rem;">
+        <details class="phase-accordion" {details_open} id="{phase['id']}">
+            <summary class="phase-summary">
+                <div class="arc-header" style="border-left: 4px solid {phase['color']};">
                     <span style="color: {phase['color']}; font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">{phase['icon']} FASE {phase['id'].upper()}</span>
                     <h2>{phase['title']}</h2>
                     <p>{phase['desc']}</p>
+                    <span class="accordion-arrow">&#9660;</span>
                 </div>
+            </summary>
+            <div class="accordion-content">
                 {render_card_grid(real_lessons, is_coming_soon)}
             </div>
-        </section>
+        </details>
         """
     
     # Hero Logic: We need to replace the content of layout_index.html dynamically

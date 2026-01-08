@@ -31,8 +31,10 @@ tgtb: "Lesson 3 (Números iniciais)"
 >
 > 🎯 **A Ideia Viva (O Segredo):**
 > A mão do seu filho é a primeira "ferramenta de contagem" que Deus deu. Hoje ele descobre que carrega o número 5 consigo o tempo todo, como um mapa impresso no corpo.
->
-> 📦 **Vivência (Exploração Sensorial):**
+
+<!-- break -->
+
+> [!MATERIAL]
 > *   [ ] **1. O Concreto:** 5 sementes grandes (feijão, pedras polidas ou nozes).
 > *   [ ] **2. O Belo:** Um pequeno prato de madeira ou tecido para o "ninho".
 > *   [ ] **3. O Elo:** O Card do Número 3 (da lição anterior).
