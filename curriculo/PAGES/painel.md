@@ -17,9 +17,27 @@ titulo: "Painel do Lar"
 > [!NOTE]
 > **Regra de Ouro:** A constância vence a intensidade. O ideal é o **Pouco e Sempre**.
 
-*   [ ] **Segunda:** O Despertar (Lição Nova - 15 min)
-*   [ ] **Quarta:** O Cultivo (Revisão ou Prática - 10 min)
-*   [ ] **Sexta:** O Banquete (Leitura Viva ou Natureza - Livre)
+| Dia | Foco | Tempo |
+|-----|------|-------|
+| 🌅 **Segunda** | O Despertar — Lição Nova | 15 min |
+| 🔬 **Quarta** | O Cultivo — Revisão ou Prática | 10 min |
+| 🎨 **Sexta** | O Banquete — Leitura Viva ou Natureza | Livre |
+| 🌿 *Outros dias* | Vida Real — Contar coisas, medir receitas, observar o céu | Orgânico |
+
+---
+
+## 📊 Estado do Dia (Quick Check)
+
+> [!TIP]
+> **Antes de começar, faça um rápido diagnóstico:**
+
+| 🟢 Verde | 🟡 Amarelo | 🔴 Vermelho |
+|----------|------------|-------------|
+| Criança calma | Criança agitada | Criança cansada/doente |
+| Pai/Mãe presente | Pai/Mãe com pressa | Pai/Mãe irritado |
+| Ambiente tranquilo | Alguma distração | Caos total |
+
+**Se for 🔴 Vermelho:** Não force. Leia uma história curta ou vá ao parque. *A matemática espera.*
 
 ---
 
@@ -47,8 +65,21 @@ titulo: "Painel do Lar"
 
 ---
 
-##  compasso Atalhos do Reino
+## 📥 Downloads & Templates
 
-*   **[🌱 Sementes (0-6 anos)](../index.html)**: O Início da Jornada.
+> [!MATERIAL]
+> **Materiais para Imprimir:**
+> - 📄 **Calendário Semanal** (em breve)
+> - 📄 **Checklist de Liturgia** (em breve)
+> - 📄 **Tracker de Hábitos** (em breve)
+>
+> *Estes materiais estão sendo preparados com carinho. Volte em breve!*
+
+---
+
+## 🧭 Atalhos do Reino
+
+*   **[🌱 Sementes (0-6 anos)](../index.html#sementes)**: O Início da Jornada.
 *   **[🌳 Raízes (7+ anos)](../index.html#raizes)**: *Em construção.*
-*   **[📜 Banquete da Poesia](../materiais-complementares/poesia.html)**: *Em construção.*
+*   **[📖 Livro Dourado](livro_dourado.html)**: A História para Ler em Voz Alta.
+*   **[📜 O Manifesto](manifesto.html)**: Os 5 Artigos da Nossa Fé.
