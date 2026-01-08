@@ -9,6 +9,7 @@ guardia: "Celeste"
 local: "A Trilha das Sementes"
 tempo: "15 min"
 meta: "💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e do ritmo do corpo."
+tgtb: "Level K / Lição 1"
 ---
 
 # 🌿 Os Primeiros Números (1 a 3)

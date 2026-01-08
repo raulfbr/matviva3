@@ -6,9 +6,11 @@ from datetime import datetime
 
 # --- CONFIG ---
 SOURCE_DIR = "curriculo/01_SEMENTES"
+PAGES_DIR = "curriculo/PAGES"
 TEMPLATE_DIR = "curriculo/_SISTEMA/TEMPLATES"
 DIST_DIR = "dist"
 DIST_SEMENTES = os.path.join(DIST_DIR, "sementes")
+DIST_PAGES = os.path.join(DIST_DIR, "pages")
 
 def clean_dist():
     """Limpa a pasta dist para um build fresco."""
@@ -20,12 +22,12 @@ def clean_dist():
             print(f"⚠️ [WARN] Não foi possível remover completamente {DIST_DIR}: {e}")
     
     os.makedirs(DIST_SEMENTES, exist_ok=True)
-    print(f"✨ [INIT] Pasta {DIST_DIR} pronta.")
+    os.makedirs(DIST_PAGES, exist_ok=True)
+    print(f"✨ [INIT] Dist e Subpastas prontas.")
 
 def copy_assets():
     """Copia o CSS."""
     shutil.copy(os.path.join(TEMPLATE_DIR, "style.css"), os.path.join(DIST_DIR, "style.css"))
-    # shutil.copytree("assets", os.path.join(DIST_DIR, "assets")) # Assets placeholder
     print(f"🎨 [ASSETS] style.css copiado.")
 
 def parse_markdown(filepath):
@@ -59,6 +61,7 @@ def parse_markdown(filepath):
     html_content = html_content.replace("<blockquote>\n<p>[!CONCEITO]", "<blockquote class='conceito'>\n<p><strong>💡 CONCEITO</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!TIP]", "<blockquote class='tip'>\n<p><strong>🦋 SE QUISER VOAR</strong>")
     html_content = html_content.replace("<blockquote>\n<p>[!NOTE]", "<blockquote class='note'>\n<p><strong>📝 NOTA</strong>")
+    html_content = html_content.replace("<blockquote>\n<p>[!IMPORTANT]", "<blockquote class='important'>\n<p><strong>⚠️ IMPORTANTE</strong>")
     
     return metadata, html_content
 
@@ -67,8 +70,9 @@ def build_lesson(filename):
     filepath = os.path.join(SOURCE_DIR, filename)
     metadata, body_html = parse_markdown(filepath)
     
-    # Filter: Process only valid lessons (skip templates/drafts if needed)
-    
+    # Filter: Skip templates
+    if "TEMPLATE" in filename: return None
+
     with open(os.path.join(TEMPLATE_DIR, "layout_base.html"), "r", encoding="utf-8") as f:
         template = f.read()
     
@@ -83,23 +87,60 @@ def build_lesson(filename):
     output_html = output_html.replace("{{ versao }}", metadata.get("versao", "3.6"))
     output_html = output_html.replace("{{ conteudo }}", body_html)
     
+    # TGTB Logic (If empty, remove line or hide)
+    tgtb_ref = metadata.get("tgtb", "")
+    output_html = output_html.replace("{{ tgtb }}", tgtb_ref)
+    
     output_filename = filename.replace(".md", ".html")
     with open(os.path.join(DIST_SEMENTES, output_filename), "w", encoding="utf-8") as f:
         f.write(output_html)
         
-    print(f"✅ [BUILD] {output_filename}")
+    print(f"✅ [LESSON] {output_filename}")
     
     metadata['filename'] = output_filename
     metadata['original_filename'] = filename
+    # Remove ugly MV-S prefix for display logic if needed
+    metadata['clean_id'] = metadata.get('id', '').replace('MV-S-', 'Lição ')
     return metadata
 
+def build_static_pages():
+    """Constrói páginas estáticas (Quem Somos, Metodo, etc)."""
+    if not os.path.exists(PAGES_DIR):
+        return
+
+    with open(os.path.join(TEMPLATE_DIR, "layout_page.html"), "r", encoding="utf-8") as f:
+        template = f.read()
+
+    for filename in os.listdir(PAGES_DIR):
+        if filename.endswith(".md"):
+            filepath = os.path.join(PAGES_DIR, filename)
+            metadata, body_html = parse_markdown(filepath)
+            
+            output_html = template
+            output_html = output_html.replace("{{ titulo }}", metadata.get("titulo", "Página"))
+            output_html = output_html.replace("{{ conteudo }}", body_html)
+            
+            output_filename = filename.replace(".md", ".html")
+            with open(os.path.join(DIST_PAGES, output_filename), "w", encoding="utf-8") as f:
+                f.write(output_html)
+            print(f"📄 [PAGE] {output_filename}")
+
 def render_card_grid(lessons_subset):
-    """Gera o HTML do Grid de Cards para um subconjunto de lições."""
+    """Gera o HTML do Grid de Cards."""
     html = ""
     for licao in lessons_subset:
+        # TGTB Badge Logic
+        tgtb_val = licao.get('tgtb', '')
+        tgtb_html = ""
+        if tgtb_val and "{{" not in tgtb_val: # Avoid unreplaced template strings
+             tgtb_html = f'<span class="badge-tgtb" title="Baseado em {tgtb_val}">📘 {tgtb_val}</span>'
+
         card = f"""
         <a href="sementes/{licao['filename']}" class="card">
-            <span class="card-id">{licao.get('id', 'MV-S-???')}</span>
+            <div class="card-header-row">
+                <span class="card-id">{licao.get('clean_id', '???')}</span>
+                {tgtb_html}
+            </div>
             <h3 class="card-title">{licao.get('titulo')}</h3>
             <p class="card-desc">{licao.get('meta')}</p>
             <div class="card-footer">
@@ -112,68 +153,55 @@ def render_card_grid(lessons_subset):
     return html
 
 def build_index(lessons):
-    """Constrói a Landing Page com Arcos."""
+    """Constrói a Landing Page."""
     with open(os.path.join(TEMPLATE_DIR, "layout_index.html"), "r", encoding="utf-8") as f:
         template = f.read()
 
-    # Buckets (Arcos)
-    arco_despertar = []  # 000 - 003
-    arco_ritmo = []      # 004 - 010
-    arco_plenitude = []  # 011 +
+    arco_despertar = []
+    arco_ritmo = [] 
+    arco_plenitude = []
     
-    # Simple sorting logic based on filename prefix (000, 001...)
     for licao in lessons:
         fname = licao['original_filename']
         try:
             num = int(fname.split('_')[0])
-            if num <= 3:
-                arco_despertar.append(licao)
-            elif num <= 10:
-                arco_ritmo.append(licao)
-            else:
-                arco_plenitude.append(licao)
+            if num <= 3: arco_despertar.append(licao)
+            elif num <= 10: arco_ritmo.append(licao)
+            else: arco_plenitude.append(licao)
         except ValueError:
-            # Fallback for non-numbered files
             arco_plenitude.append(licao)
 
-    # Render Grids
-    html_despertar = render_card_grid(arco_despertar)
-    html_ritmo = render_card_grid(arco_ritmo)
-    html_plenitude = render_card_grid(arco_plenitude)
-
-    # Inject
     final_index = template
-    final_index = final_index.replace("{{ arco_despertar }}", html_despertar)
-    final_index = final_index.replace("{{ arco_ritmo }}", html_ritmo)
-    final_index = final_index.replace("{{ arco_plenitude }}", html_plenitude)
-    
+    final_index = final_index.replace("{{ arco_despertar }}", render_card_grid(arco_despertar))
+    final_index = final_index.replace("{{ arco_ritmo }}", render_card_grid(arco_ritmo))
+    final_index = final_index.replace("{{ arco_plenitude }}", render_card_grid(arco_plenitude))
     final_index = final_index.replace("{{ data_build }}", datetime.now().strftime("%d/%m/%Y %H:%M"))
 
     with open(os.path.join(DIST_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(final_index)
     
-    print(f"🏠 [INDEX] Landing Page gerada. (Despertar: {len(arco_despertar)}, Ritmo: {len(arco_ritmo)}, Plenitude: {len(arco_plenitude)})")
+    print(f"🏠 [INDEX] Home Page Gerada.")
 
 def main():
-    print("🦁 Gutenberg Engine v2.0 (Exponential)...")
+    print("🦁 Gutenberg Engine v3.0 (Portal Edition)...")
     clean_dist()
     copy_assets()
     
     lessons = []
+    # Build Lessons
+    if os.path.exists(SOURCE_DIR):
+        files = sorted(os.listdir(SOURCE_DIR))
+        for filename in files:
+            if filename.endswith(".md"):
+                meta = build_lesson(filename)
+                if meta: lessons.append(meta)
     
-    # Ler pasta Sementes
-    files = sorted(os.listdir(SOURCE_DIR))
-    for filename in files:
-        if filename.endswith(".md"):
-             # Simple skip for templates inside the lesson folder if any
-            if "TEMPLATE" in filename: continue
-            
-            meta = build_lesson(filename)
-            if meta:
-                lessons.append(meta)
-    
+    # Build Static Pages
+    build_static_pages()
+
+    # Build Index
     build_index(lessons)
-    print("🚀 Build Exponencial Concluído!")
+    print("🚀 Portal v3.0 Concluído!")
 
 if __name__ == "__main__":
     main()
