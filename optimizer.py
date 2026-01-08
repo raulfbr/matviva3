@@ -34,11 +34,13 @@ def optimize_images(source_dir, dest_dir, max_width=800, quality=80):
             output_filename = file_path.stem + ".webp"
             output_path = dest_path / output_filename
             
-            # Se Pillow não existir, fallback para cópia simples
-            if not HAS_PILLOW:
-                shutil.copy(file_path, dest_path / file_path.name)
-                print(f"   -> [COPY] {file_path.name}")
-                continue
+            # Se o arquivo de destino já existe e é mais recente que a fonte, PULA
+            if output_path.exists():
+                src_mtime = file_path.stat().st_mtime
+                dst_mtime = output_path.stat().st_mtime
+                if dst_mtime >= src_mtime:
+                    # print(f"   -> [SKIP] {file_path.name} (Já otimizado)")
+                    continue
 
             try:
                 with Image.open(file_path) as img:

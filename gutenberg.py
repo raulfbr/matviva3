@@ -17,18 +17,28 @@ DIST_PAGES = os.path.join(DIST_DIR, "pages")
 DIST_IMG = os.path.join(DIST_DIR, "assets", "img") # Target for images
 
 def clean_dist():
-    """Limpa a pasta dist para um build fresco."""
-    if os.path.exists(DIST_DIR):
-        try:
-            shutil.rmtree(DIST_DIR)
-            print(f"🧹 [CLEAN] Pasta {DIST_DIR} removida.")
-        except Exception as e:
-            print(f"⚠️ [WARN] Não foi possível remover completamente {DIST_DIR}: {e}")
+    """Limpa a pasta dist para um build fresco, preservando IMAGENS otimizadas."""
     
+    # 1. Clean HTML folders (Sementes, Pages) - We want to regenerate these always
+    if os.path.exists(DIST_SEMENTES):
+        shutil.rmtree(DIST_SEMENTES, ignore_errors=True)
+    if os.path.exists(DIST_PAGES):
+        shutil.rmtree(DIST_PAGES, ignore_errors=True)
+    
+    # 2. Clean Index
+    if os.path.exists(os.path.join(DIST_DIR, "index.html")):
+        os.remove(os.path.join(DIST_DIR, "index.html"))
+
+    # 3. Clean CSS (Always copy fresh)
+    if os.path.exists(os.path.join(DIST_DIR, "style.css")):
+        os.remove(os.path.join(DIST_DIR, "style.css"))
+
+    # 4. Create folders if they don't exist
     os.makedirs(DIST_SEMENTES, exist_ok=True)
     os.makedirs(DIST_PAGES, exist_ok=True)
-    # create dist_img inside optimizer
-    print(f"✨ [INIT] Dist e Subpastas prontas.")
+    os.makedirs(DIST_IMG, exist_ok=True)
+
+    print(f"✨ [INIT] Pastas limpas (Imagens preservadas).")
 
 def copy_assets():
     """Copia CSS e Otimiza Imagens."""
