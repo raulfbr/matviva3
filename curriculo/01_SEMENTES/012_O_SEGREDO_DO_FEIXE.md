@@ -1,5 +1,15 @@
 ---
-
+id: MV-S-012
+titulo: "O Segredo do Feixe"
+fase: "Sementes"
+tipo: "Lição Sementes (Nível 0)"
+versao: 3.6 (Inevitable Gold)
+status: "Canônico"
+guardia: "Bernardo"
+local: "A Oficina da Montanha"
+tempo: "15 min"
+meta: "🌲 Selar o Laço do Reino e manifestar a força de um **Feixe de Plenitude**."
+tgtb: "Math K, Lesson 12"
 ---
 
 ## 📜 1. Para o Portador da Tocha (Mise-en-place)
