@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }} | Reino Contado</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero" style="padding-bottom: 4rem;">
+        <div class="container">
+            <nav class="nav-bar" style="border: none; margin: 0; color: white;">
+                <a href="../index.html" class="btn-back" style="color: var(--color-gold);">← Voltar ao Reino</a>
+                <span style="opacity: 0.8">{{ fase }}</span>
+            </nav>
+            <h1>{{ titulo }}</h1>
+            <p>{{ meta }}</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="lesson-content">
+            <div class="meta-header" style="margin-bottom: 2rem; display: flex; gap: 1rem; font-size: 0.9rem; color: #666;">
+                <span>🛡️ Guardião: <strong>{{ guardia }}</strong></span>
+                <span>⏱️ Tempo: <strong>{{ tempo }}</strong></span>
+                <span>📍 Local: <strong>{{ local }}</strong></span>
+            </div>
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 2rem;">
+            
+            {{ conteudo }}
+            
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Matemática Viva • Versão {{ versao }} • <span style="color: var(--color-green);">Selo Família Rodrigues</span></p>
+    </footer>
+
+</body>
+</html>

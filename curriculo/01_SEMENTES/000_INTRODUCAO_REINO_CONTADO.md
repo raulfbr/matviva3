@@ -3,7 +3,7 @@ id: MV-S-000
 titulo: "O Início de Tudo"
 fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
-versao: 4.5 (Gold V4 Standard)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "Melquior"
 local: "O Grande Portão (Jardim da Criação)"
@@ -51,11 +51,11 @@ meta: "🕯️ Receber a herança do Reino e conhecer os Guardiões."
 ## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
 >
 > > [!RITUAL]
-> > *[Ação: Acenda a vela. A chama deve ser o único foco da sala.]*
+> > *[Ação: Acenda a vela, ligue a luz ou abra a cortina. A LUZ deve ser o foco.]*
 > >
 > > **Você diz:**
 > > `[tom de segredo — voz baixa e grave]`
-> > "Eu sou o Portador da Tocha... E hoje, acendo esta luz para você."
+> > "Eu sou o Portador da Tocha... E hoje, trago esta luz para você."
 > >
 > > "Respire devagar... Deixe as pálpebras pesarem... Pode fechar os olhos."
 > >

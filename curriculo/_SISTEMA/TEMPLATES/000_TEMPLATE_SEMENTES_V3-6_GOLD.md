@@ -2,7 +2,7 @@ id: {{ID_LICAO}}
 titulo: "{{TITULO_LICAO}}"
 fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
-versao: 4.0 (Gold Edition)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "{{NOME_GUARDIAO}}"
 meta: "{{META_DA_LICAO}}"
@@ -48,11 +48,11 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 ## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
 
 > [!RITUAL]
-> *[Ação: Acenda a vela. A chama deve ser o único foco da sala.]*
+> *[Ação: Acenda a vela, ligue a luz ou abra a cortina para um raio de sol. A LUZ deve ser o foco.]*
 >
 > **Você diz:**
 > `[tom de segredo — voz baixa e grave]`
-> "Eu sou o Portador da Tocha... E hoje, acendo esta luz para você, minha pequena semente, meu **Filho e Herdeiro**."
+> "Eu sou o Portador da Tocha... E hoje, trago esta luz para você, minha pequena semente, meu **Filho e Herdeiro**."
 >
 > "Respire devagar... Deixe as pálpebras pesarem... Pode fechar os olhos."
 >
@@ -177,8 +177,13 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 > 🌌 **A Ordem do Reino (Filosofia & Beleza):**
 > {{A_BELEZA_DO_LOGOS_POR_TRAS_DO_NUMERO_CITAÇÃO_FILOSOFICA_OU_LITERARIA}}
 >
-> 🛡️ **Sua Confiança (Vacina contra a Culpa):**
-> Portador, se a lição hoje foi caótica, lembre-se: a matemática não está na folha perfeita, mas no brilho do olho quando a criança descobre uma verdade. O hábito da alegria vale mais que a resposta certa. Você está construindo uma catedral, não corrigindo provas.
+> 💰 **O Investimento do Reino (Gasto vs. Legado):**
+>
+> **O Gasto:** Sim, educar *custa*. Custa paciência, custa tempo, custa morrer para si mesmo. Não escondemos o preço.
+>
+> **O Investimento:** Mas o que você está comprando com esse 'gasto' não é uma nota de prova. É a arquitetura mental e a alma do seu filho.
+>
+> *Troque a Culpa pelo Capital Eterno:* Se hoje foi difícil, você não 'falhou'; você 'pagou o preço' de fundar uma dinastia. O ROI (Retorno) deste Ofício é medido em Gerações, não em minutos.
 
 ---
 
@@ -191,4 +196,4 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 
 ---
 **[00_HUB](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/00_CENTRO_DE_COMANDO.md)**
-*Template V4 Sementes (Gold Edition) - Janeiro 2026.*
+*Template V3.6 Sementes (Gold Edition) - Janeiro 2026.*

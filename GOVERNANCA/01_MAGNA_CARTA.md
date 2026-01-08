@@ -145,56 +145,57 @@ A história do Reino Contado é a espinha dorsal que une o berço à maestria. A
 | **Legado** | **Parceiro Mordomo** | **A Mordomia Real.** O governo através da ordem. |
 
 ---
-## 🏰 V. ENGENHARIA DE CENA (O Segredo da Magia)
+## 🏰 V. A LITURGIA DA ATENÇÃO (Engenharia de Cena)
 
-Para restaurar o padrão de excelência do Nível 0, toda lição deve ser um **Roteiro de Atuação**, não um texto didático.
+Para restaurar o padrão de excelência, toda lição deve ser um **Roteiro de Atuação**, não um texto didático.
 
 ### 1. Protocolos de Ritual (A Troca de Atmosfera)
-O ritual é a "ponte" entre o tempo Cronos (relógio) e o tempo Kairos (sagrado). Ele evolui conforme a maturidade do Viajante para manter a reverência (Scholé):
+O ritual é a "ponte" entre o tempo Cronos (relógio) e o tempo Kairos (sagrado). Ele evolui para manter a reverência:
 
-| Fase | Clima Ritualístico | Sinal de Entrada | O Fechamento | Cor da Pasta (Física) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Sementes** | **Maravilha** | **Acender a Vela** | Soprar a vela + Narração oral. | **Verde Musgo** (Vida/Início) |
-| **Raízes** | **Hábito** | **Abrir o Diário** | Escrever 1 frase-resumo. | **Marrom Amadeirado** (Base) |
-| **Lógica** | **Duelo** | **Modo Avião + Porta** | Debate Socrático (Oral). | **Cinza Aço** (Rigor/Lógica) |
-| **Legado** | **Maestria** | **Auto-Gerido** | Aplicação Prática. | **Dourado/Couro** (Maestria) |
+| Fase | O Solo Sagrado (Local) | A Luz (Foco) | Sinal de Entrada | O Fechamento | Cor da Pasta |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Sementes** | **Tapete no Chão** (Movimento) | **Luz de Revelação** | **O Salto de Luz** | Enrolar o Tapete | **Verde Musgo** |
+| **Raízes** | **Mesa de Estudo** (Ordem) | **Luz Natural** | Abrir o Diário | Guardar Material | **Marrom** |
+| **Lógica** | **Mesa ou Púlpito** (Rigor) | **Luminária de Mesa** | Modo Avião | Debate de Saída | **Cinza Aço** |
+| **Legado** | **O Mundo** (Autonomia) | **Qualquer Luz** | Auto-iniciação | Aplicação Prática | **Dourado** |
+
+> **O Salto de Luz (Sinal de Entrada Universal):**
+> 1.  **A Calma (Flexível):** O Portador conecta-se com a criança. Pode estar sentado ao lado dela ou já posicionado em pé próximo ao interruptor. O importante é a conexão visual.
+> 2.  **O Comando:** "Feche os olhos." (O Portador prepara o ambiente silenciosamente).
+> 3.  **A Viagem (Escuro):** Apaga a luz. Conta até 5. É o tempo da travessia.
+> 4.  **A Revelação (Claro):** Acende a luz. Se estiver em pé, senta-se ou agacha-se rapidamente para ficar no nível da criança. Só então diz: *"Abra os olhos!"*. A criança acorda com o pai presente no Reino iluminado.
+
+*   **Sementes (O Chão):** A criança de 4-6 anos vive no chão. O Tapete delimita o Reino.
+*   **Raízes (A Mesa):** A partir dos 7 anos, a escrita exige postura. A "Mesa Posta" torna-se o altar do trabalho.
 
 *   **Abertura:** "Eu sou o Portador da Tocha. Hoje, acendo a luz para você..."
 *   **Encerramento:** "O Reino adormece, mas os Guardiões continuam cuidando."
 
-### 2. A Voz Viva (Narrativa de CM)
-A voz dos Guardiões não é estática. Seguindo Charlotte Mason, o tom de voz deve variar conforme a **Ideia Viva** apresentada:
-*   **Conceitos Místicos (Origens):** Voz profunda, lenta e maravilhada (Estilo Lção 000).
-*   **Conceitos Práticos (Ação):** Voz inspiradora, socrática e questionadora.
-*   **O Mentor Melquior:** Ele alterna entre o Mentor que faz a pergunta certa (Socrático) e o Porta-voz que revela o segredo (Místico).
-*   **A Liturgia Viva (Flexibilidade):** O roteiro é um convite, não um trilho. O Portador da Tocha tem autoridade para adaptar o tempo e a fala ao ritmo do Viajante, priorizando sempre a **Ideia Viva**.
+### 2. A Lei do Vácuo (O Sagrado Silêncio)
+> *"A ideia precisa de espaço vazio para pousar."*
 
-### 2. O Ideal do Sagrado Silêncio (Law of 10 Years)
-Nenhuma tela deve mediar o aprendizado da criança até os 10 anos de idade.
-*   **Incentivo Absoluto:** O Arquiteto deve incentivar fortemente o "Zero Telas", explicando seus benefícios para o Hábito da Atenção.
-*   **Flexibilidade Paternal:** O material deve ser flexível para que a decisão final sobre o uso de recursos digitais caiba à família, sem criar um fardo de culpa, mas sempre apontando para o ideal do contato direto com a realidade.
-*   **O Digital serve à Mãe:** O celular é o "Guia de Bolso" para o pai, não para o filho.
+1.  **Lei dos 10 Anos (Zero Telas):** Nenhuma tela deve mediar o aprendizado da criança até os 10 anos. O digital serve à Mãe (Guia de Bolso); a criança toca na Realidade.
+2.  **A Regra do Eco:** O maior erro de um Portador é falar demais. Se a criança der uma resposta, **cale-se**. Não repita ("Ah, você disse 3!"). Aceite o presente do silêncio dela.
+3.  **Noé na Vigília:** Quando a criança está pensando (processando), o pai deve ser como a Coruja Noé: apenas observar. Qualquer intervenção ("tente assim") nesse momento mata o hábito da atenção.
 
-### 3. O Código de Atuação (Stage Directions)
-O Portador da Tocha atua conforme as marcas técnicas de CM:
-*   `[!RITUAL]`: Momento de solenidade. Linguagem corporal calma.
-*   `[tom de segredo]`: Volume baixo, olhos brilhantes. Invoca o Hábito da Atenção.
-*   `[pausa de maravilha]`: Silêncio de 5 a 10 segundos. Essencial para que a criança processe a Ideia Viva.
-*   `[olhe nos olhos]`: Garante que a pessoa da criança está sendo reconhecida.
-*   `[convite]`: Nunca uma ordem ("faça isso"), mas um convite ("vamos descobrir?").
+### 3. A Voz Viva (Narrativa de CM)
+A voz dos Guardiões não é estática. Ela muda conforme a **Ideia Viva**:
+*   **Místico (Origens):** Voz profunda, lenta (Estilo Lição 000). *Para revelar Mistérios.*
+*   **Socrático (Ação):** Voz inspiradora, questionadora. *Para desafiar a Razão.*
+*   **Mentor (Melquior):** Alterna entre o silêncio e a pergunta cirúrgica.
 
-### 3. A Costura Invisível (Invisible Seam)
-A transição entre a História e a Atividade deve ser imperceptível. Seguimos a **Sub-criação (Tolkien)**: o Reino Contado deve ser internamente consistente. O Guardião nunca "dá uma tarefa"; ele compartilha um desafio que a matemática ajuda a resolver.
+### 4. Rubricas do Portador (Stage Directions)
+O Portador da Tocha obedece aos sinais do roteiro para governar a atmosfera:
+*   `[!RITUAL]`: **Solenidade.** Pare tudo. Mude a postura corporal.
+*   `[tom de segredo]`: **Intimidade.** Abaixe o volume para forçar a criança a se inclinar (atenção ativa).
+*   `[pausa de maravilha]`: **Digestão.** Silêncio de 5 a 10 segundos. Essencial para que a Ideia pouse no coração.
+*   `[olhe nos olhos]`: **Pessoa.** Garante que a dignidade da criança está sendo reconhecida antes da técnica.
+*   `[convite]`: **Liberdade.** Nunca ordene ("faça"); convide ("vamos descobrir?").
 
-### 4. Dicionário de Alma (O Reinanês)
+### 5. Dicionário de Alma (O Reinanês)
 Banimos o vocabulário utilitário para proteger a dignidade da criança:
 *   **PALAVRAS NOBRES:** Jornada, Viajante, Pista, Descoberta, Missão, Simples, Desafiador, Celebração, Mistério, Padrão.
 *   **PALAVRAS BANIDAS (Termos Escolares):** Lição, Aluno, Errado, Prova, Tarefa, Fácil, Difícil, Professor, Exercício, Treino.
-
-### 5. A Lei do Sagrado Silêncio (The Law of Silence)
-O maior erro de um Portador da Tocha é falar demais.
-*   **A Regra do Eco:** Se a criança der uma resposta, você não precisa repetir ("Ah, você disse 3!"). Apenas aceite o presente do silêncio dela.
-*   **O Trabalho Mental:** Quando a criança está pensando, o pai deve ser como o Noé (a coruja): apenas observar. Qualquer intervenção nesse momento mata o hábito da atenção.
 
 ---
 
@@ -234,5 +235,5 @@ Nenhuma lição é aprovada se CM não der o veredito:
 5.  [ ] A Ideia Viva foi "apresentada" e não apenas "explicada"?
 
 ---
-**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md) | [Reino](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md) | [Ofício](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md)**
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md) | [Reino](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md) | [Ofício](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md) | [Exponencial](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/05_PROTOCOLO_EXPONENCIAL.md)**
 *Arquiteto (v3.5 Sovereign Positive Gold).*

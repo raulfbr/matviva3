@@ -1,5 +1,17 @@
+# System & Logs
 _Assistente_Pessoal/
+_LOGS/
 .agent/
+.gemini/
+.git/
+
+# Legacy & Organization
 _ARQUIVO/
 Arrumar/
-_LOGS/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/

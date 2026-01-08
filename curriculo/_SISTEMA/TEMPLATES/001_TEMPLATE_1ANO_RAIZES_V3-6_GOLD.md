@@ -3,7 +3,7 @@ id: {{ID_LICAO}}
 titulo: "{{TITULO_LICAO}}"
 fase: "Raízes I"
 tipo: "Lição Raízes (Nível 1)"
-versao: 4.0 (Gold Edition)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "{{NOME_GUARDIAO}}"
 meta: "{{META_DA_LICAO}}"

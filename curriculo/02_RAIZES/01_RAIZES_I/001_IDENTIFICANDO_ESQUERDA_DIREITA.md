@@ -3,7 +3,7 @@ id: MV-001
 titulo: "O Norte da Navegadora (Esquerda e Direita)"
 fase: "Raízes I"
 tipo: "Lição Raízes (Nível 1)"
-versao: 4.0 (Sovereign Positive - V4 Raízes)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "Celeste"
 local: "As Colinas de Vento"

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Reino Contado | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <span
+                style="display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-gold);">Matemática
+                Viva</span>
+            <h1 style="font-size: 3.5rem; margin-top: 0.5rem;">O Reino Contado</h1>
+            <p>Um currículo vivo onde os números falam e as formas têm nomes.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h2>🌱 Fase Sementes (4-6 Anos)</h2>
+        <p style="color: #666; margin-bottom: 2rem;">O despertar da maravilha. Lições curtas de 15 minutos.</p>
+
+        <div class="card-grid">
+            {% for licao in licoes %}
+            <a href="sementes/{{ licao.filename }}" class="card">
+                <span
+                    style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-green); font-weight: bold;">{{
+                    licao.id }}</span>
+                <h3>{{ licao.titulo }}</h3>
+                <p style="font-size: 0.95rem; color: #555;">{{ licao.meta }}</p>
+                <div class="meta">
+                    <span>🛡️ {{ licao.guardia }}</span>
+                    <span>⏱️ {{ licao.tempo }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>Construído pelo <strong>Motor Gutenberg</strong> • {{ data_build }}</p>
+    </footer>
+
+</body>
+
+</html>

@@ -3,7 +3,7 @@ id: {{ID_LICAO}}
 titulo: "{{TITULO_LICAO}}"
 fase: "Raízes II"
 tipo: "Lição Raízes (Nível 2)"
-versao: 4.0 (Gold Edition)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "Celeste"
 local: "O Mercado do Reino"

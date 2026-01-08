@@ -48,9 +48,9 @@ Materiais complementares já consolidados:
 
 ## 🔗 Links Úteis
 
-- **[Matriz de Evolução K-12](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md):** SSOT de cronobiologia e ciclos.
-- **[Manual do Ofício](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md):** Guia de liturgia e execução.
-- **[Centro de Comando](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md):** HUB central.
+- **[Matriz de Evolução K-12](../GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md):** SSOT de cronobiologia e ciclos.
+- **[Manual do Ofício](../GOVERNANCA/04_MANUAL_DO_OFICIO.md):** Guia de liturgia e execução.
+- **[Centro de Comando](../GOVERNANCA/00_CENTRO_DE_COMANDO.md):** HUB central.
 
 ---
 

@@ -1,6 +1,8 @@
 # PROTOCOLO DE PRODUÇÃO GOLD (v1.0)
 
-Este protocolo define como transformar uma lição do "Linguajar Didático" ou do "Legado HTML" para a **Alta Narrativa V4**.
+Este protocolo define como transformar uma lição do "Linguajar Didático" ou do "Legado HTML" para a **Alta Narrativa V3.6**.
+
+**Versão do Protocolo:** 3.6 (Inevitable Gold)
 
 ---
 

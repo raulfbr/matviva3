@@ -3,7 +3,7 @@ id: MV-S-001
 titulo: "Os Primeiros Números (1 a 3)"
 fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
-versao: 3.5 (Sovereign Positive)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "Celeste"
 local: "A Trilha das Sementes"
@@ -23,26 +23,22 @@ meta: "💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e
 > **Lembrete de Graça (Renew):**
 > *Portador da Tocha: Este roteiro é um mapa, não uma lei. Se o coração do Viajante pedir outro caminho hoje, siga o amor, não o texto. O improviso amoroso vale mais que a leitura perfeita.*
 
-## 📜 1. Para o Portador da Tocha (Mise-en-place)
+## 📜 1. A Bancada (Mise-en-place)
 
 > [!MESTRA]
-> **Esta seção é SÓ PARA VOCÊ. Não leia em voz alta.**
+> **A Liturgia da Ordem:**
+> *   **O Conceito:** "Mise-en-place" significa "tudo no lugar". Se você levantar para buscar a vela, o **fio da atenção** se rompe.
 >
-> 🎯 **A Ideia Viva:**
-> O Três não é apenas "mais que dois"; é a primeira família completa (Pai, Mãe, Filho / Início, Meio, Fim). A criança precisa sentir a estabilidade do 3 na mão antes de ver o rabisco "3". A multiplicidade começa com a unidade.
+> 🎯 **A Ideia Viva (O Segredo):**
+> O Três não é apenas "mais que dois"; é a primeira família completa (Pai, Mãe, Filho). A multiplicidade começa com a unidade.
 >
-> 📦 **Materiais do Reino:**
-> *   [ ] 3 sementes grandes (ou pedras, nozes, botões nobres).
-> *   [ ] Cards numéricos (1, 2, 3) se disponíveis (opcional nesta fase).
-> *   [ ] **(Fio de Ouro):** Como é a primeira lição, o Token é a própria *Promessa da Aventura* (um convite verbal).
-> *   [ ] Uma vela (Símbolo da Presença).
+> 📦 **Vivência (Exploração Sensorial):**
+> *   [ ] **1. O Concreto:** 3 sementes grandes (ou pedras, nozes, botões).
+> *   [ ] **2. O Belo:** Uma bandeja limpa para dispor os elementos.
+> *   [ ] **3. O Elo:** *Promessa da Aventura* (Convite verbal).
+> *   [ ] **4. O Sagrado:** Uma vela (Símbolo da Presença) e fósforos.
 >
-> 💡 **Dica de Mestra:**
-> *"The duty of attention is the first lesson."* – Celeste é rápida, uma raposa curiosa. Não deixe a lição se arrastar. Mantenha o ritmo vibrante. Se os olhos da criança brilharem, você acertou.
->
-> 🧵 **O Fio de Ouro (Continuidade):**
-> *   **Onde paramos:** Na última jornada, Melquior nos deu o **Passaporte do Reino** com nosso Nome. Celeste quer vê-lo hoje.
-> *   **O que levaremos:** Ao final, o Viajante deve guardar **uma das 3 sementes** no bolso. Ela será a chave para entrar no Castelo na próxima lição (002).
+> 🧵 **O Fio de Ouro:** Na última jornada, recebemos o Passaporte. Celeste quer vê-lo hoje. Ao final, guardaremos **uma** semente.
 
 ---
 
@@ -55,33 +51,24 @@ meta: "💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e
 
 ---
 
-## ✨ 3. Atmosfera e Gatilho (O Preparo do Altar)
-
-> [!NOTE]
-> *Escolha um gatilho para sinalizar que o tempo sagrado começou:*
->
-> *   🎶 **Som:** Correr com as mãos fazendo barulho de "vento" nas folhas (shhhhhhh) ou o som de galhos secos quebrando.
-> *   🕯️ **Luz:** Luz clara e viva, como o sol da manhã atravessando as folhas de uma floresta (abra as cortinas).
-
----
-
-## 🎇 4. Ritual de Abertura (A Chama na Escuridão)
+## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
 
 > [!RITUAL]
-> *[Ação: Acenda a vela. Olhe nos olhos do Viajante com entusiasmo.]*
+> *[Ação: Acenda a vela, ligue a luz ou abra a cortina. A LUZ deve ser o foco.]*
 >
 > **Você diz:**
-> "Eu sou o Portador da Tocha. Hoje, a luz nos guia para a trilha secreta de Celeste. Você está pronto para encontrar os primeiros tesouros do Rei?"
->
 > `[tom de segredo]`
-> "Feche os olhos... Sinta o chão da floresta sob seus pés... A Trilha das Sementes acaba de aparecer."
+> "Eu sou o Portador da Tocha... Hoje, a luz nos guia para a trilha de Celeste. Você está pronto para os primeiros tesouros?"
 >
-> `[pausa de 3 segundos]`
+> "Respire devagar... Deixe as pálpebras pesarem..."
+>
+> *[pausa de 3 segundos]*
+>
 > "Abra os olhos... Veja o rastro laranja de Celeste!"
 
 ---
 
-## 🗺️ 5. A Jornada (Contexto Narrativo)
+## 🗺️ 4. A Jornada (Imersão Total)
 
 > [!NARRATIVA]
 > *[Cenário: Uma trilha de terra macia rodeada por carvalhos gigantes. Um vulto laranja passa correndo entre as árvores.]*
@@ -95,7 +82,7 @@ meta: "💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e
 
 ---
 
-## 💡 6. A Ideia Viva (Descoberta da Razão e Beleza)
+## 💡 5. A Ideia Viva (O Segredo Revelado)
 
 > [!CONCEITO]
 > **Celeste:**
@@ -111,37 +98,37 @@ meta: "💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e
 
 ---
 
-## 🛠️ 7. O Menu de Atividades (A Mesa Variada)
+## 🧱 6. O Caminho Dourado (Mãos na Massa)
 
 > [!ATIVIDADE]
-> **A Missão do Viajante:**
-> `[tom de chamado honroso]`
-> *"Viajante, escolha sua ferramenta. O Reino precisa da sua força para organizar os tesouros do carvalho!"*
+> **A Missão Principal (Obrigatória):**
+> `[tom de convite nobre]`
+> *"Viajante, vamos construir o que Celeste nos mostrou?"*
 >
-> **Escolha UMA das opções abaixo conforme a energia do dia:**
+> 1.  **Concreto:** Coloque as 3 sementes na mesa. Peça para a criança separá-las em grupos (1 e 2, ou 1, 1 e 1).
+> 2.  **Pictórico:** Dê 3 folhas (reais ou desenhadas). Peça para desenhar 3 pontinhos dourados (sementes de luz) sobre elas.
+> 3.  **Abstrato:** Peça para mostrar 3 dedos e escondê-los rápido. "Onde foi parar o três?".
 >
-> **Opção A: A Via Real (Mãos na Massa)** 🧱
-> *Ideal para dias equilibrados.*
-> *   **Concreto:** Coloque as 3 sementes na mesa. Peça para a criança separá-las em grupos (1 e 2, ou 1, 1 e 1).
-> *   **Pictórico:** Dê 3 folhas reais (ou desenhadas) para a criança colocar uma semente "dormindo" em cima de cada folha.
-> *   **Abstrato:** Peça para mostrar 3 dedos e escondê-los rápido. "Onde foi parar o três?"
+> *[Nota de Virtude: Parabéns. Você ativou o toque, o olho e o símbolo.]*
+
+---
+
+## 🦋 7. Se Quiser Voar (Opcional)
+
+> [!TIP]
+> **Fez o Caminho Dourado? A missão está cumprida.**
+> *Só siga adiante se os olhos do Viajante pedirem "Mais!".*
 >
-> **Opção B: A Via do Corpo (Movimento Vivo)** 🏃
-> *Ideal para dias de alta energia ou necessidade de expansão.*
+> **A Via do Corpo (Movimento Vivo):**
 > *   **Ação:** Dê 3 pulos de sapo. A cada pulo, grite o número: "UM! DOIS! TRÊS!".
-> *   **Desafio:** Correr até a parede e tocar nela 3 vezes rápidas antes de voltar.
->
-> **Opção C: A Via do Silêncio (Arte & Contemplação)** 🎨
-> *Ideal para dias de chuva, cansaço ou introspecção.*
-> *   **Observação:** Olhe fixamente para uma semente por 10 segundos. O que você vê nela?
-> *   **Registro:** Desenhe 3 pontinhos dourados no papel, como estrelas ou sementes de luz.
+> *   **Desafio:** Correr até a parede e tocar nela 3 vezes rápidas.
 
 ---
 
 ## 🗣️ 8. Momento de Conversa (Narração da Alma)
 
 > [!NARRAÇÃO]
-> *[Guarde as sementes, mas deixe uma separada. Foco no olhar e na vela acesa.]*
+> *[Guarde as sementes, mas deixe uma separada. Foco no olhar e na luz acesa.]*
 >
 > **Celeste pergunta:**
 > *"Se você encontrasse 3 tesouros na floresta, para quem você daria cada um deles? O que você faria com tanto poder?"*
@@ -167,14 +154,14 @@ meta: "💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e
 
 ---
 
-## 🌌 10. Ritual de Encerramento (O Reino Adormece)
+## 🌌 10. Ritual de Encerramento (Ordem & Bênção)
 
 > [!RITUAL]
 > **Você diz:**
 > "O Reino adormece, mas a semente que guardamos continua viva em seu bolso e em seu coração."
 > "Até a próxima jornada."
 >
-> *[Ação: Apaguem a vela juntos. A jornada termina no silêncio.]*
+> *[Ação: Apaguem a vela, apague a luz ou fechem a cortina. A jornada termina no silêncio.]*
 
 ---
 

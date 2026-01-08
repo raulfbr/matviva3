@@ -39,8 +39,8 @@ A "carne" do projeto. Milhares de ativos educacionais organizados por ciclos de 
 ## 💻 Tech Stack & Pipeline (Vercel Ready)
 Este projeto utiliza uma abordagem **"Doc-as-Code"**:
 1.  **Input:** Todo o conteúdo é escrito em **Markdown** puro.
-2.  **Engine:** Scripts Python + Jinja2 (em desenvolvimento).
-3.  **Output:** Geração automática de **PDFs (Print)** e **Web App (Vercel)** a partir da mesma fonte de verdade (SSOT).
+2.  **Engine (Roadmap):** Scripts Python + Jinja2 para automação de build.
+3.  **Output:** Geração automática de **PDFs (Print)** e **Web App (Vercel)**.
 
 > *Status: O repositório está estruturado para conexão futura com Vercel para deploy contínuo da versão web.*
 

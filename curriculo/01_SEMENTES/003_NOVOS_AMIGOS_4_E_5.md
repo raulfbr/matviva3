@@ -1,127 +1,196 @@
 ---
 id: MV-S-003
-titulo: "Novos Amigos 4 e 5"
+titulo: "Novos Amigos: 4 e 5"
 fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
-versao: 3.5 (Sovereign Positive)
+versao: 3.6 (Inevitable Gold)
 status: "Canônico"
 guardia: "Íris"
-local: "🗺️ Ninho do Mirante"
-tempo: "15 min"
-meta: "💎 Conquistar o segredo do 4 e do 5 através do mapa da sua própria mão e do voo rítmico de Íris."
+meta: "Conquistar o segredo do 4 e do 5 através do mapa da mão humana."
+tgtb: "Lesson 3 (Números iniciais)"
 ---
 
----
+# 🌿 Novos Amigos: 4 e 5
 
-## 📋 1. Para o Portador da Tocha (Mise-en-place)
-> [!MESTRA]
-> **Esta seção é SÓ PARA VOCÊ. Não leia em voz alta.**
+> [!IMPORTANT]
+> **Para o Pai/Mãe (Leia antes de tudo):**
+> Você não precisa ser um ator de teatro nem um professor perfeito. O "Reino" acontece no brilho dos olhos do seu filho, não na sua performance. Se você errar ou gaguejar, ria junto. A graça vale mais que a técnica.
 >
-> 🎯 **A Ideia Viva:**
-> O número 5 é uma "estação" fundamental. A mão humana é **As Janelas da Fortaleza** natural que Deus nos deu. Hoje o Viajante descobre que o 4 e o 5 completam a primeira fileira de "amigos".
->
-> 📦 **Materiais do Reino:**
-> *   [ ] 5 pedrinhas (ou sementes).
-> *   [ ] Uma vela.
->
-> 💡 **Dica de Mestra:**
-> Íris é a guardiã da Atenção. Ela observa pequenos detalhes. Se o Viajante se apressar, chame o **Hábito da Atenção**: "Íris viu um detalhe aqui... você viu também?".
-
----
-
-## 📡 2. [AUDIO-SCRIPT] (Postura da Alma)
-> [!TIP]
-> **Portador da Tocha, ouça este breviário enquanto prepara o ambiente. Ele deve calibrar o seu coração para a jornada sacra.**
->
-> "Abaixe-se. Íris voa baixo e vê o que os outros ignoram. Nesta lição, você deve ser o guardião da atenção plena. A Ideia Viva é que sua mão é um mapa de 5 amigos que o Rei deu a você. Antes de chamar o Viajante, coloque as 5 sementes em uma trilha curva sobre a mesa. O segredo deste encontro está no detalhe mínimo... prepare-se para notar a beleza do 'um por um' com ele."
-
----
-
-## 🎭 3. Atmosfera e Gatilho (O Preparo do Altar)
 > [!NOTE]
-> *Escolha um gatilho para sinalizar que o tempo sagrado começou:*
-> * 🎶 **Som:** Um sino suave ou o barulho de bicar o papel (Tap-Tap-Tap).
-> * 🕯️ **Luz:** Luz suave, imitando o brilho debaixo de uma folha.
+> **Protocolo de Impecabilidade:**
+> Este roteiro foi desenhado para ser lido com **Alma**. Não corra. Respeite as pausas. Você é o Portador da Tocha, não um leitor de notícias. A "Ideia Viva" não é um dado, é um *encontro*.
 
 ---
 
-## 🔥 4. Ritual de Abertura (A Chama na Escuridão)
+## 📜 1. A Bancada (Mise-en-place)
+
+> [!MESTRA]
+> **A Liturgia da Ordem:**
+> *   **O Local:** Estenda o **Tapete do Reino** no chão ou limpe a mesa. Onde o tapete toca, o solo vira sagrado.
+> *   **A Luz:** Se possível, apague a luz do teto e deixe apenas a vela. O "Teatro de Sombras" foca a atenção no essencial.
+>
+> 🎯 **A Ideia Viva (O Segredo):**
+> A mão do seu filho é a primeira "ferramenta de contagem" que Deus deu. Hoje ele descobre que carrega o número 5 consigo o tempo todo, como um mapa impresso no corpo.
+>
+> 📦 **Vivência (Exploração Sensorial):**
+> *   [ ] **1. O Concreto:** 5 sementes grandes (feijão, pedras polidas ou nozes).
+> *   [ ] **2. O Belo:** Um pequeno prato de madeira ou tecido para o "ninho".
+> *   [ ] **3. O Elo:** O Card do Número 3 (da lição anterior).
+> *   [ ] **4. O Sagrado:** Uma vela (Símbolo da Presença) e fósforos.
+
+---
+
+## 🎧 2. Áudio-Script (Somente para o Pai)
+*Opção A (Imersão): Coloque o fone e ouça.*
+*Opção B (Leitura Rápida - Persona Priscila): Leia para si mesmo em 30s.*
+
+*"Sossegue o coração. Hoje a missão é sobre **Atenção aos Detalhes**. No chão ou na mesa, crie o silêncio. Íris, nossa guardiã pardal, vai ensinar seu filho a usar o 'Monóculo' (fechar um olho e focar) para ver o número 5 escondido na própria mão. Respire. Você está pronta."*
+
+---
+
+## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
+
 > [!RITUAL]
-> *[Ação: Acenda a vela. Olhe nos olhos do Viajante.]*
+> *[Ação 1: Calma. Sente-se com a criança (chão/mesa). Respirem juntos. O material já está separado ao lado.]*
 >
 > **Você diz:**
-> "Eu sou o Portador da Tocha. Hoje, a luz sobe até o ponto mais alto do Reino para encontrarmos Íris."
+> "Eu sou o Portador da Tocha... Hoje, acenderei a luz para você, meu **Filho Herdeiro**."
+> "Feche os olhos agora, bem forte."
 >
-> `[tom de segredo]`
-> "Respire fundo... Feche os olhos... Sinta o balanço suave dos galhos... O Ninho do Mirante acaba de aparecer."
+> *[Ação 2: Movimento. Enquanto ela está de olhos fechados, vá até o interruptor (se já não estiver lá) e APAGUE a luz.]*
+>
+> "Respire fundo no escuro... conte comigo até 5 para cruzarmos o portal."
+> "Um... Dois... Três... Quatro... Cinco..."
+>
+> *[Ação 3: O Salto. ACENDA a luz (ou abajur). Volte e SENTE-SE rapidamente ao lado dela.]*
+>
+> "Abra os olhos!"
+> "Bem-vindo ao Reino Contado."
 
 ---
 
-## 🌿 5. A Jornada (O Olhar de Íris)
+## 🗺️ 4. A Jornada (Imersão Total)
+
 > [!NARRATIVA]
-> *[Cenário: Uma plataforma segura no topo de uma árvore gigante.]*
+> *[Cenário: Leia descrevendo as cores e cheiros. Pinte o ar com a sua voz.]*
 >
-> **Narrador:**
-> "Você abre os olhos. Os pés pisam em galhos firmes e o vento lá fora parece uma canção. De repente, um par de olhos cintilantes observa você de cima de um ninho... é Íris."
+> **Narrador (Sua voz normal, mas calorosa):**
+> "Estamos alto, muito alto. O vento balança o ninho suavemente. De repente... *vapt, vupt*! Uma pardal de penas azul-céu pousa no galho. Ela carrega um pequeno vidro brilhante no pescoço."
+>
+> ![CARD: Íris e o Monóculo](https://via.placeholder.com/800x400/304837/F8F5E9?text=Iris+e+Monoculo)
 >
 > **Íris:**
-> `[tom de voz suave e atento]`
-> *"Olá! Eu sou a Íris. Eu estava te observando... você já conhece o 1, o 2 e o 3... Mas hoje, eu vi dois novos amigos se escondendo no reflexo do sol. Quer ver os tesouros que o Rei me deu?"*
+> `[tom de voz rápido e preciso]`
+> *"Psiu! Olá, Viajante! Eu sou a Íris. Eu uso este Monóculo para ver coisas que ninguém mais vê. Todo mundo vê uma árvore... eu vejo as cinco pontas da folha. Todo mundo vê uma mão... eu vejo cinco irmãos abraçados. Você quer pegar meu monóculo emprestado?"*
 
 ---
 
-## 💎 6. A Ideia Viva (A Mão de Cinco)
+## 💡 5. A Ideia Viva (O Segredo Revelado)
+
 > [!CONCEITO]
 > **Íris:**
-> *"Ali! Quatro árvores juntas formam um quadrado. E ali... uma quinta árvore solitária as protege. Veja sua mão, Viajante. O Rei colocou o segredo do cinco bem aqui para você nunca se perder."*
+> *"Olhe aquela árvore: Quatro folhas formam um quadrado perfeito... e uma quinta folha abraça todas elas. Agora, olhe para a sua mão."*
 >
-> `[pausa de maravilha]`
+> ![CARD: A Mão das 5 Sementes](https://via.placeholder.com/800x400/B89B5E/FFFFFF?text=Mao+com+5+Sementes)
 >
-> **VOCÊ FAZ (O Sentir da Mão):**
-> 1. Mostre sua mão aberta.
-> 2. Conte os dedos um por um: 1, 2, 3, 4, 5.
-> 3. Encoste a ponta de cada dedo da criança enquanto conta, como se fosse o bico de Íris.
+> `[pausa de maravilha - 5 segundos]`
+>
+> **VOCÊ FAZ (O Toque da Matéria):**
+> 1.  Abra a mão da criança suavemente.
+> 2.  Toque cada dedo: "Um... Dois... Três... Quatro (os irmãos)... e Cinco (o polegar, o guardião)!"
+> 3.  `[tom de maravilhamento]` "O Rei desenhou o número Cinco na sua carne, filho. Você carrega essa ferramenta mágica o tempo todo."
 
 ---
 
-## 🖐️ 7. Hora de Fazer (Ciclo CPA e Ritmo Steiner)
+## 🧱 6. O Caminho Dourado (Mãos na Massa)
+
 > [!ATIVIDADE]
-> **A Missão do Viajante:**
-> `[tom de chamado honroso]`
-> *"Viajante, precisamos da sua força e do seu voo para organizar os ovos no ninho de Íris!"*
+> **A Missão Principal (Obrigatória):**
+> `[tom de convite nobre]`
+> *"Viajante, vamos ajudar a Íris a encher o ninho?"*
 >
-> **AÇÃO (Portador da Tocha e Viajante):**
-> *   **Fase 1 (Somática/Corpo Vivo):** Abrir os braços como asas e dar "voos" suaves pela sala. Pousar em 4 pontos diferentes (como se fossem árvores) e, no 5º ponto, fazer o ninho com as mãos. Depois, contar as 5 pedrinhas no "ninho" real.
-> *   **Fase 2 (Pictórico):** Mostre os cards do 4 e do 5. Peça para o Viajante colocar a semente sobre a imagem que combina com a mão cheia.
-> *   **Fase 3 (Abstrato):** Pergunte: "Se eu te der uma mão cheia de pedrinhas, quantas você tem? E se eu esconder uma, quantos amigos sobram?".
+> 1.  **Concreto (O Ninho):** Coloque o prato (ninho) na mesa. Peça para a criança pegar **4 sementes** com a mão esquerda e colocar no ninho. Depois, pegar mais **1 semente** (a quinta, especial) com a mão direita e completar. Conte todas juntas.
+> 2.  **Pictórico (O Desenho):** No 'Passaporte' (folha de papel), peça para ele contornar a própria mão com lápis de cera. Dentro do desenho, desenhe 5 sementinhas.
+> 3.  **Abstrato (O Símbolo):** Mostre o **Card do 4** e o **Card do 5**. Trace o número com o dedo no ar ou na mesa.
+>
+> *[Nota de Virtude: Parabéns, Pai. Ao guiá-lo no concreto antes do símbolo, você plantou a semente da Ordem.]*
 
 ---
 
-## 💬 8. Momento de Conversa (Narração)
+## 🦋 7. Se Quiser Voar (Opcional)
+
+> [!TIP]
+> **Fez o Caminho Dourado? A missão está cumprida com honra.**
+> *Só siga adiante se os olhos do Viajante pedirem "Mais!". Caso contrário, pule para a **Seção 8**.*
+>
+> **A Via do Corpo (Movimento Vivo):**
+> *   **O Voo de Íris:** Abram os braços como asas. "Voem" pela sala contando passos até pousar no sofá (Ninho) ao chegar no 5.
+> *   **Desafio:** Pousem em apenas um pé (equilíbrio) quando disser "Cinco!".
+
+---
+
+## 🗣️ 8. Momento de Conversa (Narração da Alma)
+
 > [!NARRAÇÃO]
-> **Íris pergunta:**
-> *"Qual desses dois novos amigos — o 4 ou o 5 — é o mais fácil de encontrar no seu corpo? Eles gostam de brincar com você?"*
+> *[Guarde as ferramentas. Foco no olhar e na vela acesa.]*
 >
-> `[pausa - Respeite a narração livre]`
+> **Íris pergunta:**
+> *"Antes de partirmos... qual dos amigos novos você achou mais bonito? O Quatro quadrado ou o Cinco da mão cheia?"*
+>
+> `[pausa - respeite solenemente o tempo da criança]`
+>
+> **Sondas de Sabedoria (Use 1 ou 2):**
+> *   "Se sua mão tivesse só 3 dedos, como seria segurar a bola?"
+> *   "Onde mais na casa você vê coisas que vêm em grupos de 4 (cadeira tem pernas?)?"
 
 ---
 
-## 🌅 9. Despedida & Bênção
+## 🕊️ 9. Despedida & Bênção
+
 > [!FECHAMENTO]
 > **Íris:**
-> *"Seus olhos estão ficando afiados. Na próxima jornada, Noé vai te mostrar que os números têm uma fila e um tempo certo para aparecer no rio do tempo."*
+> `[gesto de despedida nobre]`
+> *"Sua jornada hoje foi luz, Viajante. Agora você carrega o segredo do Cinco na palma da mão."*
+> *"Na próxima jornada, Noé vai nos ensinar sobre o 'Antes e o Depois' no rio do tempo."*
 
 ---
 
-## 🌙 10. Ritual de Encerramento (O Reino Adormece)
+## 🌌 10. Ritual de Encerramento (Ordem & Bênção)
+
 > [!RITUAL]
 > **Você diz:**
-> "O Reino adormece, mas a luz da sua atenção continua brilhando."
+> "O Reino adormece, mas a melodia do Cinco continua ecoando em seu coração."
+> "Até a próxima jornada."
 >
-> *[Ação: Apague a vela juntas.]*
+> *[Ação: Apaguem a vela juntos. A jornada termina no silêncio.]*
 
 ---
-### ✅ Auditoria da Mestra (Veredito CM)
-- [ ] A conexão entre o corpo e o número 5 foi vivenciada?
-- [ ] Houve espaço para o maravilhamento de Íris?
-- [ ] O gancho narrativo aponta corretamente para a Lição 004?
+
+## 🏛️ 11. Por que isso importa? (A Cátedra dos Pais)
+
+> [!NOTE]
+> **A Autoridade para o Portador da Tocha:**
+>
+> 🧠 **O Cérebro da Criança (Neurociência & SGP):**
+> O número 5 é um "anchor number" (número âncora). O cérebro usa o 5 e o 10 como base para tudo. Ao associar o 5 à mão, criamos uma referência biológica permanente para a matemática futura (Sistema Decimal).
+>
+> 🌌 **A Ordem do Reino (Filosofia & Beleza):**
+> "A mão é a ferramenta das ferramentas", dizia Aristóteles. Deus nos fez capazes de moldar o mundo, e o número 5 é a assinatura dessa capacidade criativa.
+>
+> 💰 **O Investimento do Reino (Gasto vs. Legado):**
+> **O Gasto:** Sim, educar *custa*. Custa paciência, custa tempo, custa morrer para si mesmo. Não escondemos o preço.
+> **O Investimento:** Mas o que você está comprando com esse 'gasto' não é uma nota de prova. É a arquitetura mental e a alma do seu filho.
+> *Troque a Culpa pelo Capital Eterno:* Se hoje foi difícil, você não 'falhou'; você 'pagou o preço' de fundar uma dinastia. O ROI (Retorno) deste Ofício é medido em Gerações, não em minutos.
+
+---
+
+## 🛡️ 12. Auditoria da Mestra (Veredito CM)
+
+- [ ] **Atenção:** O Hábito da Atenção Plena foi estimulado (lição curta)?
+- [ ] **Hábito:** A disciplina do ritual foi mantida para gerar segurança?
+- [ ] **Ideia Viva:** Houve um encontro direto com a beleza da mão humana?
+- [ ] **Narração:** A criança agiu como "narradora" da própria descoberta?
+
+---
+**[00_HUB](../GOVERNANCA/00_CENTRO_DE_COMANDO.md)**
+*Lição Canônica V4 (Gold) - Janeiro 2026.*
