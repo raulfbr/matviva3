@@ -3,7 +3,7 @@ id: MV-S-011
 titulo: "A Plenitude das Mãos (11)"
 fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
-versao: 3.5 (Sovereign Positive)
+versao: 3.6 (Sovereign Positive)
 status: "Canônico"
 guardia: "Celeste"
 local: "A Colina dos Segredos"

@@ -38,3 +38,7 @@ Nossos filhos não são "cobaias"; são a inspiração e o propósito. Cada "Uau
 **Matemática Viva** é o nosso legado para a nossa família — e agora, para a sua.
 
 > *"Soli Deo Gloria"*
+
+---
+
+### [🏰 O Convite Real](convite_real.html) | [📜 O Manifesto](manifesto.html) | [🗺️ Voltar ao Mapa](index.html)

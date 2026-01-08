@@ -173,12 +173,27 @@ def build_static_pages():
 def render_card_grid(lessons_subset):
     """Gera o HTML do Grid de Cards."""
     html = ""
+    
+    # Emojis para Guardiões
+    guardian_emojis = {
+        "Melquior": "🦁",
+        "Celeste": "🦊",
+        "Bernardo": "🐻",
+        "Íris": "🐦",
+        "Noé": "🦉"
+    }
+
     for licao in lessons_subset:
         # TGTB Badge Logic
         tgtb_val = licao.get('tgtb', '')
         tgtb_html = ""
-        if tgtb_val and "{{" not in tgtb_val: # Avoid unreplaced template strings
+        if tgtb_val and "{{" not in tgtb_val: 
+             # Limpar string para ficar curto (Ex: "Math K, Lesson 10" -> "MK L10" se quiser, mas vamos manter limpo)
              tgtb_html = f'<span class="badge-tgtb" title="Baseado em {tgtb_val}">📘 {tgtb_val}</span>'
+
+        # Guardian Logic
+        g_name = licao.get('guardia', '').split(' ')[0] # Pega só o primeiro nome
+        g_emoji = guardian_emojis.get(g_name, "🛡️")
 
         card = f"""
         <a href="sementes/{licao['filename']}" class="card">
@@ -187,10 +202,13 @@ def render_card_grid(lessons_subset):
                 {tgtb_html}
             </div>
             <h3 class="card-title">{licao.get('titulo')}</h3>
-            <p class="card-desc">{licao.get('meta')}</p>
+            
+            <!-- Meta/Goal limpo (Essencialismo: apenas o texto, sem labels extras) -->
+            <p class="card-desc">{licao.get('meta', '').replace('🍇 ', '').replace('🦁 ', '').replace('🐻 ', '').replace('🦊 ', '')}</p>
+            
             <div class="card-footer">
-                <span>🛡️ {licao.get('guardia')}</span>
-                <span>⏱️ {licao.get('tempo')}</span>
+                <span class="guardian-tag">{g_emoji} {g_name}</span>
+                <span class="time-tag">⏱️ {licao.get('tempo')}</span>
             </div>
         </a>
         """
@@ -212,11 +230,28 @@ def build_index(lessons):
             num = int(fname.split('_')[0])
             if num <= 3: arco_despertar.append(licao)
             elif num <= 10: arco_ritmo.append(licao)
-            else: arco_plenitude.append(licao)
+            else: arco_plenitude.append(licao) # 11+ e Assessments caem aqui
         except ValueError:
             arco_plenitude.append(licao)
 
     final_index = template
+    
+    # Navigation Bar Injection
+    nav_bar = """
+    <nav class="portal-nav">
+        <a href="pages/convite_real.html" class="nav-link">🏰 O Convite Real</a>
+        <a href="pages/manifesto.html" class="nav-link">📜 Manifesto</a>
+        <a href="pages/quem_somos.html" class="nav-link">🦁 Quem Somos</a>
+    </nav>
+    """
+    # Replace a placeholder if exists, otherwise prepend to body (risky). 
+    # Let's assume there is a place or I insert after <body>
+    if "<body>" in final_index:
+        final_index = final_index.replace("<body>", "<body>" + nav_bar)
+    else:
+        # Fallback if no body tag found (unlikely)
+        final_index = nav_bar + final_index
+
     final_index = final_index.replace("{{ arco_despertar }}", render_card_grid(arco_despertar))
     final_index = final_index.replace("{{ arco_ritmo }}", render_card_grid(arco_ritmo))
     final_index = final_index.replace("{{ arco_plenitude }}", render_card_grid(arco_plenitude))

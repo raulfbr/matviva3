@@ -1,15 +1,4 @@
 ---
-id: MV-S-012
-titulo: "O Segredo do Feixe"
-fase: "Sementes"
-tipo: "Lição Sementes (Nível 0)"
-versao: 3.5 (Sovereign Positive)
-status: "Canônico"
-guardia: "Bernardo"
-local: "A Oficina da Montanha"
-tempo: "15 min"
-meta: "🌲 Selar o Laço do Reino e manifestar a força de um **Feixe de Plenitude**."
----
 
 ---
 

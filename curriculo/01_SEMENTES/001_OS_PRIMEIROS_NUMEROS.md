@@ -14,15 +14,13 @@ tgtb: "Math K, Lesson 1"
 
 # 🌿 Os Primeiros Números (1 a 3)
 
-> [!NOTE]
-> O Gutenberg Engine extrairá o Guardião, Local, Tempo e Meta automaticamente para o cabeçalho.
-> Mantenha o conteúdo abaixo limpo e focado na jornada.
-
----
-
-> [!TIP]
-> **Lembrete de Graça (Renew):**
-> *Portador da Tocha: Este roteiro é um mapa, não uma lei. Se o coração do Viajante pedir outro caminho hoje, siga o amor, não o texto. O improviso amoroso vale mais que a leitura perfeita.*
+> [!IMPORTANT]
+> **Para o Pai/Mãe (Leia antes de tudo):**
+> Você não precisa ser um ator de teatro nem um professor perfeito. O "Reino" acontece no brilho dos olhos do seu filho, não na sua performance. Se você errar ou gaguejar, ria junto. A graça vale mais que a técnica.
+>
+> > [!NOTE]
+> > **Protocolo de Impecabilidade:**
+> > Este roteiro foi desenhado para ser lido com **Alma**. Não corra. Respeite as pausas. Você é o Portador da Tocha, não um leitor de notícias. A "Ideia Viva" não é um dado, é um *encontro*.
 
 ## 📜 1. A Bancada (Mise-en-place)
 

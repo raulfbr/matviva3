@@ -114,16 +114,10 @@ meta: "🏚️ Multiplicar o vigor da Plenitude e erguer as colunas do Celeiro R
 ## 🗣️ 8. Momento de Conversa (Narração da Alma)
 
 > [!NARRAÇÃO]
-> *[Admirem o Celeiro que começou a ser desenhado ou construído com os feixes.]*
->
 > **Bernardo pergunta:**
-> *"Por que precisamos de muitos Feixes em vez de um só? O que acontece com a segurança da Vila quando os construtores trabalham com essa ordem?"*
+> *"Por que uma mesa tem 4 pernas e não 2? O que o número 4 traz para o número 10 quando eles viram 14?"*
 >
-> `[pausa - respeite solenemente o tempo da criança]`
->
-> **Sondas de Sabedoria (Use 1 ou 2):**
-> *   "Se você pudesse construir qualquer coisa no Reino com esses feixes, o que seria?"
-> *   "Como a paciência de Bernardo te ajudou a amarrar o segundo feixe?"
+> `[pausa - respeite a engenharia intuitiva da criança]`
 
 ---
 

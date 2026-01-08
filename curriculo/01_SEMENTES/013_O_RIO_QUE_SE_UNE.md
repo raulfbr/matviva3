@@ -132,19 +132,6 @@ meta: "🌊 Decifrar o segredo da União Real (+) e contemplar a Balança da Paz
 
 > [!FECHAMENTO]
 > **Melquior:**
-> `[gesto de bênção com a pata]`
-> *"Sua alma é um rio que sabe se unir. Guarde o segredo do Encontro em sua mochila."*
-> *"Na próxima jornada, Bernardo precisará de você para ver como os feixes podem construir um celeiro inteiro."*
-
----
-
-## 🌌 10. Ritual de Encerramento (O Reino Adormece)
-
-> [!RITUAL]
-> **Você diz:**
-> "O Vale do Encontro silencia. A União está selada."
-> "Até a próxima jornada."
->
 > *[Ação: Apaguem a vela juntos com um sopro suave, como o vento no vale.]*
 
 ---
