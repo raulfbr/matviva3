@@ -166,3 +166,7 @@ Este currículo deve ser servido através do **Protocolo Dual Printing** (Gutenb
 | **MV-116** | 008-L116 - Final Course Review Part 1 / Revisão Final do Curso Parte 1 | **Bernardo:** "Rever a Muralha: Rever a muralha. Cada tijolo, cada axioma defendido com persistência." |
 | **MV-117** | 008-L117 - Final Course Review Part 2 / Revisão Final do Curso Parte 2 | **Melquior:** "Soberania da Razão: A soberania da razão iluminada pela Fé. O Reino está em paz." |
 | **MV-118** | 008-L118-119 - Course Assessment / Banquete Final | **Melquior:** "Jornada Perfeita: Paladino do Axioma, sua jornada no Ciclo Lógica termina com perfeição. O Legado o aguarda. Louvai ao Rei!" |
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*

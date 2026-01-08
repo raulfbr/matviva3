@@ -188,3 +188,7 @@ Este currículo deve ser servido através do **Protocolo Dual Printing** (Gutenb
 | **MV-117** | 003-L117 - Unit Review / Revisão da Unidade | **Melquior:** "Afinação Final: Afinar os instrumentos para o final." |
 | **MV-118** | 003-L118 - Course Review / Revisão do Curso | **Melquior:** "Mapa do Ano: Olhar o mapa completo de um ano de descobertas." |
 | **MV-119** | 003-L119-120 - Course Assessment / Banquete Final | **Melquior:** "Banquete da Imensidão: Cartógrafo do Rei, sua atenção nos trouxe até aqui. Celebremos a imensidão!" |
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*

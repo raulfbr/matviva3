@@ -196,3 +196,7 @@ Este currículo deve ser servido através do **Protocolo Dual Printing** (Gutenb
 | **MV-117** | 004-L117 - Review Game: Units 1 and 2 / Jogo de Revisão: Unidades 1 e 2 | **Melquior:** "Vencedor de Gigantes: Rever a jornada com a alegria de quem venceu gigantes." |
 | **MV-118** | 004-L118 - Review Game: Units 3 and 4 / Jogo de Revisão: Unidades 3 e 4 | **Noé:** "Raízes Firmes: A ventania soprou, e as raízes da verdade permanecem firmes." |
 | **MV-119** | 004-L119-120 - Course Assessment / Banquete Final | **Melquior:** "Aprovação do Reino: Guardião do Tempo e da Precisão, seu labor honesto é aprovado no Reino!" |
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*

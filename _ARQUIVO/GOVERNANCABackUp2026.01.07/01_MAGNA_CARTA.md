@@ -1,18 +1,5 @@
----
-id: MAGNA_CARTA
-titulo: "Magna Carta: A Constituição Suprema do Matemática Viva"
-versao: 3.5 (Sovereign Positive Gold)
-status: Canônico
-ultima_atualizacao: 2026-01-07
----
-
-# 👑 MAGNA CARTA: A LEI DO REINO (v3.5 GOLD)
+# 📜 MAGNA CARTA (v3.5 GOLD)
 **O Cânone de Governança do Matemática Viva**
-
-> *"A educação é o caminho para o conhecimento de Deus, e a Mestra Charlotte Mason é o nosso Guia neste caminho."*
-
-> [!NOTE]
-> **North Star:** A missão técnica completa (CC BY 4.0, Modelo Híbrido, Kernel Pedagógico) está definida no **[Painel de Especialistas (Seção North Star)](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/PAINEL-ESPECIALISTAS.md#-o-grande-objetivo-the-north-star)**.
 
 > [!IMPORTANT]
 > **PROTOCOLO DE REVISÃO E ALINHAMENTO (Mandatório):**
@@ -26,8 +13,20 @@ ultima_atualizacao: 2026-01-07
 > 5. **O Princípio da Translucidez (C.S. Lewis):** A tecnologia (IA) deve ser invisível, servindo apenas como uma lente para a glória da Realidade e da Matemática. Se a ferramenta é percebida, ela falhou.
 > 6. **O Voto de Graça (Double CM Loop):** Toda decisão estratégica ou pedagógica sugerida pela IA (CM Interna) deve ser validada canonicamente pela consulta direta aos Volumes originais de Charlotte Mason (CM Externa).
 
-Este documento estabelece a estrutura de **Governança Suprema**. Charlotte Mason não é apenas uma "influência"; ela é a **Mestra Chefe** que dita o tom, o ritmo e a autoridade sobre todos os outros elementos do projeto.
+---
 
+---
+id: MAGNA_CARTA
+titulo: "Magna Carta: A Constituição Suprema do Matemática Viva"
+versao: 3.5 (Sovereign Positive Gold)
+status: Canônico
+---
+
+# 👑 MAGNA CARTA: A LEI DO REINO (v3.5 GOLD)
+
+> *"A educação é o caminho para o conhecimento de Deus, e a Mestra Charlotte Mason é o nosso Guia neste caminho."*
+
+Este documento estabelece a estrutura de **Governança Suprema**. Charlotte Mason não é apenas uma "influência"; ela é a **Mestra Chefe** que dita o tom, o ritmo e a autoridade sobre todos os outros elementos do projeto.
 
 ## 🧭 I. O ALICERCE INVISÍVEL (A Hierarquia do Logos)
 O Matemática Viva não é um material secular com "etiquetas cristãs". É uma exploração da Verdade inspirada pelo Logos (Col 1:17).

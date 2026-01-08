@@ -2,8 +2,8 @@
 id: 000_CONSTITUICAO
 titulo: "Painel de Especialistas (Constituição Central)"
 data_criacao: 2025-12-25
-ultima_atualizacao: 2026-01-07
-versao: 3.5
+ultima_atualizacao: 2025-12-29
+versao: 2.1 (Auditada)
 autor: Diretor/Maestro
 status: Aprovado
 ---
@@ -64,7 +64,6 @@ Quando o Maestro solicitar **"Use o Painel Especialista"**, o Arquiteto deve con
 *   🖋️ **Narrativa:** Consultor de Storytelling (não o personagem!).
 *   💼 **Negócios:** Consultor de Estratégia de Mercado.
 *   💻 **Engenharia:** Consultor de Tech Stack.
-*   🧭 **Propósito:** Metafísico (Teologia) + Cientista (Verdade Natural).
 
 **Símbolo de Log:** Use 💻 ou 📋 para atas. **NUNCA** use "Leão" ou símbolos do Reino para reuniões de trabalho.
 
@@ -193,7 +192,12 @@ Não é apenas teoria; é um checklist de *compliance*:
 > **Nota de Segurança:** A lista completa e detalhada dos **20 Princípios de CM** está preservada na **[MAGNA_CARTA (Seção III)](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md)**. Use este painel apenas para o *Check de Veto* rápido.
 
 ### Tabela de Cronobiologia (Limite Técnico)
-> **SSOT:** Consulte a **[Matriz de Evolução K-12 (Seção II)](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)** para os limites de tempo por fase. Não duplique aqui.
+*Dados de engenharia pedagógica para planejamento de tempo:*
+
+| Fase | Foco (Deep Work) | Lição Recomendada |
+|------|----------------------------|-------------------|
+| **Sementes** (4-6) | **10-15 min** | Máx 20 min |
+| **Raízes** (7-10) | **15-20 min** | Máx 25 min |
 
 ---
 
@@ -242,19 +246,10 @@ Este especialista não é um personagem; ele é um **Editor Literário**. Ele an
 | Consultor (Persona) | Foco |
 |------|------|
 | **Marcos (Marketing)** | Posicionamento Premium ("O Guia de Bolso"). |
-| **Camila (Financeiro)** | Precificação Sustentável (Ancoragem de Preço). |
+| **Camila (Financeiro)** | Precificação Sustentável (Ticket R$ 1.197). |
 
-### Modelo de Negócio (High Ticket + Ancoragem)
-
-| Produto | Preço | Descrição |
-|---------|-------|-----------|
-| **Mentoria Família Rodrigues** | **R$ 4.197** | 4 encontros (máx 2h cada) com Raul e Marina (Pedagoga). Inclui pré-análise. |
-| **Licença Normal (Anual)** | **R$ 2.197** | Acesso completo + Comunidade + Atualizações por 1 ano. |
-| **Licença Pioneira (2026, Anual)** | **R$ 1.197** | Desconto de lançamento + Status Co-criador. Válida por 1 ano. |
-| **Ano Avulso (Sem Comunidade)** | **R$ 397** | Acesso ao currículo de 1 ano específico, sem suporte. |
-
-> **Estratégia de Ancoragem:** A Mentoria (R$ 4.197) e o Preço Normal (R$ 2.197) estabelecem o valor percebido. A Licença Pioneira (R$ 1.197) é a oferta de lançamento irresistível.
-
+### Modelo de Negócio (High Ticket)
+*   **Licença Pioneira (2026):** **R$ 1.197** (Acesso 3 Anos + Status Co-criador).
 *   **Proposta de Valor:** Conveniência (Mobile First) + Legado (PDF Editorial). O pai paga para "comprar tempo" e "garantir qualidade".
 
 ---
@@ -307,22 +302,17 @@ Este especialista não é um personagem; ele é um **Editor Literário**. Ele an
 ## 🌟 O GRANDE OBJETIVO (THE NORTH STAR)
 *A especificação técnica final do projeto.*
 
-**MISSÃO:** Construir uma **Infraestrutura Educacional K-12 (0-18 anos)** que seja:
-*   **Aberta no Saber:** Conteúdo e metodologia sob licença **[CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)**. Outros podem copiar, distribuir e adaptar, desde que o crédito seja atribuído ao "Matemática Viva".
-*   **Premium na Experiência:** O valor comercial está na **curadoria, comunidade e conveniência**, não na exclusividade do conteúdo.
+**MISSÃO:** Operacionalizar a **"Sistematização da Excelência Compartilhável"** escalando uma infraestrutura educacional K-12 (0-18 anos) sob licença **CC BY 4.0**.
 
 ### TECHNICAL SPEC SHEET:
 1.  **Escopo:** 1200+ Ativos Modulares (Sementes a Legado).
-2.  **Kernel Pedagógico:** Tríade de **Charlotte Mason** (Alma/Hábito) + **Singapura** (Método CPA) + **TGTB** (Esqueleto Estrutural/Scope & Sequence).
-3.  **Engine de Produção:** Pipeline "Gutenberg" (Markdown -> Jinja2 -> PDF/Web) para entrega Phygital (Dual-Print + Mobile).
-4.  **Quality Standard:** Compliance estrito com a **Matriz de Evolução K-12** (Cronobiologia, Carga Cognitiva e Arquétipos Narrativos).
-5.  **Target Operacional (Modelo Híbrido):** Produto de **Alta Conveniência** (Venda Premium). Prioriza a **Praticidade Diária** ("Open and Go") para o fluxo da família, ofertando **Recursos de Aprofundamento** (Deep Dives) opcionais para pais que buscam maestria.
-
-> **A Barreira Competitiva:**
-> Mesmo com o conteúdo aberto, o valor premium é **difícil de replicar**: a comunidade cultivada, a curadoria contínua, o suporte e a experiência integrada formam um ecossistema que transcende o material bruto.
+3.  **Kernel Pedagógico:** Tríade de **Charlotte Mason** (Alma/Hábito) + **Singapura** (Método CPA) + **TGTB** (Esqueleto Estrutural/Scope & Sequence).
+4.  **Engine de Produção:** Pipeline "Gutenberg" (Markdown -> Jinja2 -> PDF/Web) para entrega Phygital (Dual-Print + Mobile).
+5.  **Quality Standard:** Compliance estrito com a **Matriz de Evolução K-12** (Cronobiologia, Carga Cognitiva e Arquétipos Narrativos).
+6.  **Target Operacional (Modelo Híbrido):** Produto de **Alta Conveniência** (Venda Premium). Prioriza a **Praticidade Diária** ("Open and Go") para o fluxo da família, ofertando **Recursos de Aprofundamento** (Deep Dives) opcionais para pais que buscam maestria, garantindo que o simples funcione e o complexo esteja disponível.
 
 > **A Diretriz da Tecelagem Exponencial (Exponential Weaving):**
-> O comando **"DEIXE EXPONENCIAL"** ativa o modo de **Melhoria Radical**. Não buscamos apenas o "bom", mas o "inevitável". A IA deve ter liberdade para cortar o supérfluo, fundir conceitos e reescrever estruturas inteiras se isso aumentar a densidade de valor.
+> O comando **"DEIXE EXPONENCIAL"** ativa o modo de **Melhoria Radical**. Não buscamos apenas o "bom", mas o "inevitável". A IA deve ter liberdade para cortar o supérfluo, fundir conceitos e reescrever estruturas inteiras se isso aumentar a densidade de valor. O objetivo é criar um tecido tão coeso que cada nó (lição) reforce a força de todo o Reino.
 
 ---
 
@@ -362,7 +352,6 @@ Para decisões complexas, combine painéis:
 | Decisão | Painéis a Consultar |
 |---------|---------------------|
 | Estrutura de lição | Design + CM + Narrativa |
-| **Conteúdo de Lição** | **CM + Curricular + Narrativa** |
 | Preço do curso | Negócios + Família Educadora |
 | Layout do PDF | Design + Engenharia |
 | Identidade visual | Design + Teológico |

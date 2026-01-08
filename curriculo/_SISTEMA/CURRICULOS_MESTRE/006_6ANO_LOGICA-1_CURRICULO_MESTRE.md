@@ -185,3 +185,7 @@ Este currículo deve ser servido através do **Protocolo Dual Printing** (Gutenb
 | **MV-117** | 006-L117 - Final Review / Revisão Final | **Melquior:** "Abertura do Portal: O Portal se abre. Mostre sua armadura polida e sua mente afiada." |
 | **MV-118** | 006-L118 - Final Review Game / Jogo de Revisão Final | **Celeste:** "Celebração Solene: Celebração solene e alegre no centro da Vila." |
 | **MV-119** | 006-L119-120 - Course Assessment / Banquete Final | **Melquior:** "Reconhecimento Real: Guardião da Razão, o Reino reconhece seu labor. Entre na glória do serviço!" |
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*

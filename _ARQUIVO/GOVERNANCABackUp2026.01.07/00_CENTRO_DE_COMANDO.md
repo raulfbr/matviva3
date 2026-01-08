@@ -33,7 +33,11 @@ status: Canônico (HUB Central)
 - **Ação:** Execute o ofício operacional com precisão. Consulte para rituais no lar e calibração de Prompts IA.
 - **Guardião:** Arquiteto IA.
 
-
+### 🏛️ [SISTEMA DE EXCELÊNCIA](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/05_SISTEMA_EXCELENCIA.md) (O CRIVO)
+- **Essência:** Arquitetura Multi-Agente (Orquestrador + 5 Mesas).
+- **Ação:** O Arquiteto roteia automaticamente para `/conselho-v3` (Decisão) ou `/verificar` (Qualidade v2.0).
+- **Base Técnica:** [SSOT](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/.agent/SSOT.md) (Verdade Única).
+- **Guardião:** Charlotte Mason (Veto Pedagógico).
 
 ---
 
@@ -51,8 +55,9 @@ status: Canônico (HUB Central)
 ---
 
 ## 🧭 RITUAIS DE COMANDO (O Modo de Operar)
-- **Conselho:** Use `/deixe-exponencial` para melhorias radicais ou convoque o Painel de Especialistas para decisões críticas.
-- **Logs:** Registre sessões em `_LOGS/` para rastreabilidade.
+- **Sincronia:** Leia o [99_TEMPORARIO](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/99_TEMPORARIO.md) para alinhar o contexto da sessão atual.
+- **Veredito:** Use o `/conselho-v3` para decisões que alterem a estrutura fundamental do Pentateuco.
+- **Continuidade:** Atualize o `00_CONTEXTO_RETOMADA.md` ao final de cada jornada.
 
 ---
 
@@ -79,10 +84,9 @@ status: Canônico (HUB Central)
 | **6-12** | 🛡️ Lógica/Legado | **PRODUÇÃO** | [Explorar Legado](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/curriculo/03_LEGADO/) |
 
 ### 💼 Estratégia de Reino (Valor & Sustentabilidade)
-> **SSOT:** Consulte a tabela de preços e ancoragem no **[Painel de Especialistas (Negócios)](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/PAINEL-ESPECIALISTAS.md#-consultoria-de-negócios--estratégia)**. Não duplique aqui.
-
-*   **Modelo de Casa:** Uma licença cobre todos os filhos do lar.
-*   **Régua do Mundo:** Currículo 1-2 anos à frente da BNCC.
+*   **Licença Pioneira (R$ 1.197):** Ticket premium que sinaliza a dignidade do material.
+*   **Modelo de Casa (12 Meses):** Uma licença cobre todos os filhos do lar naquele ciclo.
+*   **Régua do Mundo:** Currículo desenhado para estar 1 a 2 anos à frente da BNCC.
 
 ### 🌊 Ondas de Expansão
 1. **Onda de Aço (Fundações):** 

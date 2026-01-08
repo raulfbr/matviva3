@@ -12,10 +12,8 @@ status: Canônico (SSOT Operacional)
 
 ---
 
-## 🕯️ 1. A LITURGIA DO LAR (Guia do Portador)
+## 🕯️ PARTE I: A LITURGIA DO LAR (Guia do Portador)
 *Fundamentado no Ritual de Charlotte Mason e na Postura do Mentor.*
-
-> **"A Liturgia precede o Conteúdo. Sem a atmosfera correta, a técnica é ruído."**
 
 ### 🏛️ 1. O Arsenal do Viajante (Ferramentas de Honra)
 Não usamos materiais descartáveis. A dignidade da ferramenta ensina o respeito pelo ofício.
@@ -34,16 +32,9 @@ Você não é um professor; você é um **Anfitrião**.
 
 ### 🌿 3. A Liturgia do Erro (Protocolo Bernardo)
 O erro é uma "Pedra Lascada", uma cicatriz de vitória, não uma mancha de vergonha.
-
-*   **Hamartia:** Significa "errar o alvo". No Reino, não há julgamento, apenas o convite para "ajustar a mira".
-*   **O Lápis Verde:** Bernardo (O Guardião Manco) ensina que a correção é um ato de beleza. Usamos o verde (cor da vida) para circular o desvio, permitindo a auto-correção sem a mancha do "X" escolar.
-*   **Oportunidade de Glória:** Quando o erro é vencido, ele se torna uma **Cicatriz de Sabedoria**. Celebramos o esforço da superação tanto quanto o resultado correto.
-
-**Protocolo Prático:**
-1. Circule o desvio suavemente com o Lápis Verde. Banimento total do "X" vermelho.
-2. **Redenção:** Incentive a auto-correção. "Seus erros de hoje são as fundações de seu castelo amanhã."
+1. **O Lápis Verde:** Circule o desvio suavemente. Banimento total do "X" vermelho.
+2. **Redenção:** Incentive a auto-correção. Seus erros de hoje são as fundações de seu castelo amanhã.
 3. **Permanência no Posto:** A vitória é declarada pela persistência honrada, não apenas pelo acerto.
-
 
 ### 🎉 4. O Banquete da Memória (Celebração de Fim de Ciclo)
 Ao final de cada trimestre ou bimestre, a "aula" se transforma em um **Banquete de Ideias**. Não é prova; é celebração.
@@ -59,7 +50,7 @@ Ao final de cada trimestre ou bimestre, a "aula" se transforma em um **Banquete 
 ---
 
 
-## 🧬 2. O OFÍCIO NARRATIVO (Manual de Fluidez)
+## 🧬 PARTE II: O OFÍCIO NARRATIVO (Manual de Fluidez)
 *Diretrizes para a Voz dos Guardiões e Escrita das Lições.*
 
 ### 🎭 1. A Voz que Amadurece
@@ -80,15 +71,15 @@ NUNCA viole a fisiologia da criança. Se a lição fadiga a atenção, ela falho
 - **Raízes:** < 25 min.
 - **Hard Stop:** Se o tempo acabar antes do fim, pare. O hábito da atenção é superior ao cumprimento da página.
 
-### 🌤️ 4. Variações de Clima (A Resposta da Alma)
-A mente, como o corpo, fadiga com a monotonia. Alterne a "temperatura" da lição:
-- **Ensolaradas (Vivace):** Lições de descoberta e alegria. Ritmo ágil, mas nunca apressado.
-- **Nubladas (Adagio):** Lições de interiorização e esforço silencioso. O tempo da "ruminação" da ideia.
-- **Ventosas (Allegro):** Lições de movimento e expansão geográfica. Troque o escritório pelo jardim.
+### 🌤️ 4. Variações de Clima (Ritmo Narrativo)
+Para evitar a monotonia, as lições devem alternar entre climas emocionais:
+- **Ensolaradas:** Lições rápidas, vibrantes, de descoberta e celebração.
+- **Nubladas:** Lições de interiorização, silêncio profundo e repetição honrada.
+- **Ventosas:** Lições de movimento, troca de ambiente e missões de "correr o Reino".
 
 ---
 
-## 🧬 3. ENGENHARIA DO MARAVILHAMENTO (Guia de Prompt IA)
+## 🧬 PARTE III: ENGENHARIA DO MARAVILHAMENTO (Guia de Prompt IA)
 *Instruções de Sistema para o Arquiteto IA.*
 
 ### 🧭 1. O Mapa do Arquiteto
@@ -99,27 +90,22 @@ Siga este fluxo para criar ou revisar qualquer lição:
 4. **Passos Firmes:** Instruções claras para o pai em blocos `VOCÊ FAZ`.
 5. **Doxologia Final:** Eleve o técnico a uma verdade maior sobre a Criação.
 
-### 🛠️ 2. MISE-EN-PLACE DO ARQUITETO (Checklist de Prontidão)
-Antes de construir, verifique a "Bancada Digital":
-1.  **Doxologia Definida?** Qual verdade sobre o Logos essa lição revela?
-2.  **Fase Calibrada?** O tom respeita a Matriz K-12 (Fábula vs Duelo)?
-3.  **Técnica Clara?** Qual é o *Bond Number* ou Conceito exato?
+### 🛠️ 2. Padrões de Engenharia (Manual do Maestro)
+Para garantir o "Zero Atrito" e a Beleza Gratuita (Plussing):
+- **O Teste do Café (One-Handed):** O roteiro no celular deve ser operável com uma mão; a outra deve estar livre para segurar a xícara de café ou guiar a mão da criança.
+- **Local First (Soberania):** Privacidade total. O progresso é do usuário, salvo no dispositivo, sem burocracia de senhas ou carregamentos lentos.
+- **Gutenberg Pipeline:** Markdown limpo -> PDFs Editoriais e Apps Dinâmicos com um clique.
+- **Privacidade Radical:** O Reino pertence à família; os dados não saem do lar sem autorização expressa.
 
-### 📐 3. Princípios de Design (A Estética do Serviço)
-A técnica deve servir à paz do lar, não roubá-la:
-- **Ergonomia da Atenção (One-Handed):** Interface fluida para uso com uma mão. O pai consulta o guia sem quebrar o contato visual com a criança.
-- **Fluidez Digital (Responsividade):** O conteúdo se adapta a qualquer tela como água. Seja no celular ou no tablet, a leitura nunca trava, nunca espera e nunca distrai.
-- **Beleza Editorial (Pipeline):** Do texto puro (Markdown) à elegância visual instantânea. A forma honra o conteúdo e facilita a leitura em movimento.
-
-### 🔒 4. Os Invariantes Soberanos
+### 🔒 2. Os Invariantes Sobrenos
 - **Zero Telas < 10 anos:** O digital serve ao Pai; a criança toca na Realidade.
 - **Things before Signs (SGP):** O concreto (objeto) sempre precede o símbolo (número).
-- **Narração é o Motor:** Quem não narra, não sabe. Garanta o espaço da fala.
-- **Link, não Cópia:** Nunca re-explique Lore ou Regras. Aponte o link para o SSOT.
+- **Narração é o Motor:** Garanta espaço para a criança "falar o conhecimento".
+- **Soberania Terminológica:** Definições de Guardiões e Ciclos pertencem à Governança. Não re-explique; aponte o link.
 
 ---
 
-## 📜 4. SINTAXE DO REINO (Custom Blocks)
+## 📜 PARTE IV: SINTAXE DO REINO (Custom Blocks)
 *O Gutenberg Pipeline reconhece e renderiza estes blocos especiais.*
 
 ### 🎭 Blocos Semânticos (Markdown → HTML)
@@ -155,7 +141,7 @@ O sistema lê Markdowns e processa Regex customizado, gerando cards CSS distinto
 
 ---
 
-## 📋 5. FRONTMATTER CANÔNICO
+## 📋 PARTE V: FRONTMATTER CANÔNICO
 *Campos obrigatórios no topo de cada arquivo de lição.*
 
 ### Campos Obrigatórios
@@ -187,7 +173,7 @@ variacao_clima: Ensolarado # Ensolarado | Nublado | Ventoso
 
 ---
 
-## 🎒 6. KIT ESSENCIAL POR CICLO
+## 🎒 PARTE VI: KIT ESSENCIAL POR CICLO
 *O Arsenal Básico para iniciar cada fase.*
 
 ### 🍃 Sementes (4-6 anos)

@@ -12,7 +12,7 @@ status: Canônico
 
 > **Nota do Conselho:** Este documento é a "Fonte da Verdade". Se o mapa diz que a lição é sobre "Ordem", não a transforme em apenas "Sequência". A ideia viva governa o tópico.
 
-Este documento é a "Fonte da Verdade" para o ciclo Sementes (Prescola/Kindergarten). Ele mapeia a jornada do **Viajante**, em sincronia absoluta com a pedagogia da **The Good and the Beautiful (TGTB) Math Kindergarten** e sob as diretrizes da [Arquitetura do Reino](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/curriculo/_SISTEMA/_ESTRATEGIA/00_ARQUITETURA_DO_REINO.md).
+Este documento é a "Fonte da Verdade" para o ciclo Sementes (Prescola/Kindergarten). Ele mapeia a jornada do **Viajante**, em sincronia absoluta com a pedagogia da **The Good and the Beautiful (TGTB) Math Kindergarten** e sob as diretrizes da [Magna Carta](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md).
 
 ---
 
@@ -212,6 +212,6 @@ A Lição 000 não é matemática conteudista. É **Litúrgica e Narrativa**.
 | **MV-S-120** | 000-L119-120 - Course Assessment / Banquete de Melquior II | **Melquior:** "O Banquete da Travessia: Melquior reúne todos os 5 Guardiões no Portal de Prata. Noé entrega a última semente; Celeste mostra o mapa completo; Bernardo oferece o bastão de Construtor; a Íris (Pardal) aponta para a luz do horizonte. Melquior sorri: 'Você cuidou bem das sementes, pequeno **Herdeiro**. Suas raízes estão fortes. O Jardim das Raízes o espera.' Melquior então mostra um pequeno objeto verde: 'Leve este **Lápis Verde**; na Oficina de Bernardo, o erro não é fim, é polimento.' O Viajante cruza o portal." |
 
 ---
----
-**[00_HUB](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [01_LEIS](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/01_MAGNA_CARTA.md) | [09_MATRIZ](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/09_MATRIZ_DE_EVOLUCAO_K12.md)**
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
 *Arquiteto (v3.5 Sovereign Positive).*

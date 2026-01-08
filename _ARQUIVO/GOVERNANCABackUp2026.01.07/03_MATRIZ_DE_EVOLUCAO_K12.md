@@ -1,16 +1,12 @@
----
-id: MATRIZ_EVOLUCAO_K12
-titulo: "Matriz de Evolução Pedagógica K-12"
-versao: 3.5 (Sovereign Positive Gold)
-status: Canônico
-ultima_atualizacao: 2026-01-07
----
-
 # 🧭 MATRIZ DE EVOLUÇÃO PEDAGÓGICA (K-12)
+**O Cânone de Crescimento e Bússola da IA v3.5 (Sovereign Positive Gold)**
+
+> [!NOTE]
+> **SELO DE IMPECABILIDADE GOLD+:** Este documento é a âncora suprema do projeto. Ele integra a Governança, a Lore e a Pedagogia de Charlotte Mason em um único mapa de navegação para o Arquiteto e o Maestro.
 
 > [!IMPORTANT]
-> **SSOT Operacional:** Este documento é a fonte única para **Cronobiologia**, **Tempos de Lição** e **Escala de Autonomia**. Para Lore e Guardiões, consulte o [Livro do Reino](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md). Para Liturgia e Postura, consulte o [Manual do Ofício](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md).
-
+> **ESTE É O DOCUMENTO DE SINALIZAÇÃO MESTRE.**
+> Qualquer criação de lição ou template deve consultar esta matriz para garantir que o "fardo" e o "encanto" estejam calibrados com a cronobiologia e a maturidade do Viajante.
 
 ---
 
@@ -26,7 +22,7 @@ ultima_atualizacao: 2026-01-07
 
 ---
 
-## ⏳ 2. TABELA DE CRONOBIOLOGIA & RITUAL (A Lei do Tempo)
+## ⏳ II. TABELA DE CRONOBIOLOGIA & RITUAL (A Lei do Tempo)
 A atenção é um músculo sagrado. Evitamos ao máximo ultrapassar estes limites e sempre respeitamos o **Ritual do Clima** (veja Tabela de Ritual na Magna Carta).
 
 | Ciclo | Idade | Fase | Tempo (Máx) | Ritmo Ritualístico | Foco Atmosférico |
@@ -56,20 +52,20 @@ Para que o Reino funcione em harmonia, os papéis devem ser claros e o tom de vo
 
 ## 🧭 IDENTIDADE E DIGNIDADES DO VIAJANTE
 
-> **SSOT:** Para detalhamento completo das Dignidades e Lore do Viajante, consulte o **[Livro do Reino - Seção 2](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md#-2-o-viajante-e-suas-dignidades)**.
+Embora chamemos carinhosamente todos os aprendizes de **Viajante** ao longo de toda a jornada (0-18 anos), sua identidade na Lore evolui para refletir sua maturidade:
 
-| Ciclo | Dignidade | Arquétipo (Subtítulo) |
-|-------|-----------|----------------------|
-| 0-4 anos | Pequeno Viajante | Explorador da Atmosfera |
-| 5-6 anos | Filho Herdeiro | Desbravador do Jardim |
-| 7-10 anos | Ajudante Construtor | A Oficina e o Mercado |
-| 11-14 anos | Investigador Lógico | Patrulheiro da Fronteira |
-| 15-18 anos | Parceiro Mordomo | Governante do Logos |
+*   **0-4 anos: O Pequeno Viajante** (Explorador da Atmosfera)
+*   **5-6 anos: Filho Herdeiro** (Desbravador do Jardim)
+*   **7-10 anos: Ajudante Construtor** (A Oficina e o Mercado)
+*   **11-14 anos: Investigador Lógico** (Patrulheiro da Fronteira)
+*   **15-18 anos: Parceiro Mordomo** (Governante do Logos)
 
+> [!TIP]
+> **O NOME VIVO:** Utilize os nomes das Dignidades nos rituais de abertura e nos documentos de conquista para conferir peso e honra ao crescimento do Viajante.
 
 ---
 
-## 🦅 3. ESCALA DE AUTONOMIA (O Protocolo de Transição)
+## 🦅 III. ESCALA DE AUTONOMIA (O Protocolo de Transição)
 > *Ajudamos a família a transicionar de "Mãe que faz" para "Filho que busca". Flexibilidade é a chave, mas sem abandono.*
 
 | Fase | Quem Guia? | Papel do Pai/Mãe | Papel da Criança |
@@ -134,10 +130,7 @@ O Portador da Tocha é o **Anfitrião Ativo**: ele prepara a mesa, acende a vela
 
 ## 🎭 Evolução Épica da Lore (Os Guardiões)
 
-> **SSOT:** Para detalhamento completo dos Guardiões (histórias, artefatos, chamados), consulte o **[Livro do Reino - Seção 3](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md#-3-os-guardiões-do-reino)**.
-
-**Resumo de Evolução por Fase:**
-
+A Lore não é estática; os Guardiões "crescem" em autoridade e complexidade junto com o Viajante:
 
 | Guardião | **Sementes (Fábula)** | **Raízes (Aventura)** | **Lógica (Rigor)** | **Legado (Governo)** | **Cor (#Hex)** | **Evolução Pedagógica CM** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -173,23 +166,19 @@ Para evitar a monotonia e treinar o **Hábito da Atenção**, a IA Arquiteta dev
 
 ---
 
-## 🖋️ A LITURGIA DO ERRO
+## 🖋️ A LITURGIA DO ERRO (O Protocolo do Lápis Verde)
 
-> **SSOT:** Para o protocolo completo, consulte o **[Manual do Ofício - Seção 3](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md)**.
+O erro no Matemática Viva é tratado como uma **Escalata da Verdade**:
 
-**Resumo Operacional para a IA:**
-- **Hamartia:** Significa "errar o alvo". Não há julgamento, apenas convite para "ajustar a mira".
-- **Lápis Verde:** Bernardo (O Guardião Manco) ensina: use verde (cor da vida) para circular o desvio. Banimento do "X" vermelho.
-- **Cicatriz de Sabedoria:** O erro vencido vira glória. Celebre o esforço da superação.
-- **Postura:** O erro é polimento técnico, não falha moral.
-
-
+*   **Hamartia:** Significa "errar o alvo". No Reino, não há julgamento, apenas o convite para "ajustar a mira".
+*   **O Lápis Verde:** Bernardo (O Guardião Manco) ensina que a correção é um ato de beleza. Usamos o verde (cor da vida) para circular o desvio, permitindo a auto-correção sem a mancha do "X" escolar.
+*   **Oportunidade de Glória:** Quando o erro é vencido, ele se torna uma **Cicatriz de Sabedoria**. Celebramos o esforço da superação tanto quanto o resultado correto.
 
 ---
 
 ---
 
-## 🎨 4. O FLUXO VIVO POR CICLO (O Campo Unificado)
+## 🎨 IV. O FLUXO VIVO POR CICLO (O Campo Unificado)
 
 Este capítulo é a âncora operacional suprema. Ele unifica o Espírito (Teologia), a Alma (Lore) e o Corpo (Técnica) de cada fase do amadurecimento do Viajante.
 
@@ -211,7 +200,7 @@ Este capítulo é a âncora operacional suprema. Ele unifica o Espírito (Teolog
 
 ---
 
-### 1. CICLO SEMENTES (5-6 anos): O Jardim do Maravilhamento {#sementes-tatico}
+### 🍃 I. CICLO SEMENTES (5-6 anos): O Jardim do Maravilhamento {#sementes-tatico}
 *   **O ESPÍRITO (Ideia Viva):** **"O Mundo é um Banquete, e você é o Convidado de Honra. O Deus da Beleza e do Maravilhamento."**
 *   **A ALMA (Identidade & Lore):**
     *   **Filosofia CM:** *"The child's mind is a garden, not a storage."* (Informalidade total).
@@ -233,7 +222,7 @@ Este capítulo é a âncora operacional suprema. Ele unifica o Espírito (Teolog
 
 ---
 
-### 2. CICLO RAÍZES (7-10 anos): A Oficina da Ordem
+### 🌳 II. CICLO RAÍZES (7-10 anos): A Oficina da Ordem
 *   **FILOSOFIA CM:** Início formal. **Hábito da Atenção** (Lições curtas de 20 min com foco total).
 *   **MATEMÁTICA:** **Transição Pictórica.** Aritmética robusta (4 Operações), Tabuada rítmica e Geometria de Construção.
 *   **POSTURA GERAL:** **Mestre de Oficina.** (Exigente na qualidade, paciente no processo).
@@ -314,7 +303,7 @@ Este capítulo é a âncora operacional suprema. Ele unifica o Espírito (Teolog
 
 ---
 
-### 3. CICLO LÓGICA (11-14 anos): A Fortaleza da Verdade {#logica-tatico}
+### 🛡️ III. CICLO LÓGICA (11-14 anos): A Fortaleza da Verdade {#logica-tatico}
 *   **O ESPÍRITO (Ideia Viva):** **"A Verdade é uma Fortaleza; a Lógica é a sua guarda. O Cinto da Verdade."**
 *   **A ALMA (Identidade & Lore):**
     *   **Filosofia CM:** Form III/IV. Introdução de **Euclides** e Raciocínio Dedutivo (Socrático).
@@ -336,7 +325,7 @@ Este capítulo é a âncora operacional suprema. Ele unifica o Espírito (Teolog
 
 ---
 
-### 4. CICLO LEGADO (15-18 anos): O Governo do Logos {#legado-tatico}
+### 👑 IV. CICLO LEGADO (15-18 anos): O Governo do Logos {#legado-tatico}
 *   **O ESPÍRITO (Ideia Viva):** **"Governar é Servir. A Matemática é a Linguagem da Mordomia. Soberania das Esferas."**
 *   **A ALMA (Identidade & Lore):**
     *   **Filosofia CM:** Form V/VI. Entendimento da "Geometria do Universo" e **Stewardship**.
@@ -362,6 +351,8 @@ Para cada lição gerada, a IA deve injetar uma destas "Ideias Âncoras" conform
 *   **RAÍZES:** *"O seu trabalho edifica o Reino. Cada traço é um tijolo."* (Foco: Diligência).
 *   **LÓGICA:** *"A Verdade é uma Fortaleza; a Lógica é a sua guarda."* (Foco: Discernimento).
 *   **LEGADO:** *"Governar é Servir. A Matemática é a linguagem da Mordomia."* (Foco: Responsabilidade).
+
+---
 
 ---
 

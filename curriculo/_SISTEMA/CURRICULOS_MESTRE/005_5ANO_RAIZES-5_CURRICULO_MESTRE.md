@@ -194,3 +194,7 @@ Este currículo deve ser servido através do **Protocolo Dual Printing** (Gutenb
 | **MV-117** | 005-L117 - Roman Numerals / Algarismos Romanos | **Noé:** "Tradição Viva: A tradição viva das pedras antigas no nosso registro." |
 | **MV-118** | 005-L118 - Course Review / Revisão do Curso | **Melquior:** "Mosaico Pronto: O Mosaico está quase pronto. Cada peça brilha com o suor do labor." |
 | **MV-119** | 005-L119-120 - Course Assessment / Banquete Final | **Melquior:** "Guardião da Complexidade: Mestre do Mosaico, você provou ser um verdadeiro Guardião da Complexidade. Louvai ao Rei!" |
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*

@@ -187,3 +187,7 @@ Este currículo deve ser servido através do **Protocolo Dual Printing** (Gutenb
 | **MV-116** | 007-L116 - Unit 4 Assessment / Banquete da Memória | **Melquior:** "Tesouro Seguro: Seu tesouro conquistado está seguro sob a guarda da Sabedoria." |
 | **MV-117** | 007-L117 - Final Review: Game Lesson / Revisão Final: Lição de Jogo | **Celeste:** "Celebração do Mistério: Celebração do Mistério desvendado no coração da Vila." |
 | **MV-118** | 007-L118 - Final Course Assessment / Banquete Final | **Melquior:** "Ranger das Incógnitas: Ranger das Incógnitas, o Mistério agora é sua força. Louvai ao Rei!" |
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*

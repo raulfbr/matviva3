@@ -53,5 +53,5 @@ O Portador da Tocha deve agir como um **Apontador de Maravilhas**:
 
 ---
 ---
-**[00_HUB](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [01_LEIS](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/01_MAGNA_CARTA.md) | [09_MATRIZ](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/09_MATRIZ_DE_EVOLUCAO_K12.md)**
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
 *Arquiteto (v3.5 Sovereign Positive).*

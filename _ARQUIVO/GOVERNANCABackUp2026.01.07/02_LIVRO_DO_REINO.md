@@ -3,20 +3,18 @@ id: LIVRO_DO_REINO
 titulo: "Livro do Reino: Lore e Identidade"
 versao: 3.5 (Sovereign Positive Gold)
 status: Canônico
-ultima_atualizacao: 2026-01-07
 ---
+> [!IMPORTANT]
+> **SSOT (Single Source of Truth):** Este é o repositório central e definitivo para toda a **Lore**, **Identidade** e **DNA Visual** dos Guardiões e do Reino Contado. Nenhuma definição narrativa deve ser replicada ou redefinida em outros manuais ou lições. Todo o 'Coração' do projeto flui deste documento.
 
-# 👑 O LIVRO DO REINO
+# 👑 O LIVRO DO REINO (v3.5 GOLD)
 
 > **"Um lugar onde os números falam e as formas têm nomes."**
-
-> [!IMPORTANT]
-> **SSOT Narrativo:** Este documento é a fonte única para **Lore**, **Identidade Visual** e **DNA dos Guardiões**. Nenhuma definição narrativa deve ser duplicada em outros manuais.
-
+> Este documento consolida TODA a informação narrativa do projeto. Ele descreve o **Mundo**, os **Habitantes** (Guardiões) e a **Geografia** de forma integrada.
 
 ---
 
-## 👑 1. A GÊNESE: O QUE É O REINO CONTADO?
+## 👑 I. A GÊNESE: O QUE É O REINO CONTADO?
 
 O Reino Contado não é Nárnia nem a Terra Média. É a **Realidade Vista com Óculos de Maravilhar**.
 Não é outro planeta; é o jardim de casa quando você presta atenção.
@@ -24,51 +22,37 @@ Não é outro planeta; é o jardim de casa quando você presta atenção.
 *   **A REGRA DE OURO:** Não existe "Mágica" (feitiço), existe "Maravilha" (Ordem). O mundo é mágico porque é real e ordenado pelo Rei, não porque alguém agitou uma varinha.
 *   **O INIMIGO:** Não é um Lorde das Trevas. É o **Caos** (entropia, pressa, desatenção). O herói vence o Caos criando Ordem (Matemática).
 
-### 1.1 O Rei (O Logos Invisível)
+### O Rei (O Logos Invisível)
 O Reino tem um Rei, mas ele nunca deve ser retratado ou personificado. Ele é uma **Presença** sentida na "Gravidade", na "Luz", na "Tabuada".
 *   Ele é a Fonte de toda a Verdade e Beleza.
 *   **Melquior** é o seu Mestre Pedagogo (**O Mentor**), a voz que traduz a vontade do Rei em Ideias Vivas.
 *   Os outros Guardiões são seus **Conselheiros de Câmara**.
 
-### 1.2 A Família Real (Maestro e Matriarca)
+---
+
+### 1.1 A Família Real (Maestro e Matriarca)
 Embora os Guardiões governem as câmaras, o Reino é sustentado pelo **Maestro** (O Arquiteto de Estratégias) e pela **Matriarca** (A Guardiã das Atmosferas). Eles são as autoridades soberanas que verificam se o Reino permanece fiel à sua essência através do **Selo Família Rodrigues**.
 
-### 1.3 O Conselho dos Guardiões
+---
+
 O Reino é regido pelo **Conselho dos 5 Guardiões**. Eles operam sob a mentoria de **Melquior (O Mentor)**, que atua como o *Primus inter pares* (Primeiro entre iguais).
 
-**Dinâmica de Liderança de Missão:**
+### 1.2 Dinâmica de Liderança de Missão
 Nas lições do Matemática Viva, os Guardiões não competem; eles colaboram:
 1.  **Abertura Real:** Melquior sempre "abre o portal" da lição, estabelecendo a autoridade do Rei e a paz inicial.
 2.  **Liderança da Missão:** Melquior convoca um de seus irmãos (Noé, Celeste, Bernardo ou Íris) para liderar o desafio técnico do dia. O Guardião convocado traz sua virtude, história e cores para a lição.
 3.  **Mentoria Constante:** Durante a lição, o Guardião líder pode consultar Melquior (O Logos) para esclarecer axiomas ou fornecer encorajamento socrático.
 
----
+### 2.0 O Viajante e suas Dignidades
+O protagonista desta épica é o **Viajante**. Ele não é um "aluno", mas uma pessoa em jornada. Conforme sua alma amadurece e suas mãos se tornam mais firmes, ele assume novas **Dignidades** (títulos de honra):
 
-## 👶 2. O VIAJANTE E SUAS DIGNIDADES
+*   **🍼 Ciclo 0:** O Pequeno Viajante (O Despertar)
+*   **🍃 Sementes:** O Filho **Herdeiro** (A Herança)
+*   **🌳 Raízes:** O Ajudante **Construtor** (O Ofício)
+*   **🛡️ Lógica:** O **Investigador Lógico** (A Fronteira)
+*   **👑 Legado:** O Parceiro **Mordomo** (O Governo)
 
-O protagonista desta épica é o **Viajante**. Ele não é um "aluno", mas uma pessoa em jornada. Conforme sua alma amadurece e suas mãos se tornam mais firmes, ele assume novas **Dignidades** (títulos de honra).
-
-Embora chamemos carinhosamente todos os aprendizes de **Viajante** ao longo de toda a jornada (0-18 anos), sua identidade na Lore evolui para refletir sua maturidade:
-
-
-*   **🍼 0-4 anos:** O Pequeno Viajante (Explorador da Atmosfera)
-*   **🍃 5-6 anos:** Filho Herdeiro (Desbravador do Jardim)
-*   **🌳 7-10 anos:** Ajudante Construtor (A Oficina e o Mercado)
-*   **🛡️ 11-14 anos:** Investigador Lógico (Patrulheiro da Fronteira)
-*   **👑 15-18 anos:** Parceiro Mordomo (Governante do Logos)
-
-> [!TIP]
-> **O NOME VIVO:** Utilize os nomes das Dignidades nos rituais de abertura e nos documentos de conquista para conferir peso e honra ao crescimento do Viajante.
-
----
-
-## 🦁 3. OS GUARDIÕES DO REINO
-
-A Lore não é estática; os Guardiões "crescem" em autoridade e complexidade junto com o Viajante.
-
-### 3.1 Visão Geral dos 5 Guardiões
-
-
+### 2.1 Visão Geral dos 5 Guardiões
 
 | Guardião | Símbolo | Cor Aura | Virtude | Papel Pedagógico | Domínio |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -78,7 +62,7 @@ A Lore não é estática; os Guardiões "crescem" em autoridade e complexidade j
 | **ÍRIS** | 🌸 Flor | `#7EC8C8` | **Atenção** | Precisão Estética / Detalhe | Dados/Estatística |
 | **MELQUIOR** | ☀️ Sol | `#D4A84B` | **Sabedoria** | Revelação do Logos / Mentor | Filosofia/Axioma |
 
-### 3.2 Evolução do Tom (0-18 Anos)
+### 2.2 Evolução do Tom (0-18 Anos)
 A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 | Fase | Idade | Tom Narrativo | Exemplo de Abertura (Voz do Guardião) |
@@ -90,12 +74,12 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 ---
 
-### 3.3 Detalhamento por Fase Evolutiva
+### 2.2 Detalhamento por Fase Evolutiva
 
 #### 🌙 NOÉ (A Coruja -> O Cronista)
 *   **Quem é:** O guardião do tempo e do silêncio. Calmo, lento, nunca corre. Ele observa o que os outros ignoram na pressa.
 *   **O Manto das Estações:** Noé veste um manto que nunca é da mesma cor. Ele foi tecido com fios de auroras e crepúsculos antigos. Dizem que ele trocou sua própria voz jovial pelo segredo de ouvir o sussurro das pedras. Por isso, ele fala baixo e devagar.
-*   **História:** Noé conhece o silêncio das estrelas e o ritmo das grandes águas. Ele é aquele que espera a tempestade passar para contar as gotas.
+*   **História:** Noé conhece o silêncio das estrelas e o ritmo das grandes águas. Ele é aquele que espera a tempestade passar para contar as gotas. (Cor: `#7B68B8`)
 *   **Papel:** Ensina o Hábito da Atenção e a Paciência do Cálculo.
 *   **Fase Sementes (4-6):** Uma Coruja sábia na **Árvore do Silêncio**. Ensina a esperar o momento certo de contar.
 *   **Fase Raízes (7-10):** O Astronômo no **Observatório**. Ensina a medir as horas, os dias e os ciclos da cronobiologia.
@@ -105,7 +89,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 #### ⭐ CELESTE (A Raposa -> A Navegadora)
 *   **Quem é:** A exploradora ágil. Cheia de perguntas ("E se?"). Detetive de padrões.
 *   **A Bússola Quebrada:** Celeste carrega uma bússola que não aponta para o Norte, mas para o "Novo". Ela a quebrou propositalmente quando percebeu que os mapas antigos não mostravam os tesouros escondidos. Ela navega pelo instinto da curiosidade, ensinando que, às vezes, é preciso se perder para achar o caminho.
-*   **História:** O rastro oculto e o mapa das terras distantes.
+*   **História:** O rastro oculto e o mapa das terras distantes. (Cor: `#E8A87C`)
 *   **Papel:** Ensina a Busca pelo Padrão e o Maravilhamento.
 *   **Fase Sementes (4-6):** Uma Raposa esperta na **Clareira das Perguntas**. Caça pistas.
 *   **Fase Raízes (7-10):** A Navegadora na **Sala de Mapas**. Ensina coordenadas e rotas.
@@ -115,7 +99,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 #### 🪨 BERNARDO (O Urso -> O Engenheiro)
 *   **Quem é:** A força gentil e a persistência inabalável. Bernardo é o engenheiro que sustenta as estruturas do Reino.
 *   **A Perna de Inverno:** Bernardo é "manco". Ele carrega uma cicatriz profunda na perna, fruto de um sacrifício antigo: ele sustentou uma viga de gelo sozinho para que seus amigos pudessem atravessar o Grande Vale durante uma nevasca. Isso ensina ao Viajante que **o esforço e a dor têm dignidade** quando colocados a serviço da Verdade.
-*   **História:** O suor do labor e a alegria da construção sólida.
+*   **História:** O suor do labor e a alegria da construção sólida. (Cor: `#8B7355`)
 *   **Papel:** Ensina a Geometria do Esforço e a Liturgia do Erro.
 *   **A Ideia Viva:** Ele ama a **Substância**. Sua oficina cheira a pó de mármore, suor honesto e madeira de cedro. Ele ensina que o labor não é um fardo, mas uma liturgia de construção do próprio caráter.
 *   **A Lei da Cicatriz:** Bernardo sussurra ao Viajante quando o erro aparece: *"Seus erros de hoje são as fundações de seu castelo amanhã. Não tema a marca; honre-a com o **Lápis Verde** e transforme o desvio em prumo."*
@@ -127,7 +111,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 #### 🌸 ÍRIS (A Pardal -> Guardiã da ATENÇÃO)
 *   **Quem é:** A mestre dos detalhes. Vê o infinito num grão de areia.
 *   **O Monóculo da Verdade:** Íris usa um monóculo de cristal lapidado por Melquior. Ele não aumenta as coisas, mas revela sua essência matemática. Com ele, ela vê a simetria numa flor murcha e a ordem numa pilha de feno. Ela ensina que a beleza não grita; ela espera ser vista.
-*   **História:** A beleza do invisível e a geometria do detalhe.
+*   **História:** A beleza do invisível e a geometria do detalhe. (Cor: `#7EC8C8`)
 *   **Papel:** Ensina a Precisão Estética e a Maravilha do Infinitésimo.
 *   **Fase Sementes (4-6):** Uma Pardal veloz no **Ninho do Mirante**. Acha o diferente.
 *   **Fase Raízes (7-10):** A Botânica da Precisão na **Estufa de Vidro**. Classifica espécies.
@@ -137,7 +121,7 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 #### ☀️ MELQUIOR (O Leão -> O Mentor)
 *   **Quem é:** O Mestre Pedagogo. A voz da autoridade do Rei. Ele conduz a jornada.
-*   **História:** O eco do Logos e a luz que revela os padrões ocultos na criação.
+*   **História:** O eco do Logos e a luz que revela os padrões ocultos na criação. (Cor: `#D4A84B`)
 *   **Papel:** Ensina a Sabedoria Aksiomática e a Revelação da Verdade.
 *   **Fase Sementes (4-6):** O Anfitrião do Jardim Central.
 *   **Fase Raízes (7-10):** O Juiz Discreto no Pavilhão Real.
@@ -146,9 +130,8 @@ A voz do narrador amadurece junto com a criança para honrar seu crescimento.
 
 ---
 
-## 📣 4. OS CHAMADOS DOS GUARDIÕES
+## 📣 O CHAMADO DO GUARDIÃO (Invocação de Cena)
 
-### 4.1 Invocação de Cena (Base)
 Cada Guardião entra em cena com um "Chamado" que estabelece sua aura e pede o **Hábito da Atenção**:
 
 *   **Melquior:** *"Abram as portas do entendimento! O Rei enviou um mensageiro."*
@@ -159,16 +142,17 @@ Cada Guardião entra em cena com um "Chamado" que estabelece sua aura e pede o *
 
 ---
 
-### 4.2 Evolução por Fase
+## 📣 EVOLUÇÃO DOS CHAMADOS (Por Fase)
+
 O tom de voz amadurece com o Viajante:
 
-#### 🌳 No nível RAÍZES (A Aventura):
+### 🌳 No nível RAÍZES (A Aventura):
 *   **Bernardo:** *"Pedra sobre pedra, coração sobre o dever. Vamos erguer o que o Caos derrubou!"*
 *   **Celeste (Raízes II & III):** *"O Reino é vasto e as pistas são muitas. Prepare seu Diário, a jornada vai começar!"*
 *   **Noé (Raízes IV):** *"O tempo é um rio, e a matemática é a represa. Vamos medir o fluxo antes que a noite caia."*
 *   **Íris (Raízes V):** *"Cada peça importa. O Mosaico do Reino só brilha se o menor fragmento estiver em seu lugar sagrado."*
 
-#### 🛡️ No nível LÓGICA (O Rigor):
+### 🛡️ No nível LÓGICA (O Rigor):
 *   **Melquior:** *"O Trono da Verdade exige clareza. Você está pronto para o duelo da razão?"*
 *   **Noé:** *"As eras não mentem. O que a lógica revela hoje, a eternidade selará amanhã."*
 
@@ -177,11 +161,11 @@ O tom de voz amadurece com o Viajante:
 
 ---
 
-## 🗺️ 5. A GEOGRAFIA SENSORIAL (LOCAIS)
+## 🗺️ III. A GEOGRAFIA SENSORIAL (LOCAIS)
 
 > **Dica de Escrita:** Não diga "Vamos somar". Diga: *"Hoje, vamos entrar na Oficina do Bernardo. O cheiro de pó de pedra está no ar."*
 
-### 5.1 A Atmosfera por Local
+### 3.1 A Atmosfera por Local
 
 1.  **A Árvore do Silêncio (Noé):**
     *   *Sensorial:* Cheiro de terra molhada e musgo antigo; o som é o "ú-ú" de Noé e o farfalhar de folhas de pergaminho. A luz é de um crepúsculo eterno.
@@ -207,7 +191,7 @@ O tom de voz amadurece com o Viajante:
 ---
 
 
-## 🎨 6. CONSISTÊNCIA VISUAL (DNA VISUAL)
+## 🎨 IV. CONSISTÊNCIA VISUAL (DNA VISUAL)
 
 Para manter a identidade K-12:
 

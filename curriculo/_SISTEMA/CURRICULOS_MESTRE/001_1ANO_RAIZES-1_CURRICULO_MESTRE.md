@@ -211,7 +211,12 @@ Para manter o **Nível Platinum** sem perder o fôlego, seguiremos este protocol
 
 1.  **Selo Platinum:** Toda lição deve referenciar a `TGTB Ref` constante neste mapa.
 Para diretrizes detalhadas sobre a voz e a virtude de cada Guardião, consulte:
-1.  **[05_GUIA_DE_FLUIDEZ](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/05_GUIA_DE_FLUIDEZ.md)** (Tom Narrativo).
+1.  **[04_MANUAL_DO_OFICIO](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/04_MANUAL_DO_OFICIO.md)** (Tom Narrativo).
 2.  **[02_LIVRO_DO_REINO](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/02_LIVRO_DO_REINO.md)** (Identidade e Lore).
 3.  **Baton-Pass:** A última frase de `licao-N` deve ser o título do `Hook` de `licao-N+1`.
 4.  **Estética Living Ideas:** Evite verbos imperativos secos ("Faça", "Escreva"). Use convites: "Vamos traçar...", "Dê nome a...".
+
+---
+
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Matriz](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/03_MATRIZ_DE_EVOLUCAO_K12.md)**
+*Arquiteto (v3.5 Sovereign Positive).*
