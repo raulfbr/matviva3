@@ -618,3 +618,72 @@ ul:not(.browser-default) {
     margin-left: 0.5rem;
     vertical-align: middle;
 }
+
+/* --- K12 Premium Additions --- */
+.coming-soon-card {
+    background: linear-gradient(135deg, #fdfbf7 0%, #f4f1ea 100%);
+    border: 2px dashed #e5e0d0;
+    border-radius: var(--radius-card);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.coming-soon-card:hover {
+    opacity: 1;
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+}
+
+.coming-soon-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.coming-soon-title {
+    font-family: var(--font-heading);
+    color: var(--color-green-light);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon-desc {
+    font-size: 0.95rem;
+    color: #888;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Phase Headers */
+.arc-header {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.arc-header h2 {
+    font-size: 2rem;
+    color: var(--color-green);
+    margin: 0.5rem 0;
+}
+
+.arc-header p {
+    color: var(--color-green-light);
+    font-size: 1.1rem;
+}
+
+/* Coming Soon Badge in Nav */
+.nav-link.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+}

@@ -83,300 +83,76 @@ def parse_markdown(filepath):
     
     return metadata, html_content
 
-def build_lesson(filename):
-    """Constrói uma única lição."""
-    filepath = os.path.join(SOURCE_DIR, filename)
-    metadata, body_html = parse_markdown(filepath)
-    
-    # Filter: Skip templates
-    if "TEMPLATE" in filename: return None
+import glob
 
-    with open(os.path.join(TEMPLATE_DIR, "layout_base.html"), "r", encoding="utf-8") as f:
+# --- CONFIGURAÇÃO K-12 ---
+# Define a ordem e os metadados das fases
+K12_PHASES = [
+    {"id": "vivencia", "folder": "00_VIVENCIA", "title": "Vivência (0-4 Anos)", "desc": "O Despertar do Logos. A ordem no ordinário.", "color": "#7B68B8", "icon": "🍼"},
+    {"id": "sementes", "folder": "01_SEMENTES", "title": "Sementes (5-6 Anos)", "desc": "O Jardim do Maravilhamento. Onde tudo começa.", "color": "#2E8B57", "icon": "🌿"},
+    {"id": "raizes", "folder": "02_RAIZES", "title": "Raízes (7-10 Anos)", "desc": "A Oficina da Ordem. A construção do hábito.", "color": "#8B4513", "icon": "🌳"},
+    {"id": "logica", "folder": "03_LOGICA", "title": "Lógica (11-14 Anos)", "desc": "A Fortaleza da Verdade. O rigor da razão.", "color": "#4682B4", "icon": "⚔️"},
+    {"id": "legado", "folder": "04_LEGADO", "title": "Legado (15-18 Anos)", "desc": "O Governo do Logos. Servir para liderar.", "color": "#D4A84B", "icon": "👑"}
+]
+
+CONTENT_DIR = "curriculo" # Base para scan
+
+def scan_markdown_files():
+    """Varre todas as pastas de fase definidas em K12_PHASES."""
+    all_lessons = []
+    
+    for phase in K12_PHASES:
+        phase_dir = os.path.join(CONTENT_DIR, phase["folder"])
+        # Fallback para Sementes se estiver em outro lugar ou se for a estrutura antiga
+        
+        if not os.path.exists(phase_dir):
+            print(f"⚠️ [WARN] Fase não encontrada: {phase['folder']}")
+            continue
+            
+        print(f"🔍 [SCAN] Lendo fase: {phase['title']}...")
+        files = glob.glob(os.path.join(phase_dir, "*.md"))
+        
+        for f in files:
+            meta, body = parse_markdown(f)
+            
+            # Skip se for dummy (mas queremos renderizar dummy para debug? Na verdade, dummy é placeholder)
+            # Vamos renderizar dummy SE não houver ID.
+            if not meta.get('id'): 
+                 if "DUMMY" not in f: continue
+            
+            # Injeta metadata da fase se não existir
+            if not meta.get('fase'): meta['fase'] = phase['title']
+            
+            # Adiciona caminho relativo para link
+            filename = os.path.basename(f)
+            html_filename = filename.replace('.md', '.html')
+            
+            dest_folder = phase["folder"].lower().split('_', 1)[1] # Ex: 01_SEMENTES -> sementes
+            
+            lesson_data = {
+                "meta": meta,
+                "body": body,
+                "filename": filename,
+                "html_filename": html_filename,
+                "dest_folder": dest_folder, # sementes, raizes, etc
+                "phase_id": phase["id"]
+            }
+            all_lessons.append(lesson_data)
+            
+    return all_lessons
+
+def render_lesson_template(meta, body_content, prev_link=None, next_link=None):
+    """Renderiza o template HTML final para uma lição."""
+    
+    # 1. Carregar Template Base
+    template_path = os.path.join(TEMPLATE_DIR, "layout_base.html") # Usando layout_base existente
+    # Se layout_lesson.html existir, use. Mas vamos manter layout_base para compatibilidade imediata.
+    
+    with open(template_path, "r", encoding="utf-8") as f:
         template = f.read()
-    
-    # Injetar Dados
-    output_html = template
-    output_html = output_html.replace("{{ titulo }}", metadata.get("titulo", "Sem Título"))
-    output_html = output_html.replace("{{ fase }}", metadata.get("fase", "Sementes"))
-    output_html = output_html.replace("{{ meta }}", metadata.get("meta", ""))
-    output_html = output_html.replace("{{ guardia }}", metadata.get("guardia", "Misterioso"))
-    output_html = output_html.replace("{{ tempo }}", metadata.get("tempo", "15 min"))
-    output_html = output_html.replace("{{ local }}", metadata.get("local", "O Reino"))
-    output_html = output_html.replace("{{ versao }}", metadata.get("versao", "3.6"))
-    output_html = output_html.replace("{{ conteudo }}", body_html)
-    
-    # TGTB Logic (If empty, remove line or hide)
-    tgtb_ref = metadata.get("tgtb", "")
-    output_html = output_html.replace("{{ tgtb }}", tgtb_ref)
-    
-    # --- IMAGE MAPPING LOGIC ---
-    guardian_name = metadata.get("guardia", "Misterioso").split(" ")[0] # Pegar primeiro nome
-    
-    # Map Names to Files (Naive approach, can be improved with regex or refined dict)
-    image_map = {
-        "Melquior": "melquior-leao.webp",
-        "Celeste": "celeste-raposa.webp",
-        "Bernardo": "bernardo-urso.webp",
-        "Íris": "iris-passarinho-colar.webp",
-        "Noé": "noe-coruja.webp"
-    }
-
-    # Location Fuzzy Match (Simple inclusion check)
-    loc_name = metadata.get("local", "O Reino").lower()
-    loc_img = "local-jardim-central.webp" # Default
-    
-    if "árvore" in loc_name or "arvore" in loc_name: loc_img = "local-arvore-silencio.webp"
-    elif "caverna" in loc_name: loc_img = "local-caverna-recomeco.webp"
-    elif "clareira" in loc_name: loc_img = "local-clareira-perguntas.webp"
-    elif "ninho" in loc_name: loc_img = "local-ninho-mirante.webp"
-    elif "floresta" in loc_name: loc_img = "local-arvore-silencio.webp"
-
-    # Inject Image Paths
-    output_html = output_html.replace("{{ guardia_img }}", f"../assets/img/{image_map.get(guardian_name, 'melquior-leao.webp')}")
-    output_html = output_html.replace("{{ local_img }}", f"../assets/img/{loc_img}")
-
-    
-    output_filename = filename.replace(".md", ".html")
-    with open(os.path.join(DIST_SEMENTES, output_filename), "w", encoding="utf-8") as f:
-        f.write(output_html)
         
-    print(f"✅ [LESSON] {output_filename}")
-    
-    metadata['filename'] = output_filename
-    metadata['original_filename'] = filename
-    # Remove ugly MV-S prefix for display logic if needed
-    metadata['clean_id'] = metadata.get('id', '').replace('MV-S-', 'Lição ')
-    return metadata
-
-def build_static_pages():
-    """Constrói páginas estáticas (Quem Somos, Metodo, etc)."""
-    if not os.path.exists(PAGES_DIR):
-        return
-
-    with open(os.path.join(TEMPLATE_DIR, "layout_page.html"), "r", encoding="utf-8") as f:
-        template = f.read()
-
-    for filename in os.listdir(PAGES_DIR):
-        if filename.endswith(".md"):
-            filepath = os.path.join(PAGES_DIR, filename)
-            metadata, body_html = parse_markdown(filepath)
-            
-            output_html = template
-            output_html = output_html.replace("{{ titulo }}", metadata.get("titulo", "Página"))
-            output_html = output_html.replace("{{ conteudo }}", body_html)
-            
-            output_filename = filename.replace(".md", ".html")
-            with open(os.path.join(DIST_PAGES, output_filename), "w", encoding="utf-8") as f:
-                f.write(output_html)
-            print(f"📄 [PAGE] {output_filename}")
-
-def render_card_grid(lessons_subset):
-    """Gera o HTML do Grid de Cards."""
-    html = ""
-    
-    # Emojis para Guardiões
-    guardian_emojis = {
-        "Melquior": "🦁",
-        "Celeste": "🦊",
-        "Bernardo": "🐻",
-        "Íris": "🐦",
-        "Noé": "🦉"
-    }
-
-    for licao in lessons_subset:
-        # TGTB Badge Logic
-        tgtb_val = licao.get('tgtb', '')
-        tgtb_html = ""
-        if tgtb_val and "{{" not in tgtb_val: 
-             # Limpar string para ficar curto (Ex: "Math K, Lesson 10" -> "MK L10" se quiser, mas vamos manter limpo)
-             tgtb_html = f'<span class="badge-tgtb" title="Baseado em {tgtb_val}">📘 {tgtb_val}</span>'
-
-        # Guardian Logic
-        g_name = licao.get('guardia', '').split(' ')[0] # Pega só o primeiro nome
-        g_emoji = guardian_emojis.get(g_name, "🛡️")
-
-        card = f"""
-        <a href="sementes/{licao['filename']}" class="card">
-            <div class="card-header-row">
-                <span class="card-id">{licao.get('clean_id', '???')}</span>
-                {tgtb_html}
-            </div>
-            <h3 class="card-title">{licao.get('titulo')}</h3>
-            
-            <!-- Meta/Goal limpo (Essencialismo: apenas o texto, sem labels extras) -->
-            <p class="card-desc">{licao.get('meta', '').replace('🍇 ', '').replace('🦁 ', '').replace('🐻 ', '').replace('🦊 ', '')}</p>
-            
-            <div class="card-footer">
-                <span class="guardian-tag">{g_emoji} {g_name}</span>
-                <span class="time-tag">⏱️ {licao.get('tempo')}</span>
-            </div>
-        </a>
-        """
-        html += card
-    return html
-
-def build_index(lessons):
-    """Constrói a Landing Page."""
-    with open(os.path.join(TEMPLATE_DIR, "layout_index.html"), "r", encoding="utf-8") as f:
-        template = f.read()
-
-    arco_despertar = []
-    arco_ritmo = [] 
-    arco_plenitude = []
-    
-    for licao in lessons:
-        fname = licao['original_filename']
-        try:
-            num = int(fname.split('_')[0])
-            if num <= 3: arco_despertar.append(licao)
-            elif num <= 10: arco_ritmo.append(licao)
-            else: arco_plenitude.append(licao) # 11+ e Assessments caem aqui
-        except ValueError:
-            arco_plenitude.append(licao)
-
-    final_index = template
-    
-    # Navigation Bar Injection
-    nav_bar = """
-    <nav class="portal-nav">
-        <a href="pages/convite_real.html" class="nav-link">🏰 O Convite Real</a>
-        <a href="pages/manifesto.html" class="nav-link">📜 Manifesto</a>
-        <a href="pages/quem_somos.html" class="nav-link">🦁 Quem Somos</a>
-    </nav>
-    """
-    # Replace a placeholder if exists, otherwise prepend to body (risky). 
-    # Let's assume there is a place or I insert after <body>
-    if "<body>" in final_index:
-        final_index = final_index.replace("<body>", "<body>" + nav_bar)
-    else:
-        # Fallback if no body tag found (unlikely)
-        final_index = nav_bar + final_index
-
-    final_index = final_index.replace("{{ arco_despertar }}", render_card_grid(arco_despertar))
-    final_index = final_index.replace("{{ arco_ritmo }}", render_card_grid(arco_ritmo))
-    final_index = final_index.replace("{{ arco_plenitude }}", render_card_grid(arco_plenitude))
-    final_index = final_index.replace("{{ data_build }}", datetime.now().strftime("%d/%m/%Y %H:%M"))
-
-    with open(os.path.join(DIST_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(final_index)
-    
-    print(f"🏠 [INDEX] Home Page Gerada.")
-
-def collect_metadata():
-    """Passo 1: Coletar metadados de todas as lições."""
-    lessons_data = []
-    if not os.path.exists(SOURCE_DIR):
-        print(f"❌ [ERR] Pasta fonte não encontrada: {SOURCE_DIR}")
-        return []
-
-    files = sorted(os.listdir(SOURCE_DIR))
-    for filename in files:
-        if filename.endswith(".md") and "TEMPLATE" not in filename:
-            filepath = os.path.join(SOURCE_DIR, filename)
-            meta, _ = parse_markdown(filepath) # Só precisamos do meta agora
-            
-            # Adicionar campos extras derivados
-            meta['filename'] = filename.replace(".md", ".html")
-            meta['original_filename'] = filename
-            meta['clean_id'] = meta.get('id', '').replace('MV-S-', 'Lição ')
-            
-            lessons_data.append(meta)
-    
-    # Ordenar por ID ou Filename para garantir sequencia
-    # Assumindo filename "001_..." funciona bem
-    return lessons_data
-
-def render_lesson(meta, prev_meta, next_meta):
-    """Passo 2: Renderizar HTML com links de navegação."""
-    filepath = os.path.join(SOURCE_DIR, meta['original_filename'])
-    _, body_html = parse_markdown(filepath) # Ler corpo novamente (poderia otimizar, mas ok para SSG)
-    
-    with open(os.path.join(TEMPLATE_DIR, "layout_base.html"), "r", encoding="utf-8") as f:
-        template = f.read()
-    
-    # Injetar Dados Básicos
-    output_html = template
-    output_html = output_html.replace("{{ titulo }}", meta.get("titulo", "Sem Título"))
-    output_html = output_html.replace("{{ fase }}", meta.get("fase", "Sementes"))
-    output_html = output_html.replace("{{ meta }}", meta.get("meta", ""))
-    output_html = output_html.replace("{{ guardia }}", meta.get("guardia", "Misterioso"))
-    output_html = output_html.replace("{{ tempo }}", meta.get("tempo", "15 min"))
-    output_html = output_html.replace("{{ local }}", meta.get("local", "O Reino"))
-    output_html = output_html.replace("{{ versao }}", meta.get("versao", "3.6"))
-    output_html = output_html.replace("{{ conteudo }}", body_html)
-    
-    # TGTB Logic
-    tgtb_ref = meta.get("tgtb", "")
-    output_html = output_html.replace("{{ tgtb }}", tgtb_ref)
-
-    # --- CARD SYSTEM (Inline Image Processor) ---
-    # Encontra todas as tags <img src="..."> e reescreve para Assets Dist
-    # Regex para capturar src="algo"
-    import re
-    def replace_img_src(match):
-        src = match.group(1)
-        alt = match.group(2) if match.group(2) else ""
-        
-        # Se for link externo (http), ignora
-        if src.startswith("http") and "placeholder" not in src:
-            return f'<img src="{src}" alt="{alt}" class="lesson-card">'
-            
-        # Tenta extrair apenas o nome do arquivo
-        filename = os.path.basename(src)
-        
-        # Remove extensão antiga e põe .webp
-        base_name = os.path.splitext(filename)[0]
-        webp_name = f"{base_name}.webp"
-        
-        # Caminho final no Dist
-        dist_path = f"../assets/img/{webp_name}"
-        
-        # Verifica se existe no source (para saber se o optimizer gerou)
-        # O optimizer roda antes, então checamos se o arquivo existe em dist/assets/img
-        # (Mas aqui estamos rodando o script, então podemos checar dist/assets/img diretamente)
-        real_dist_path_abs = os.path.join(DIST_IMG, webp_name)
-        
-        img_html = ""
-        if os.path.exists(real_dist_path_abs):
-            img_html = f'<div class="card-image-container"><img src="{dist_path}" alt="{alt}" class="lesson-card"></div>'
-        else:
-            # Fallback Card
-            img_html = f'''
-            <div class="card-missing">
-                <span class="missing-icon">🖼️</span>
-                <p><strong>Arte Faltante:</strong> {base_name}</p>
-                <small>Adicione "{base_name}.png" em <code>curriculo/_SISTEMA/imagens</code></small>
-            </div>
-            '''
-        return img_html
-
-    # Regex para substituir <img src="X" alt="Y" /> gerado pelo Markdown
-    # Padrão do python-markdown é <img alt="alt" src="src" /> ou <img src="src" alt="alt" />
-    # Vamos usar uma abordagem mais robusta: processar o markdown raw antes? ou o html depois?
-    # O HTML é mais fácil se o regex for bom.
-    
-    # Regex simplificado para capturar imagens
-    # Padrão 1: src="..." alt="..."
-    body_html = re.sub(r'<img[^>]+src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>', replace_img_src, body_html)
-    
-    # Padrão 2: alt="..." src="..." (Markdown as vezes gera assim)
-    def replace_img_alt_first(match):
-        # Neste caso group(1) é alt, group(2) é src
-        # Criamos um objeto fake compatível com replace_img_src que espera (src, alt)
-        alt = match.group(1)
-        src = match.group(2)
-        
-        # Chamamos a função original mas simulando o match group
-        class MatchMock:
-            def group(self, n):
-                return src if n == 1 else alt
-        
-        return replace_img_src(MatchMock())
-
-    body_html = re.sub(r'<img[^>]+alt="([^"]*)"[^>]*src="([^"]+)"[^>]*>', replace_img_alt_first, body_html)
-
-    output_html = output_html.replace("{{ conteudo }}", body_html)
-    guardian_name = meta.get("guardia", "Misterioso").split(" ")[0]
+    # 2. Dados do Guardião (Imagem e Cor)
+    guardian_name = meta.get("guardia", "Melquior").split(' ')[0]
     image_map = {
         "Melquior": "melquior-leao.webp",
         "Celeste": "celeste-raposa.webp",
@@ -391,33 +167,226 @@ def render_lesson(meta, prev_meta, next_meta):
     elif "caverna" in loc_name: loc_img = "local-caverna-recomeco.webp"
     elif "clareira" in loc_name: loc_img = "local-clareira-perguntas.webp"
     elif "ninho" in loc_name: loc_img = "local-ninho-mirante.webp"
-    elif "floresta" in loc_name: loc_img = "local-arvore-silencio.webp"
-
-    output_html = output_html.replace("{{ guardia_img }}", f"../assets/img/{image_map.get(guardian_name, 'melquior-leao.webp')}")
-    output_html = output_html.replace("{{ local_img }}", f"../assets/img/{loc_img}")
-
+    
     # --- NAVIGATION LOGIC ---
     # Prev Link
-    if prev_meta:
-        prev_html = f'<a href="{prev_meta["filename"]}" class="nav-btn prev">← Anterior: {prev_meta["clean_id"]}</a>'
+    if prev_link:
+        nav_prev = f'<a href="{prev_link}" class="nav-btn prev">← Anterior</a>'
     else:
-        prev_html = '<span class="nav-btn disabled">← Início</span>'
-    
-    # Next Link
-    if next_meta:
-        next_html = f'<a href="{next_meta["filename"]}" class="nav-btn next">Próxima: {next_meta["clean_id"]} →</a>'
-    else:
-        next_html = '<a href="../index.html" class="nav-btn next">Concluir Jornada 🏁</a>'
-
-    output_html = output_html.replace("{{ nav_prev }}", prev_html)
-    output_html = output_html.replace("{{ nav_next }}", next_html)
-
-
-    output_path = os.path.join(DIST_SEMENTES, meta['filename'])
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(output_html)
+        nav_prev = '<a href="../index.html" class="nav-btn prev">🏠 Início</a>'
         
-    print(f"✅ [LESSON] {meta['filename']}")
+    # Next Link
+    if next_link:
+        nav_next = f'<a href="{next_link}" class="nav-btn next">Próxima →</a>'
+    else:
+        nav_next = '<span class="nav-btn disabled">Fim 🏁</span>'
+
+    # 3. Substituições
+    html = template
+    html = html.replace("{{ titulo }}", meta.get("titulo", "Sem Título"))
+    html = html.replace("{{ meta }}", meta.get("meta", ""))
+    html = html.replace("{{ conteudo }}", body_content)
+    
+    # Inject Nav (Manually if template doesn't support placeholders yet, but let's try injecting into wrapper)
+    # Hack: Inject nav buttons at end of content if placeholders missing
+    if "{{ nav_prev }}" in html:
+        html = html.replace("{{ nav_prev }}", nav_prev)
+        html = html.replace("{{ nav_next }}", nav_next)
+    else:
+        # Append to body content
+        html = html.replace("{{ conteudo }}", body_content + f'<div class="lesson-nav">{nav_prev} {nav_next}</div>')
+
+    # Metadata Injections
+    html = html.replace("{{ fase }}", meta.get("fase", "Geral"))
+    html = html.replace("{{ guardia }}", meta.get("guardia", "Misterioso"))
+    html = html.replace("{{ tempo }}", meta.get("tempo", "15 min"))
+    html = html.replace("{{ local }}", meta.get("local", "O Reino"))
+    html = html.replace("{{ versao }}", meta.get("versao", "3.6"))
+    html = html.replace("{{ tgtb }}", meta.get("tgtb", ""))
+    
+    # Images
+    html = html.replace("{{ guardia_img }}", f"../assets/img/{image_map.get(guardian_name, 'melquior-leao.webp')}")
+    html = html.replace("{{ local_img }}", f"../assets/img/{loc_img}")
+    
+    # Clean up empty tags
+    html = re.sub(r'\{\{.*?\}\}', '', html)
+    
+    return html
+
+def build_navigation_map(lessons):
+    """Cria mapa de navegação (prev/next) ordenado por ID dentro de cada fase."""
+    nav_map = {}
+    
+    # Agrupar por fase
+    lessons_by_phase = {}
+    for l in lessons:
+        pid = l['phase_id']
+        if pid not in lessons_by_phase: lessons_by_phase[pid] = []
+        lessons_by_phase[pid].append(l)
+        
+    for pid, phase_lessons in lessons_by_phase.items():
+        # Ordenar por filename (assumindo 001, 002...)
+        phase_lessons.sort(key=lambda x: x['filename'])
+        
+        for i, l in enumerate(phase_lessons):
+            curr = l['filename']
+            prev = phase_lessons[i-1]['html_filename'] if i > 0 else "../index.html"
+            nxt = phase_lessons[i+1]['html_filename'] if i < len(phase_lessons)-1 else None
+            
+            nav_map[curr] = {"prev": prev, "next": nxt}
+            
+    return nav_map
+
+def build_lessons(lessons):
+    """Renderiza cada lição em sua subpasta correta."""
+    nav_map = build_navigation_map(lessons)
+    
+    for lesson in lessons:
+        meta = lesson['meta']
+        body_html = lesson['body']
+        dest_folder = lesson['dest_folder']
+        filename = lesson['filename']
+        
+        # Cria pasta de destino se não existir
+        out_dir = os.path.join(DIST_DIR, dest_folder)
+        os.makedirs(out_dir, exist_ok=True)
+        
+        # Navigation Links
+        nav_data = nav_map.get(filename, {})
+        prev_link = nav_data.get('prev')
+        next_link = nav_data.get('next')
+
+        final_html = render_lesson_template(meta, body_html, prev_link, next_link)
+        
+        out_path = os.path.join(out_dir, lesson['html_filename'])
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(final_html)
+            
+        print(f"✅ [LESSON] {dest_folder}/{lesson['html_filename']}")
+
+def render_static_page(meta, body, filename):
+     # Simple static page renderer
+    template_path = os.path.join(TEMPLATE_DIR, "layout_page.html")
+    if not os.path.exists(template_path): return
+    
+    with open(template_path, "r", encoding="utf-8") as f: template = f.read()
+    
+    html = template.replace("{{ titulo }}", meta.get("titulo", "Page")).replace("{{ conteudo }}", body)
+    with open(os.path.join(DIST_PAGES, filename), "w", encoding="utf-8") as f: f.write(html)
+    print(f"📄 [PAGE] {filename}")
+
+def render_card_grid(lessons_list, is_coming_soon=False):
+    """Renderiza grid de cards HTML."""
+    if is_coming_soon or not lessons_list:
+        return """
+        <div class="coming-soon-card">
+            <span class="coming-soon-icon">🚧</span>
+            <h3 class="coming-soon-title">Em Breve: Área do Construtor</h3>
+            <p class="coming-soon-desc">Os Guardiões estão preparando este terreno.</p>
+        </div>
+        """
+        
+    html = '<div class="card-grid">\n'
+    
+    # Order lessons by filename
+    lessons_list.sort(key=lambda x: x['filename'])
+    
+    for l in lessons_list:
+        meta = l['meta']
+        link = f"{l['dest_folder']}/{l['html_filename']}"
+        
+        title = meta.get('titulo', 'Sem Título')
+        desc = meta.get('meta', 'Descrição não disponível.')
+        guardian = meta.get('guardia', 'Reino')
+        time = meta.get('tempo', 'N/A')
+        tgtb_ref = meta.get('tgtb', '')
+        lid = meta.get('id', '')
+        
+        # Guardian Emoji logic
+        g_emoji = "🦁"
+        if "Celeste" in guardian: g_emoji = "🦊"
+        if "Bernardo" in guardian: g_emoji = "🐻"
+        if "Íris" in guardian: g_emoji = "🐦"
+        if "Noé" in guardian: g_emoji = "🦉"
+        
+        html += f"""
+        <a href="{link}" class="card">
+            <div class="card-header-row">
+                <span class="card-id">{lid}</span>
+                <span class="badge-tgtb" title="Baseado em {tgtb_ref}">📘 {tgtb_ref}</span>
+            </div>
+            <h3 class="card-title">{title}</h3>
+            <p class="card-desc">{desc}</p>
+            <div class="card-footer">
+                <span class="guardian-tag">{g_emoji} {guardian}</span>
+                <span class="time-tag">⏱️ {time}</span>
+            </div>
+        </a>
+        """
+    html += '</div>'
+    return html
+
+def build_index(lessons):
+    """Constrói a Home Page K-12."""
+    template_path = os.path.join(TEMPLATE_DIR, "layout_index.html")
+    
+    # Fallback template se não existir
+    if not os.path.exists(template_path): return
+    
+    with open(template_path, "r", encoding="utf-8") as f:
+        template = f.read()
+        
+    # Limpar placeholders antigos se existirem
+    final_index = template
+    
+    nav_bar = """
+    <nav class="portal-nav">
+        <a href="pages/convite_real.html" class="nav-link">🏰 O Convite</a>
+        <a href="pages/manifesto.html" class="nav-link">📜 Manifesto</a>
+        <a href="pages/quem_somos.html" class="nav-link">🦁 Quem Somos</a>
+    </nav>
+    """
+    
+    sections_html = ""
+    for phase in K12_PHASES:
+        # Filtrar lições desta fase
+        # phase['id'] was inserted into lesson meta
+        p_lessons = [l for l in lessons if l['phase_id'] == phase['id']]
+        
+        # Se for dummy, tratar como empty para mostrar Coming Soon
+        real_lessons = [l for l in p_lessons if "DUMMY" not in l['filename']]
+        
+        is_coming_soon = len(real_lessons) == 0
+        
+        sections_html += f"""
+        <section class="section" id="{phase['id']}">
+            <div class="container">
+                <div class="arc-header" style="border-left: 4px solid {phase['color']}; padding-left: 1rem; margin-bottom:1.5rem;">
+                    <span style="color: {phase['color']}; font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">{phase['icon']} FASE {phase['id'].upper()}</span>
+                    <h2>{phase['title']}</h2>
+                    <p>{phase['desc']}</p>
+                </div>
+                {render_card_grid(real_lessons, is_coming_soon)}
+            </div>
+        </section>
+        """
+    
+    # Hero Logic: We need to replace the content of layout_index.html dynamically
+    # But layout_index might expect {{ arco_despertar }} etc.
+    # We will replace the whole content area or try to be smart.
+    # Check if {{ sections_k12 }} exists? Probably not.
+    # Let's replace {{ arco_despertar }} with sections_html and remove others.
+    
+    final_index = final_index.replace("<body>", "<body>" + nav_bar)
+    final_index = final_index.replace("{{ arco_despertar }}", sections_html)
+    final_index = final_index.replace("{{ arco_ritmo }}", "")
+    final_index = final_index.replace("{{ arco_plenitude }}", "")
+    
+    final_index = final_index.replace("{{ data_build }}", datetime.now().strftime("%d/%m/%Y %H:%M"))
+    
+    with open(os.path.join(DIST_DIR, "index.html"), "w", encoding="utf-8") as f:
+        f.write(final_index)
+    print("🏠 [INDEX] Home Page K-12 Gerada.")
 
 
 def main():
@@ -425,22 +394,27 @@ def main():
     clean_dist()
     copy_assets()
     
-    # Build Lessons (Two Pass)
-    print("🔄 [PASS 1] Coletando Metadados...")
-    all_lessons = collect_metadata()
+    # Build Lessons    # 3. Scan & Build
+    print("🔄 [PASS 1] Coletando Metadados K-12...")
+    all_lessons = scan_markdown_files()
     
     print(f"🔄 [PASS 2] Renderizando {len(all_lessons)} lições com navegação...")
-    for i, meta in enumerate(all_lessons):
-        prev_meta = all_lessons[i-1] if i > 0 else None
-        next_meta = all_lessons[i+1] if i < len(all_lessons) - 1 else None
-        
-        render_lesson(meta, prev_meta, next_meta)
-
+    build_lessons(all_lessons)
     
-    # Build Static Pages
-    build_static_pages()
+    # 4. Build Pages (Static)
+    # Scan pages dir
+    pages_files = glob.glob(os.path.join(PAGES_DIR, "*.md"))
+    for p in pages_files:
+        meta, body = parse_markdown(p)
+        filename = os.path.basename(p).replace('.md', '.html')
+        
+        # Render Page
+        # Uses simpler template or same? Let's use generic layout
+        # ... (reuse logic or simplify)
+        # For now, simplistic render:
+        render_static_page(meta, body, filename)
 
-    # Build Index
+    # 5. Build Index (K-12 Family Home)
     build_index(all_lessons)
     print("🚀 Portal v3.6 Concluído!")
 
