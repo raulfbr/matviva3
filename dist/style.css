@@ -233,12 +233,32 @@ h2::after {
 
 /* --- Guardians Section --- */
 
-.guardians-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+/* --- Guardians Section (Hierarchy) --- */
+
+.guardians-layout {
     margin-top: 3rem;
     text-align: center;
+}
+
+.guardian-leader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.leader-card {
+    max-width: 350px;
+    transform: scale(1.05);
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.guardians-squad {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .guardian-card {
@@ -256,11 +276,6 @@ h2::after {
     box-shadow: var(--shadow-md);
 }
 
-.guardian-avatar {
-    /* Legacy helper if needed, but we use IMG now */
-    display: none;
-}
-
 .guardian-avatar-img {
     width: 80px;
     height: 80px;
@@ -274,13 +289,24 @@ h2::after {
 
 .guardian-card h3 {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.guardian-virtue {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-gold);
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
 }
 
 .guardian-card p {
     font-size: 0.9rem;
     color: #666;
     margin: 0;
+    line-height: 1.4;
 }
 
 /* --- Lesson Cards & Arcs --- */

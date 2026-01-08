@@ -302,6 +302,11 @@ def render_card_grid(lessons_list, is_coming_soon=False):
         tgtb_ref = meta.get('tgtb', '')
         lid = meta.get('id', '')
         
+        # Badge Logic
+        badge_html = ""
+        if tgtb_ref and tgtb_ref.upper() != "N/A":
+            badge_html = f'<span class="badge-tgtb" title="Baseado em {tgtb_ref}">📘 {tgtb_ref}</span>'
+        
         # Guardian Emoji logic
         g_emoji = "🦁"
         if "Celeste" in guardian: g_emoji = "🦊"
@@ -313,7 +318,7 @@ def render_card_grid(lessons_list, is_coming_soon=False):
         <a href="{link}" class="card">
             <div class="card-header-row">
                 <span class="card-id">{lid}</span>
-                <span class="badge-tgtb" title="Baseado em {tgtb_ref}">📘 {tgtb_ref}</span>
+                {badge_html}
             </div>
             <h3 class="card-title">{title}</h3>
             <p class="card-desc">{desc}</p>
