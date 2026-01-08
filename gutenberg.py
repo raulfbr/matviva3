@@ -99,6 +99,33 @@ def build_lesson(filename):
     tgtb_ref = metadata.get("tgtb", "")
     output_html = output_html.replace("{{ tgtb }}", tgtb_ref)
     
+    # --- IMAGE MAPPING LOGIC ---
+    guardian_name = metadata.get("guardia", "Misterioso").split(" ")[0] # Pegar primeiro nome
+    
+    # Map Names to Files (Naive approach, can be improved with regex or refined dict)
+    image_map = {
+        "Melquior": "melquior-leao.webp",
+        "Celeste": "celeste-raposa.webp",
+        "Bernardo": "bernardo-urso.webp",
+        "Íris": "iris-passarinho-colar.webp",
+        "Noé": "noe-coruja.webp"
+    }
+
+    # Location Fuzzy Match (Simple inclusion check)
+    loc_name = metadata.get("local", "O Reino").lower()
+    loc_img = "local-jardim-central.webp" # Default
+    
+    if "árvore" in loc_name or "arvore" in loc_name: loc_img = "local-arvore-silencio.webp"
+    elif "caverna" in loc_name: loc_img = "local-caverna-recomeco.webp"
+    elif "clareira" in loc_name: loc_img = "local-clareira-perguntas.webp"
+    elif "ninho" in loc_name: loc_img = "local-ninho-mirante.webp"
+    elif "floresta" in loc_name: loc_img = "local-arvore-silencio.webp"
+
+    # Inject Image Paths
+    output_html = output_html.replace("{{ guardia_img }}", f"../assets/img/{image_map.get(guardian_name, 'melquior-leao.webp')}")
+    output_html = output_html.replace("{{ local_img }}", f"../assets/img/{loc_img}")
+
+    
     output_filename = filename.replace(".md", ".html")
     with open(os.path.join(DIST_SEMENTES, output_filename), "w", encoding="utf-8") as f:
         f.write(output_html)

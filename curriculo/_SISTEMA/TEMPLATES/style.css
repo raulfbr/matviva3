@@ -463,3 +463,53 @@ code {
     border-radius: 4px;
     font-size: 0.9em;
 }
+
+/* --- UI/UX EXPERT: Exponential Polish --- */
+
+/* Custom Checkboxes for Dashboard */
+ul li {
+    list-style-type: none;
+    /* Remove default bullets */
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul li::before {
+    content: '▫️';
+    /* Elegant default */
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+}
+
+/* If it's a checkbox list from markdown [ ] */
+li input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: var(--color-green);
+    /* Brand color checkbox */
+    transform: scale(1.2);
+}
+
+ul:not(.browser-default) {
+    padding-left: 0;
+}
+
+/* Lesson Header Card Polish */
+.meta-header>div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meta-header>div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-gold) !important;
+}
+
+/* Mobile responsiveness for Lesson Header */
+@media (max-width: 600px) {
+    .meta-header {
+        grid-template-columns: 1fr !important;
+        /* Stack vertically on small screens */
+    }
+}
