@@ -4,13 +4,17 @@ import markdown
 import re
 from datetime import datetime
 
+import optimizer  # Importante: certifique-se que optimizer.py está na mesma pasta
+
 # --- CONFIG ---
 SOURCE_DIR = "curriculo/01_SEMENTES"
 PAGES_DIR = "curriculo/PAGES"
 TEMPLATE_DIR = "curriculo/_SISTEMA/TEMPLATES"
+IMAGES_DIR = "curriculo/_SISTEMA/imagens"  # New Source
 DIST_DIR = "dist"
 DIST_SEMENTES = os.path.join(DIST_DIR, "sementes")
 DIST_PAGES = os.path.join(DIST_DIR, "pages")
+DIST_IMG = os.path.join(DIST_DIR, "assets", "img") # Target for images
 
 def clean_dist():
     """Limpa a pasta dist para um build fresco."""
@@ -23,12 +27,16 @@ def clean_dist():
     
     os.makedirs(DIST_SEMENTES, exist_ok=True)
     os.makedirs(DIST_PAGES, exist_ok=True)
+    # create dist_img inside optimizer
     print(f"✨ [INIT] Dist e Subpastas prontas.")
 
 def copy_assets():
-    """Copia o CSS."""
+    """Copia CSS e Otimiza Imagens."""
     shutil.copy(os.path.join(TEMPLATE_DIR, "style.css"), os.path.join(DIST_DIR, "style.css"))
     print(f"🎨 [ASSETS] style.css copiado.")
+    
+    # Run Optimizer
+    optimizer.optimize_images(IMAGES_DIR, DIST_IMG)
 
 def parse_markdown(filepath):
     """Lê um arquivo MD e extrai Frontmatter (YAML) e Conteúdo."""

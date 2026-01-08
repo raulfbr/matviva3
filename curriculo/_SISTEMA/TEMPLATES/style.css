@@ -257,16 +257,19 @@ h2::after {
 }
 
 .guardian-avatar {
+    /* Legacy helper if needed, but we use IMG now */
+    display: none;
+}
+
+.guardian-avatar-img {
     width: 80px;
     height: 80px;
-    background: var(--color-cream-dark);
     border-radius: 50%;
     margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
+    display: block;
+    object-fit: cover;
     border: 3px solid var(--color-gold-light);
+    background: var(--color-cream-dark);
 }
 
 .guardian-card h3 {
