@@ -114,42 +114,98 @@ def render_lab_lesson(meta, body_html, prev_url, next_url):
     return html
 
 def build_lab_index(lessons):
-    """Gera um index simplificado para o Laboratório."""
+    """Gera um index premium para o Laboratório com Glassmorphism."""
     html = """
     <!DOCTYPE html>
     <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Laboratório de Design | MatViva</title>
-        <link rel="stylesheet" href="../style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Laboratório de Design | MatViva 🧪</title>
+        <link rel="stylesheet" href="style_lab.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
         <style>
-            body { background: #fdfbf7; padding: 2rem; font-family: sans-serif; }
-            .lab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
-            .lab-card { background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid #eee; text-decoration: none; color: #333; transition: all 0.2s; }
-            .lab-card:hover { border-color: #C5A059; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-            .badge { background: #E6D2A8; color: #2A3B33; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
+            body { font-family: 'Outfit', sans-serif; }
+            .lab-grid { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+                gap: 2rem; 
+                margin-top: 2rem; 
+            }
+            .lab-card { 
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                padding: 2rem; 
+                border-radius: 20px; 
+                border: 1px solid rgba(255, 255, 255, 0.4); 
+                text-decoration: none; 
+                color: var(--color-ink); 
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            }
+            .lab-card:hover { 
+                transform: translateY(-8px); 
+                background: rgba(255, 255, 255, 0.9);
+                border-color: var(--color-gold);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+            }
+            .lab-badge { 
+                background: var(--gold-gradient); 
+                color: var(--color-green); 
+                padding: 4px 12px; 
+                border-radius: 50px; 
+                font-size: 0.7rem; 
+                font-weight: 700;
+                align-self: flex-start;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .lab-card h3 { 
+                margin: 0 0 0.5rem 0; 
+                color: var(--color-green);
+                font-family: 'Merriweather', serif;
+                font-weight: 900;
+            }
         </style>
     </head>
     <body>
-        <a href="../index.html" style="color: #666; text-decoration: none;">← Voltar ao Reino</a>
-        <h1 style="color: #2A3B33; margin-top: 1rem;">🧪 Laboratório de Design NEXT</h1>
-        <p>Experimentando o novo layout Glassmorphism para a Fase Sementes.</p>
-        
-        <div class="lab-grid">
+        <header class="lab-header">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem;">
+                <a href="../index.html" style="text-decoration: none; font-weight: 700; color: var(--color-green); font-size: 1.1rem;">🏰 REINO</a>
+                <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-gold); font-weight: 700;">LAB INDEX</div>
+            </div>
+        </header>
+
+        <div class="lab-hero">
+            <span style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; font-weight: 700; color: var(--color-gold); display: block; margin-bottom: 1rem;">🧪 DESIGN LAB</span>
+            <h1>Ambiente Experimental</h1>
+            <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Explore as novas fronteiras visuais (Glassmorphism & Mobile-First) do currículo Sementes.</p>
+        </div>
+
+        <main class="premium-content-card" style="max-width: 1000px;">
+            <div class="lab-grid">
     """
     
     for l in lessons:
         html += f"""
-        <a href="sementes/{l['html_filename']}" class="lab-card">
-            <span class="badge">SEMENTES</span>
-            <h3 style="margin: 0.5rem 0;">{l['meta'].get('titulo', 'Lição')}</h3>
-            <p style="font-size: 0.85rem; color: #666; margin: 0;">{l['meta'].get('meta', '')}</p>
+        <a href="sementes/{l['html_filename']}" class="lab-card btn-interaction">
+            <span class="lab-badge">SEMENTES</span>
+            <h3>{l['meta'].get('titulo', 'Lição')}</h3>
+            <p style="font-size: 0.95rem; color: #666; margin: 0; line-height: 1.5;">{l['meta'].get('meta', 'Explore esta lição no novo formato premium.')}</p>
         </a>
         """
         
     html += """
-        </div>
+            </div>
+        </main>
+
+        <footer style="text-align: center; padding: 4rem 2rem; color: #aaa; font-size: 0.8rem;">
+            Matemática Viva • Laboratório de Design 2026
+        </footer>
     </body>
     </html>
     """
@@ -157,7 +213,7 @@ def build_lab_index(lessons):
     out_path = os.path.join(DIST_LAB, "index.html")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
-    print("🏠 [LAB-INDEX] Index do Laboratório gerado.")
+    print("🏠 [LAB-INDEX] Index do Laboratório gerado com Design Premium.")
 
 def main():
     print("🔬 Gutenberg LAB NEXT Engine v1.0...")
