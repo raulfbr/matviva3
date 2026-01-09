@@ -7,7 +7,7 @@ from datetime import datetime
 import optimizer  # Importante: certifique-se que optimizer.py está na mesma pasta
 
 # --- CONFIG ---
-SOURCE_DIR = "curriculo/01_SEMENTES_TESTE"
+SOURCE_DIR = "curriculo/01_SEMENTES"
 PAGES_DIR = "curriculo/PAGES"
 TEMPLATE_DIR = "curriculo/_SISTEMA/TEMPLATES"
 IMAGES_DIR = "curriculo/_SISTEMA/imagens"  # New Source
@@ -53,35 +53,16 @@ def parse_markdown(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Regex robusto para extrair YAML header (com ou sem ---, e lidando com code blocks)
-    # 1. Tenta formato padrão ---
-    match = re.match(r"^---\n(.*?)\n---\n(.*)", content, re.DOTALL)
-    if match:
-        yaml_text = match.group(1)
-        body_md = match.group(2)
-    else:
-        # 2. Tenta formato Gold (wrapped in ```markdown ou apenas iniciando com metadados)
-        # Se começar com ```markdown, remove o wrapper
-        clean_content = re.sub(r"^```markdown\n", "", content)
-        # Tenta pegar as linhas iniciais que parecem chave: valor
-        meta_lines = []
-        body_lines = []
-        in_meta = True
-        
-        for line in clean_content.split("\n"):
-            if in_meta and (":" in line and not line.startswith("#")):
-                meta_lines.append(line)
-            else:
-                in_meta = False
-                body_lines.append(line)
-        
-        yaml_text = "\n".join(meta_lines)
-        body_md = "\n".join(body_lines)
-        # Remove trailing ``` if it was a block
-        body_md = re.sub(r"```$", "", body_md).strip()
+    # Regex simples para extrair YAML header
+    frontmatter_match = re.match(r"^---\n(.*?)\n---\n(.*)", content, re.DOTALL)
     
     metadata = {}
-    if yaml_text:
+    body_md = content
+    
+    if frontmatter_match:
+        yaml_text = frontmatter_match.group(1)
+        body_md = frontmatter_match.group(2)
+        
         for line in yaml_text.strip().split("\n"):
             if ":" in line:
                 key, value = line.split(":", 1)
@@ -197,7 +178,7 @@ import glob
 # Define a ordem e os metadados das fases
 K12_PHASES = [
     {"id": "vivencia", "folder": "00_VIVENCIA", "title": "Vivência (0-4 Anos)", "desc": "O Despertar do Logos. A ordem no ordinário.", "color": "#7B68B8", "icon": "🍼"},
-    {"id": "sementes", "folder": "01_SEMENTES_TESTE", "title": "Sementes (5-6 Anos)", "desc": "O Jardim do Maravilhamento. Onde tudo começa.", "color": "#2E8B57", "icon": "🌿"},
+    {"id": "sementes", "folder": "01_SEMENTES", "title": "Sementes (5-6 Anos)", "desc": "O Jardim do Maravilhamento. Onde tudo começa.", "color": "#2E8B57", "icon": "🌿"},
     {"id": "raizes", "folder": "02_RAIZES", "title": "Raízes (7-10 Anos)", "desc": "A Oficina da Ordem. A construção do hábito.", "color": "#8B4513", "icon": "🌳"},
     {"id": "logica", "folder": "03_LOGICA", "title": "Lógica (11-14 Anos)", "desc": "A Fortaleza da Verdade. O rigor da razão.", "color": "#4682B4", "icon": "⚔️"},
     {"id": "legado", "folder": "04_LEGADO", "title": "Legado (15-18 Anos)", "desc": "O Governo do Logos. Servir para liderar.", "color": "#D4A84B", "icon": "👑"}

@@ -4,16 +4,19 @@ fase: "Sementes"
 tipo: "Lição Sementes (Nível 0)"
 versao: 3.6 (Inevitable Gold)
 status: "Canônico"
-guardia: "{{NOME_GUARDIAO}}"
+clima: "{{CLIMA_NARRATIVO_EX_ENSOLARADO_NUBLADO_VENTOSO}}"
+guardia: "{{NOME_GUARDIAO_LIDER}}"
 meta: "{{META_DA_LICAO}}"
-tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
+tgtb: "{{REFERENCIA_TGTB_OPCIONAL_DO_CURRICULO_MESTRE}}"
+elo_anterior: "{{O_GANCHO_DEIXADO_PELA_LICAO_ANTERIOR_FIO_DE_OURO}}"
+proximo_passo: "{{GANCHO_MISTERIOSO_PARA_A_PROXIMA_LICAO_DO_CURRICULO}}"
 
 # 🌿 {{TITULO_LICAO}}
 
 > [!IMPORTANT]
-> **Para o Pai/Mãe (Leia antes de tudo):**
+> **Para o Portador da Tocha (Leia antes de tudo):**
 > Você não precisa ser um ator de teatro nem um professor perfeito. O "Reino" acontece no brilho dos olhos do seu filho, não na sua performance. Se você errar ou gaguejar, ria junto. A graça vale mais que a técnica.
->
+
 > [!NOTE]
 > **Protocolo de Impecabilidade:**
 > Este roteiro foi desenhado para ser lido com **Alma**. Não corra. Respeite as pausas. Você é o Portador da Tocha, não um leitor de notícias. A "Ideia Viva" não é um dado, é um *encontro*.
@@ -32,39 +35,32 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 > 📦 **Vivência (Exploração Sensorial):**
 > *   [ ] **1. O Concreto:** {{ELEMENTO_CONCRETO_PRINCIPAL_EX_GRAOS_PEDRAS}}
 > *   [ ] **2. O Belo:** {{ELEMENTO_ESTETICO_EX_BANDEJA_TOALHA}}
-> *   [ ] **3. O Elo:** {{TOKEN_DA_LICAO_ANTERIOR_FIO_DE_OURO}}
+> *   [ ] **3. O Elo:** {{DESCRIÇÃO_DO_OBJETO_OU_IDEIA_QUE_VEIO_DA_LIÇÃO_ANTERIOR}}
 > *   [ ] **4. O Sagrado:** Uma vela (Símbolo da Presença) e fósforos.
 
 ---
 
-## 🎧 2. Áudio-Script (Somente para o Pai)
+## 🎧 2. Áudio-Script (Somente para o Portador da Tocha)
 *Opção A (Imersão): Coloque o fone e ouça.*
-*Opção B (Leitura): Leia para si mesmo antes de chamar seu filho.*
+*Opção B (Leitura): Leia para si mesmo antes de chamar o Viajante.*
 
 *"Sossegue o coração. Hoje, você é o embaixador do Rei. A Ideia Viva é {{ESSENCIA}}. Lembre-se: o brilho no seu olho vale mais que a explicação perfeita."*
 
 ---
 
-## 🕯️ 3. O Ritual de Entrada (O Teatro da Mente)
+## 🕯️ 3. O Ritual de Entrada (O Salto de Luz)
 
 > [!RITUAL]
-> *[Ação: Acenda a vela, ligue a luz ou abra a cortina para um raio de sol. A LUZ deve ser o foco.]*
+> **O Salto de Luz:**
+> 1.  **A Calma:** Posicione-se próximo ao interruptor ou prepare a vela. Conecte-se visualmente com o Viajante.
+> 2.  **O Comando:** `[tom de segredo]` "Feche os olhos."
+> 3.  **A Viagem:** Apague a luz. Conte até 5 em silêncio... (Sinta a travessia).
+> 4.  **A Revelação:** Acenda a luz (ou a vela) e agache-se para ficar no nível dos olhos dele.
 >
 > **Você diz:**
-> `[tom de segredo — voz baixa e grave]`
-> "Eu sou o Portador da Tocha... E hoje, trago esta luz para você, minha pequena semente, meu **Filho e Herdeiro**."
+> "Abra os olhos! Eu sou o Portador da Tocha... E hoje, trago esta luz para você, minha pequena semente, meu **Filho e Herdeiro**."
 >
-> "Respire devagar... Deixe as pálpebras pesarem... Pode fechar os olhos."
->
-> *[pausa de 3 segundos — deixe o silêncio pesar]*
->
-> "Imagine um grande teatro silencioso. Leve e calmo."
-> "Quando o holofote acende, o mundo lá fora silencia. Só existe o aqui e o agora."
-> "Nossa vela é esse holofote. O Reino Contado vai começar."
->
-> "Quando abrir os olhos... você já estará no {{LOCAL_NO_REINO}}."
->
-> "Pode abrir."
+> "O Reino Contado já começou. Estamos no(a) {{LOCAL_NO_REINO}}."
 
 ---
 
@@ -73,33 +69,33 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 > [!NARRATIVA]
 > *[Cenário: Leia descrevendo as cores e cheiros. Pinte o ar com a sua voz.]*
 >
-> **Narrador (Sua voz normal, mas calorosa):**
-> "{{DESCRICAO_CENARIO_SENSORIAL_CHEIROS_CORES_LUMINOSIDADE_E_SONS}}"
+> > **Narrador (Sua voz normal, mas calorosa):**
+> "{{DESCRICAO_CENARIO_SENSORIAL_CLIMA_E_ENTORNO}}"
 >
-> ![CARD: O Encontro com {{NOME_GUARDIAO}}](URL_DA_IMAGEM_DO_GUARDIAO_OU_CENARIO)
+> ![CARD: O Encontro com {{NOME_GUARDIAO_LIDER}}](URL_DA_IMAGEM_DO_GUARDIAO)
 >
-> **{{NOME_GUARDIAO}}:**
+> **{{NOME_GUARDIAO_LIDER}}:**
 > `[tom de voz característico]`
 > *"{{FALA_DO_GUARDIAO_QUE_DESPERTA_O_MARAVILHAMENTO}}"*
 >
-> *[Nota para o Pai: Se ele quiser interromper para comentar o cenário, deixe. Isso é nutrição, não distração.]*
+> *[Nota para o Portador: Se ele quiser interromper para comentar o cenário, deixe. Isso é nutrição, não distração.]*
 
 ---
 
 ## 💡 5. A Ideia Viva (O Segredo Revelado)
 
 > [!CONCEITO]
-> **{{NOME_GUARDIAO}}:**
+> **{{NOME_GUARDIAO_LIDER}}:**
 > *"{{NARRATIVA_QUE_CONDUZ_AO_PADRAO_OU_NUMERAL_COM_TOM_DE_REVELACAO}}"*
 >
-> ![CARD: O Segredo de {{NOME_GUARDIAO}}](URL_DA_IMAGEM_DO_CONCEITO_OU_NUMERO)
+> ![CARD: O Segredo de {{NOME_GUARDIAO_LIDER}}](URL_DA_IMAGEM_DO_CONCEITO)
 >
 > `[pausa de maravilha - 5 segundos]`
 >
 > **VOCÊ FAZ (O Toque da Matéria):**
 > 1.  {{PASSO_CONCRETO_1_EXP_SENSORIAL}}
 > 2.  {{PASSO_CONCRETO_2_MOVIMENTO_E_RITMO}}
-> 3.  `[tom de maravilhamento]` "O Rei escreveu este segredo em toda a Criação!"
+> 3.  `[pausa de maravilha]` "O Rei escreveu este segredo em toda a Criação!"
 
 ---
 
@@ -112,9 +108,9 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 >
 > 1.  **Concreto:** {{MANIPULACAO_DE_OBJETOS_DO_MUNDO_REAL_COM_AS_MAOS}}
 > 2.  **Pictórico:** {{REGISTRO_NA_IMAGEM_OU_ESBOCO_NO_PASSAPORTE}}
-> 3.  **Abstrato:** {{SELAGEM_DO_SIMBOLO_OU_NUMERO_NA_AREIA_OU_PAPEL}}
+> 3.  **Abstrato:** {{SELAGEM_DO_SIMBOLO_OU_NUMERO}}
 >
-> *[Nota de Virtude: Parabéns, Pai. Ao guiá-lo no concreto antes do símbolo, você plantou a semente da Ordem.]*
+> *[Nota de Virtude: Parabéns, Portador. Ao guiar o concreto antes do símbolo, você plantou a semente da Ordem.]*
 
 ---
 
@@ -134,7 +130,7 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 > [!NARRAÇÃO]
 > *[Guarde as ferramentas. Foco no olhar e na vela acesa.]*
 >
-> **{{NOME_GUARDIAO}} pergunta:**
+> **{{NOME_GUARDIAO_LIDER}} pergunta:**
 > *"Antes de partirmos... o que seu coração guardou deste jardim hoje? O que você diria ao Rei sobre o que descobriu?"*
 >
 > `[pausa - respeite solenemente o tempo da criança]`
@@ -148,10 +144,10 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 ## 🕊️ 9. Despedida & Bênção
 
 > [!FECHAMENTO]
-> **{{NOME_GUARDIAO}}:**
+> **{{NOME_GUARDIAO_LIDER}}:**
 > `[gesto de despedida nobre]`
 > *"Sua jornada hoje foi luz. Guarde o {{CONCEITO_CHAVE}} em sua mochila de Viajante."*
-> *"Na próxima jornada, {{NOME_PROXIMO_GUARDIAO}} nos levará para {{GANCHO_FUTURO_MISTERIOSO_PARA_A_PROXIMA_LICAO}}."*
+> *"Na próxima jornada, {{NOME_PROXIMO_GUARDIAO}} nos levará para {{PROXIMO_PASSO_RELE_DA_LICAO_SEGUINTE}}."*
 
 ---
 
@@ -166,24 +162,19 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 
 ---
 
-## 🏛️ 11. Por que isso importa? (A Cátedra dos Pais)
+## 🏛️ 11. Por que isso importa? (A Cátedra do Portador)
 
 > [!NOTE]
-> **A Autoridade para o Portador da Tocha:**
+> **A Cadeira do Portador da Tocha (A Tríade Viva):**
 >
-> 🧠 **O Cérebro da Criança (Neurociência & SGP):**
-> {{EXPLICACAO_COGNITIVA_POR_QUE_O_CEREBRO_PRECISA_DISSO_AGORA_EX_MIELINIZACAO_ABSTRACAO}}
+> 🧠 **O Método (Singapore Math / CPA):**
+> {{EXPLICACAO_TECNICA_SOBRE_CONCRETO_PICTORICO_OU_ABSTRATO_DA_LICAO}}
 >
-> 🌌 **A Ordem do Reino (Filosofia & Beleza):**
-> {{A_BELEZA_DO_LOGOS_POR_TRAS_DO_NUMERO_CITAÇÃO_FILOSOFICA_OU_LITERARIA}}
+> 🕊️ **A Mestra (Charlotte Mason / Atmosfera):**
+> {{QUAL_PRINCIPIO_DE_CM_ESTA_SENDO_VIVIDO_ATENCAO_OU_AUTORIDADE}}
 >
-> 💰 **O Investimento do Reino (Gasto vs. Legado):**
->
-> **O Gasto:** Sim, educar *custa*. Custa paciência, custa tempo, custa morrer para si mesmo. Não escondemos o preço.
->
-> **O Investimento:** Mas o que você está comprando com esse 'gasto' não é uma nota de prova. É a arquitetura mental e a alma do seu filho.
->
-> *Troque a Culpa pelo Capital Eterno:* Se hoje foi difícil, você não 'falhou'; você 'pagou o preço' de fundar uma dinastia. O ROI (Retorno) deste Ofício é medido em Gerações, não em minutos.
+> 🛡️ **O Veredito da Graça (Melquior / Descanso):**
+> {{TEXTO_DE_GRACA_PERSONALIZADO_PARA_OS_DESAFIOS_DESTE_DIA}}
 
 ---
 
@@ -192,8 +183,8 @@ tgtb: "{{REFERENCIA_TGTB_OPCIONAL}}"
 - [ ] **Atenção:** O Hábito da Atenção Plena foi estimulado (lição curta)?
 - [ ] **Hábito:** A disciplina do ritual foi mantida para gerar segurança?
 - [ ] **Ideia Viva:** Houve um encontro direto com a beleza do mundo real?
-- [ ] **Narração:** A criança agiu como "narradora" da própria descoberta?
+- [ ] **Narração:** O Viajante agiu como "narrador" da própria descoberta?
 
 ---
-**[00_HUB](file:///c:/Users/Raul%20Fl%C3%A1vio/OneDrive/!RF%202026/Gravity%20Google/Porjeto11-MatVivaV3/GOVERNANCA/00_CENTRO_DE_COMANDO.md)**
+**[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md)**
 *Template V3.6 Sementes (Gold Edition) - Janeiro 2026.*

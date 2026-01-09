@@ -1,0 +1,32 @@
+# Dependências do Servidor MCP - Matemática Viva
+# Instalar com: pip install -r requirements.txt
+
+# Core MCP
+mcp>=1.0.0
+
+# Análise de Texto
+textstat>=0.7.3
+
+# NLP (opcional, para análise avançada)
+# spacy>=3.7.0  # Descomentar se usar análise de POS tagging
+
+# Machine Learning (opcional, para similaridade estilística)
+scikit-learn>=1.4.0
+
+# NLTK (opcional, para tokenização avançada)
+# nltk>=3.8.1  # Descomentar se usar
+
+# Configuração
+pyyaml>=6.0
+
+# Testes
+pytest>=8.0.0
+
+# ============================================================
+# INSTALAÇÃO MÍNIMA (sem dependências opcionais):
+# pip install mcp textstat pyyaml pytest
+#
+# INSTALAÇÃO COMPLETA:
+# pip install mcp textstat spacy scikit-learn nltk pyyaml pytest
+# python -m spacy download pt_core_news_sm
+# ============================================================

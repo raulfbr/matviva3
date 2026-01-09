@@ -1,0 +1,1 @@
+**[ALERTA DE COTA]** 🛑 A API atingiu o limite de requisições (Quota Exceeded). Por favor, aguarde ou troque a API Key em '.api_key'.
