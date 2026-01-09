@@ -96,4 +96,19 @@ Use este prompt para garantir funcionalidade e legibilidade.
 > Remova adjetivos inúteis e garanta que o 'Fardo Cognitivo' do pai seja zero. O roteiro deve fluir como um script de teatro impecável."
 
 ---
+---
+## 🧪 7. O CRIVO DO ARQUITETO VISUAL (UI/UX Premium)
+
+Use este prompt para levar o design de uma página ou componente ao nível "Exponencial".
+
+### **Prompt: O Olhar de Beatrix & Sofia (Premium UI/UX)**
+
+> "Atue como o Conselho de Design do Reino (Beatrix Potter + Sofia UX). Sua missão é auditar a interface [X] sob o prisma da **Excelência Inevitável**.
+> 
+> 1. **Atmosfera de Ateliê (Glassmorphism):** Verifique se estamos usando camadas translúcidas e desfoque (`backdrop-filter`) para criar profundidade. A página não deve ser sólida e fria; deve ser leve e orgânica.
+> 2. **Ergonomia do Portador (Mobile-First):** Teste mentalmente o uso com uma mão. Os botões de navegação estão na 'thumb-zone'? O header fixo protege o contexto sem roubar espaço?
+> 3. **Tipografia de Herança:** Verifique se as fontes (Merriweather/Outfit) estão honrando a tradição e a modernidade simultaneamente.
+> 4. **Micro-interações de Alma:** Adicione pequenos estados de hover e animações de entrada que façam o usuário sentir que o material está 'vivo' e servindo-o."
+
+---
 **[00_HUB](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/00_CENTRO_DE_COMANDO.md) | [Constituição](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/01_MAGNA_CARTA.md) | [Prompts](file:///c:/Users/Raul/OneDrive/!RF%202026/Gravity%20Google/Projeto011-MatVivaV3RaulPessoal/GOVERNANCA/06_BIBLIOTECA_DE_PROMPTS.md)**
