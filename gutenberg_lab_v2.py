@@ -115,6 +115,22 @@ def parse_markdown(filepath):
         html_content
     )
     
+    # === PASS 2 FIXES (Schoger + CM Audit) ===
+    
+    # 6. Convert markdown list asterisks to proper bullets
+    html_content = re.sub(r'\*\s{3}<strong>', '• <strong>', html_content)
+    html_content = re.sub(r'\*\s{2,}<strong>', '• <strong>', html_content)
+    html_content = re.sub(r'^\*\s+', '• ', html_content, flags=re.MULTILINE)
+    
+    # 7. Convert markdown checkboxes to visual checkboxes
+    html_content = re.sub(r'\[\s*\]\s*<strong>', '☐ <strong>', html_content)
+    html_content = re.sub(r'\[x\]\s*<strong>', '☑ <strong>', html_content)
+    html_content = re.sub(r'\[\s*\]\s+', '☐ ', html_content)
+    html_content = re.sub(r'\[x\]\s+', '☑ ', html_content)
+    
+    # 8. Clean up any remaining markdown artifacts
+    html_content = re.sub(r'<p>\*\s+', '<p>• ', html_content)
+    
     return metadata, html_content
 
 def render_lab_v2_lesson(meta, body_html, prev_url, next_url):
@@ -206,6 +222,9 @@ def build_lab_v2_index(lessons):
     """
     
     for l in lessons:
+        # Skip administrative files (ATAs, logs, etc.)
+        if l['filename'].startswith('ATA_') or l['filename'].startswith('LOG_'):
+            continue
         html += f"""
             <a href="sementes/{l['html_filename']}" class="index-card">
                 <h3>{l['meta'].get('titulo', 'Lição')}</h3>

@@ -1,0 +1,162 @@
+/* 
+   LAB v2.1 FLUID — Modo Kindle (Fluidez Máxima)
+   TESTE: Removendo H2s das seções narrativas
+   
+   Este CSS é uma CAMADA DE TESTE sobre o style_lab_v2.css
+   Use: <link rel="stylesheet" href="../style_lab_v2_fluid.css">
+*/
+
+/* ======================================
+   ZONA 2: RITUAL (FLUIDEZ MÁXIMA)
+   Seções 3-10: Entrada → Encerramento
+====================================== */
+
+/* Esconder H2s das seções narrativas */
+.prose h2:nth-of-type(n+3):nth-of-type(-n+10) {
+    display: none;
+}
+
+/* Alternativa: H2s sutis (não esconde, apenas minimiza) */
+/*
+.prose h2 {
+    font-size: 0.65rem;
+    color: var(--color-gold);
+    opacity: 0.5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 4rem 0 1rem;
+    text-align: center;
+}
+*/
+
+/* Esconder labels redundantes em blockquotes */
+blockquote>p:first-child>strong:first-child {
+    display: none;
+}
+
+/* Alternativa: Labels como marcadores laterais discretos */
+/*
+blockquote > p:first-child > strong:first-child {
+    position: absolute;
+    left: -2rem;
+    font-size: 1.2rem;
+    opacity: 0.3;
+}
+*/
+
+/* Substituir HR por espaço em branco generoso */
+.prose hr {
+    border: none;
+    height: 4rem;
+    margin: 0;
+    background: transparent;
+}
+
+/* ======================================
+   STAGE DIRECTIONS (Ações, tons, pausas)
+====================================== */
+
+/* [Ação: ...] como direções de palco */
+.prose em:has(+ p),
+.prose p>em:first-child {
+    display: block;
+    font-size: 0.85em;
+    color: var(--color-ink-soft);
+    margin: 2rem 0 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-gold);
+    opacity: 0.7;
+}
+
+/* [tom de...] como indicação sutil */
+.prose code {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--color-gold);
+    background: none;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* ======================================
+   DIÁLOGOS E NARRAÇÃO
+====================================== */
+
+/* Falas entre aspas - destaque sutil */
+.prose p {
+    text-indent: 0;
+}
+
+/* Nomes dos personagens em destaque */
+.prose strong:first-child {
+    color: var(--color-green);
+    font-weight: 700;
+}
+
+/* Falas em itálico - mais espaço */
+.prose em {
+    line-height: 2.2;
+}
+
+/* ======================================
+   ZONA 1: PRÉ-RITUAL (Com estrutura)
+====================================== */
+
+/* Primeiros 2 H2s mantêm estilo normal */
+.prose h2:nth-of-type(1),
+.prose h2:nth-of-type(2) {
+    display: block !important;
+    font-size: 1.3rem;
+    color: var(--color-green);
+    margin: 3rem 0 1.5rem;
+}
+
+/* ======================================
+   ZONA 3: PÓS-RITUAL (Com estrutura)
+====================================== */
+
+/* Últimos 2 H2s mantêm estilo normal */
+.prose h2:nth-of-type(n+11) {
+    display: block !important;
+    font-size: 1.3rem;
+    color: var(--color-green);
+    margin: 3rem 0 1.5rem;
+}
+
+/* ======================================
+   BLOCKQUOTES FLUIDOS
+====================================== */
+
+/* Remover borda lateral para fluidez */
+blockquote {
+    border-left: none;
+    padding-left: 0;
+    background: transparent;
+    margin: 2rem 0;
+}
+
+/* Manter apenas um acento sutil no topo */
+blockquote::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-gold);
+    margin-bottom: 1.5rem;
+    opacity: 0.3;
+}
+
+/* ======================================
+   RESPIRAÇÃO VISUAL
+====================================== */
+
+/* Mais espaço entre seções */
+.prose>*+h2 {
+    margin-top: 5rem;
+}
+
+/* Parágrafos mais espaçados na zona de diálogo */
+.prose blockquote p+p {
+    margin-top: 1.5rem;
+}
