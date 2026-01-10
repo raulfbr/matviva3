@@ -214,6 +214,10 @@ def parse_markdown_v3(filepath):
         catedra_content = catedra_match.group(1)
         # Clean the H2 for catedra
         catedra_clean = re.sub(r'<h2>[^<]*11\.\s*', '<h2>🏛️ ', catedra_content)
+        # Clean internal blockquote for cleaner UI (Box-in-Box removal)
+        catedra_clean = re.sub(r'<blockquote>\s*', '', catedra_clean)
+        catedra_clean = re.sub(r'\s*</blockquote>', '', catedra_clean)
+        
         wrapped_catedra = f'<div class="catedra-pais">\n{catedra_clean}</div>'
         html_content = html_content[:catedra_match.start()] + wrapped_catedra + html_content[catedra_match.end():]
     
