@@ -13,24 +13,23 @@
 
 <body>
 
-    <header class="lab2-header">
-        <a href="../index.html">🏰 Reino</a>
+    <header class="lab2-header" id="header">
+        <a href="../index.html">← Reino</a>
         <span class="lab2-meta">Sementes • 15 min</span>
     </header>
 
     <main class="lab2-content">
-        <!-- Title Block -->
+        <!-- Title Block (no avatar) -->
         <div class="lab2-title-block">
             <h1>A Trilha de Celeste: A Reta Numérica</h1>
             <p class="subtitle">🦊 A Direção do Passo. Entender que os números formam uma trilha que sempre avança.</p>
             <div class="guardian-line">
-                <img src="../../assets/img/celeste-raposa.webp" alt="Guardião">
-                <span>Guiado por <strong>Celeste (Raposa)</strong></span>
+                Guiado por <strong>Celeste (Raposa)</strong>
             </div>
         </div>
 
-        <!-- Ritual Separator: Entrada -->
-        <div class="ritual-separator">✦ ✦ ✦</div>
+        <!-- Whitespace Separator (replaces ✦ ✦ ✦) -->
+        <div class="ritual-separator" aria-hidden="true"></div>
 
         <!-- Prose Content -->
         <article class="prose">
@@ -184,20 +183,41 @@ Se a criança entende de onde veio (antecessor) e para onde vai (sucessor), ela 
 <em>Gerado pelo Conselho Vivo V3.7 (Celeste Lead) - Janeiro 2026.</em></p>
         </article>
 
-        <!-- Ritual Separator: Saída -->
-        <div class="ritual-separator">✦ ✦ ✦</div>
+        <!-- Whitespace Separator -->
+        <div class="ritual-separator" aria-hidden="true"></div>
 
         <!-- Footer Reference -->
         <footer class="lab2-footer">
-            📚 Referência Original: Math K, Lesson 28
+            📚 Referência: Math K, Lesson 28
         </footer>
+
+        <!-- Text Navigation (replaces pills) -->
+        <nav class="lab2-nav">
+            <a href="027_DIAS_SEMANA_GOLD.html">← Anterior</a>
+            <span class="separator">|</span>
+            <a href="029_FORMAS_DE_5_GOLD.html">Próxima →</a>
+        </nav>
     </main>
 
-    <!-- Navigation Pills -->
-    <nav class="lab2-nav">
-        <a href="027_DIAS_SEMANA_GOLD.html">← Voltar</a>
-        <a href="029_FORMAS_DE_5_GOLD.html" class="next">Próxima →</a>
-    </nav>
+    <!-- Auto-hide header script -->
+    <script>
+        (function () {
+            let lastScroll = 0;
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > lastScroll && currentScroll > 80) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+            });
+        })();
+    </script>
 
 </body>
 

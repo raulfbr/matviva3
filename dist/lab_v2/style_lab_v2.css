@@ -1,7 +1,17 @@
 /* 
-   Gutenberg LAB v2.0 — Imersão Naturalista
-   Aesthetic: E-Reader Experience / Caderno de Campo
-   Focus: Legibility, Narrative Flow, Text-First
+   Gutenberg LAB v2.1 — Ultra-Clean Mobile-First
+   Aesthetic: E-Reader Experience / Imersão Total
+   Focus: Maximum Legibility, Zero Distraction
+   
+   v2.1 Changes (10/Jan/2026):
+   - Font: 1.35rem → 1.4rem
+   - Line-height: 1.95 → 2.0
+   - Max-width: 680px → 75ch
+   - Blockquotes: Unified Gold color
+   - Navigation: Pills → Text links
+   - Header: Sticky → Auto-hide on scroll
+   - Separators: Ornaments → Whitespace
+   - Guardian: Avatar → Text only
 */
 
 :root {
@@ -13,15 +23,15 @@
     --color-gold: #B8A060;
     --color-green: #3A4A40;
 
-    /* Typography Scale */
+    /* Typography Scale (Schoger-approved) */
     --font-body: 'Merriweather', Georgia, serif;
     --font-ui: 'Outfit', system-ui, sans-serif;
-    --font-size-base: 1.35rem;
-    --line-height: 1.95;
+    --font-size-base: 1.4rem;
+    --line-height: 2.0;
 
-    /* Spacing (Generous) */
-    --margin-content: max(5%, 2rem);
-    --radius-soft: 8px;
+    /* Spacing (Ultra-Generous) */
+    --margin-content: max(6%, 1.5rem);
+    --radius-soft: 6px;
 }
 
 *,
@@ -47,81 +57,78 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Minimal Sticky Header */
+/* Auto-Hide Header (appears on scroll up) */
 .lab2-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    background: rgba(250, 247, 242, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 0.8rem var(--margin-content);
+    background: rgba(250, 247, 242, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.6rem var(--margin-content);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     font-family: var(--font-ui);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.lab2-header.hidden {
+    transform: translateY(-100%);
 }
 
 .lab2-header a {
     color: var(--color-green);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .lab2-meta {
     color: var(--color-ink-soft);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
-/* Content Container (E-Reader Style) */
+/* Content Container (75ch for optimal reading) */
 .lab2-content {
-    max-width: 680px;
+    max-width: 75ch;
     margin: 0 auto;
-    padding: 4rem var(--margin-content) 8rem;
+    padding: 5rem var(--margin-content) 6rem;
 }
 
-/* Title Block */
+/* Title Block (Clean, no avatar) */
 .lab2-title-block {
     text-align: center;
-    margin-bottom: 4rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 5rem;
 }
 
 .lab2-title-block h1 {
-    font-size: clamp(2rem, 6vw, 2.8rem);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
     font-weight: 900;
     color: var(--color-green);
     margin: 0 0 1rem;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .lab2-title-block .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--color-ink-soft);
     font-style: italic;
-    margin: 0;
+    margin: 0 0 1.5rem;
 }
 
 .lab2-title-block .guardian-line {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-ink-soft);
+    font-family: var(--font-ui);
 }
 
-.lab2-title-block .guardian-line img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--color-gold);
+.lab2-title-block .guardian-line strong {
+    color: var(--color-gold);
 }
 
 /* Prose: The Heart of Reading */
@@ -132,8 +139,8 @@ body {
 }
 
 .prose p {
-    margin: 0 0 1.8rem;
-    text-align: justify;
+    margin: 0 0 2rem;
+    text-align: left;
     hyphens: auto;
 }
 
@@ -142,126 +149,105 @@ body {
 .prose h4 {
     font-family: var(--font-ui);
     color: var(--color-green);
-    margin: 3rem 0 1.5rem;
+    margin: 4rem 0 1.5rem;
 }
 
 .prose h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 800;
 }
 
 .prose h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
-/* Ritual Separator (Ornament) */
+/* Whitespace Separator (replaces ✦ ✦ ✦) */
 .ritual-separator {
-    text-align: center;
-    margin: 4rem 0;
-    color: var(--color-gold);
-    font-size: 1.5rem;
-    letter-spacing: 0.5rem;
-    opacity: 0.6;
+    height: 4rem;
 }
 
-/* Admonition Blocks (Subtle) */
+/* Unified Blockquotes (Gold only) */
 blockquote {
-    margin: 3rem 0;
-    padding: 2rem 2rem 2rem 2.5rem;
+    margin: 2.5rem 0;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
     background: var(--color-paper);
-    border-left: 4px solid var(--color-gold);
+    border-left: 3px solid var(--color-gold);
     border-radius: var(--radius-soft);
-    font-size: 1.15rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    font-size: 1.1rem;
 }
 
 blockquote strong {
     display: block;
     font-family: var(--font-ui);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--color-gold);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
-blockquote.ritual {
-    border-left-color: #8B5CF6;
-}
-
-blockquote.mestra {
-    border-left-color: #EA580C;
-}
-
-blockquote.narrativa {
-    border-left-color: #3B82F6;
-}
-
-blockquote.atividade {
-    border-left-color: #22C55E;
-}
+/* No more colored variants - all unified */
 
 /* Footer Reference */
 .lab2-footer {
     text-align: center;
-    padding: 3rem var(--margin-content);
-    font-size: 0.8rem;
+    padding: 4rem 0 2rem;
+    font-size: 0.75rem;
     color: var(--color-ink-soft);
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
     font-family: var(--font-ui);
 }
 
-/* Fixed Navigation (Simple Pills) */
+/* Text Navigation (replaces pills) */
 .lab2-nav {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    background: var(--color-green);
-    padding: 0.5rem 0.75rem;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    text-align: center;
+    padding: 2rem var(--margin-content);
     font-family: var(--font-ui);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    background: var(--color-cream);
 }
 
 .lab2-nav a {
-    color: white;
+    color: var(--color-ink-soft);
     text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background 0.2s;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
 }
 
 .lab2-nav a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-green);
 }
 
-.lab2-nav a.next {
-    background: var(--color-gold);
-    color: var(--color-green);
+.lab2-nav .separator {
+    color: var(--color-ink-soft);
+    opacity: 0.3;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
     :root {
-        --font-size-base: 1.2rem;
+        --font-size-base: 1.25rem;
     }
 
     .lab2-content {
-        padding: 3rem var(--margin-content) 7rem;
+        padding: 4rem var(--margin-content) 5rem;
+    }
+
+    .lab2-title-block {
+        margin-bottom: 4rem;
     }
 
     .lab2-title-block h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     blockquote {
-        padding: 1.5rem;
+        padding: 1.25rem;
+        margin: 2rem 0;
+    }
+
+    .ritual-separator {
+        height: 3rem;
     }
 }

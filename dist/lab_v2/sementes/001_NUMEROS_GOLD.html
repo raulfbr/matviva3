@@ -13,24 +13,23 @@
 
 <body>
 
-    <header class="lab2-header">
-        <a href="../index.html">🏰 Reino</a>
+    <header class="lab2-header" id="header">
+        <a href="../index.html">← Reino</a>
         <span class="lab2-meta">Sementes • 15 min</span>
     </header>
 
     <main class="lab2-content">
-        <!-- Title Block -->
+        <!-- Title Block (no avatar) -->
         <div class="lab2-title-block">
             <h1>Os Primeiros Números (1 a 3)</h1>
             <p class="subtitle">💎 Conquistar o segredo do 1, do 2 e do 3 através do toque das mãos e do ritmo do corpo.</p>
             <div class="guardian-line">
-                <img src="../../assets/img/celeste-raposa.webp" alt="Guardião">
-                <span>Guiado por <strong>Celeste</strong></span>
+                Guiado por <strong>Celeste</strong>
             </div>
         </div>
 
-        <!-- Ritual Separator: Entrada -->
-        <div class="ritual-separator">✦ ✦ ✦</div>
+        <!-- Whitespace Separator (replaces ✦ ✦ ✦) -->
+        <div class="ritual-separator" aria-hidden="true"></div>
 
         <!-- Prose Content -->
         <article class="prose">
@@ -183,20 +182,41 @@ Se hoje o seu pequeno Viajante não conseguiu "ver" o 3 sem contar ou se as seme
 </ul>
         </article>
 
-        <!-- Ritual Separator: Saída -->
-        <div class="ritual-separator">✦ ✦ ✦</div>
+        <!-- Whitespace Separator -->
+        <div class="ritual-separator" aria-hidden="true"></div>
 
         <!-- Footer Reference -->
         <footer class="lab2-footer">
-            📚 Referência Original: Math K, Lesson 1
+            📚 Referência: Math K, Lesson 1
         </footer>
+
+        <!-- Text Navigation (replaces pills) -->
+        <nav class="lab2-nav">
+            <a href="000_INICIO_GOLD.html">← Anterior</a>
+            <span class="separator">|</span>
+            <a href="002_TEN_FRAMES_GOLD.html">Próxima →</a>
+        </nav>
     </main>
 
-    <!-- Navigation Pills -->
-    <nav class="lab2-nav">
-        <a href="000_INICIO_GOLD.html">← Voltar</a>
-        <a href="002_TEN_FRAMES_GOLD.html" class="next">Próxima →</a>
-    </nav>
+    <!-- Auto-hide header script -->
+    <script>
+        (function () {
+            let lastScroll = 0;
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > lastScroll && currentScroll > 80) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+            });
+        })();
+    </script>
 
 </body>
 

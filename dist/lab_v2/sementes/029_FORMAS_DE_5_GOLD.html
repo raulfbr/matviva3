@@ -13,24 +13,23 @@
 
 <body>
 
-    <header class="lab2-header">
-        <a href="../index.html">🏰 Reino</a>
+    <header class="lab2-header" id="header">
+        <a href="../index.html">← Reino</a>
         <span class="lab2-meta">Sementes • 15 min</span>
     </header>
 
     <main class="lab2-content">
-        <!-- Title Block -->
+        <!-- Title Block (no avatar) -->
         <div class="lab2-title-block">
             <h1>Bernardo e a Família do Cinco</h1>
             <p class="subtitle">🐻 A Amizade dos Pares. Descobrir todas as formas de dividir o bando de 5 entre duas cavernas.</p>
             <div class="guardian-line">
-                <img src="../../assets/img/bernardo-urso.webp" alt="Guardião">
-                <span>Guiado por <strong>Bernardo (Urso)</strong></span>
+                Guiado por <strong>Bernardo (Urso)</strong>
             </div>
         </div>
 
-        <!-- Ritual Separator: Entrada -->
-        <div class="ritual-separator">✦ ✦ ✦</div>
+        <!-- Whitespace Separator (replaces ✦ ✦ ✦) -->
+        <div class="ritual-separator" aria-hidden="true"></div>
 
         <!-- Prose Content -->
         <article class="prose">
@@ -188,20 +187,41 @@ Ao dominar essas combinações, a mente fica livre do esforço servil da contage
 <em>Gerado pelo Conselho Vivo V3.7 (Bernardo Lead) - Janeiro 2026.</em></p>
         </article>
 
-        <!-- Ritual Separator: Saída -->
-        <div class="ritual-separator">✦ ✦ ✦</div>
+        <!-- Whitespace Separator -->
+        <div class="ritual-separator" aria-hidden="true"></div>
 
         <!-- Footer Reference -->
         <footer class="lab2-footer">
-            📚 Referência Original: Math K, Lesson 29
+            📚 Referência: Math K, Lesson 29
         </footer>
+
+        <!-- Text Navigation (replaces pills) -->
+        <nav class="lab2-nav">
+            <a href="028_RETA_NUMERICA_GOLD.html">← Anterior</a>
+            <span class="separator">|</span>
+            <a href="030_REVISAO_ESTACAO_2_GOLD.html">Próxima →</a>
+        </nav>
     </main>
 
-    <!-- Navigation Pills -->
-    <nav class="lab2-nav">
-        <a href="028_RETA_NUMERICA_GOLD.html">← Voltar</a>
-        <a href="030_REVISAO_ESTACAO_2_GOLD.html" class="next">Próxima →</a>
-    </nav>
+    <!-- Auto-hide header script -->
+    <script>
+        (function () {
+            let lastScroll = 0;
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > lastScroll && currentScroll > 80) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+            });
+        })();
+    </script>
 
 </body>
 
