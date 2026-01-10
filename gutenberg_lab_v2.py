@@ -77,6 +77,44 @@ def parse_markdown(filepath):
         replacement = f"<blockquote class='{cls}'>\n<p><strong>{title}</strong>"
         html_content = re.sub(pattern, replacement, html_content)
     
+    # === POST-PROCESSING (Schoger + CM Audit Fixes) ===
+    
+    # 1. Remove first H1 from content (duplicate of title)
+    html_content = re.sub(r'^<h1[^>]*>.*?</h1>\s*', '', html_content, count=1)
+    
+    # 2. Process remaining inline admonitions that weren't caught
+    inline_admonitions = [
+        (r'\[!NOTE\]', '<strong>📝 Nota:</strong>'),
+        (r'\[!PAI\]', '<strong>👨‍👧 Ação do Pai:</strong>'),
+        (r'\[!NARRAÇÃO\]', '<strong>🗣️ Narração:</strong>'),
+        (r'\[!TIP\]', '<strong>🦋 Dica:</strong>'),
+        (r'\[!IMPORTANT\]', '<strong>⚠️ Importante:</strong>'),
+        (r'\[!WARNING\]', '<strong>⚠️ Atenção:</strong>'),
+    ]
+    for pattern, replacement in inline_admonitions:
+        html_content = re.sub(pattern, replacement, html_content)
+    
+    # 3. Convert absolute file:/// paths to relative paths
+    html_content = re.sub(
+        r'src="file:///[^"]*[/\\]imagens[/\\]([^"]+)"',
+        r'src="../../assets/img/\1"',
+        html_content
+    )
+    
+    # 4. Remove governance links (file:/// links)
+    html_content = re.sub(
+        r'<a href="file:///[^"]*">([^<]+)</a>',
+        r'\1',
+        html_content
+    )
+    
+    # 5. Remove leftover markdown image syntax with file:/// paths
+    html_content = re.sub(
+        r'<img[^>]*src="file:///[^"]*"[^>]*>',
+        '',
+        html_content
+    )
+    
     return metadata, html_content
 
 def render_lab_v2_lesson(meta, body_html, prev_url, next_url):
