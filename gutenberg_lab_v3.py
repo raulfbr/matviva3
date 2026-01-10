@@ -263,13 +263,58 @@ def parse_markdown_v3(filepath):
         html_content, flags=re.DOTALL
     )
 
-    # 3. Áudio-Script (Grey-Green)
+    # 3. Áudio-Script (Style Clean / Focus on Writing)
+    def format_audio(match):
+        raw_content = match.group(1)
+        
+        options_html = ""
+        script_html = raw_content
+        
+        # Attempt to isolate the "Options" paragraph (usually the first one)
+        # Look for "Opção A" or typical instruction start
+        opt_match = re.search(r'(<p>.*?Opção A.*?</p>)', raw_content, re.DOTALL | re.IGNORECASE)
+        if opt_match:
+            options_html = opt_match.group(1)
+            # Remove options from script content
+            script_html = raw_content.replace(options_html, "")
+        
+        # Clean script content for the box
+        # Remove potential inner blockquotes from markdown parsing
+        script_html = re.sub(r'<blockquote>(.*?)</blockquote>', r'\1', script_html, flags=re.DOTALL)
+        script_html = script_html.strip()
+        
+        # Style the options (Small, Italic, Secondary Color)
+        # We strip the original <p> tag to apply our own style if possible, or just replace attributes
+        options_html = re.sub(
+            r'<p>', 
+            r'<p style="font-size: 0.85rem; color: #5C5C5C; margin-bottom: 0.75rem; font-style: italic; line-height: 1.4;">', 
+            options_html
+        )
+        
+        # Style the Script Box (Paper background, Serif, Focused)
+        # Using a very light warm background #F9F9F7 close to the image reference
+        script_box = (
+            f'<div style="background: #F9F9F7; padding: 1.25rem; border-radius: 6px; border-left: 2px solid #E0D8C3;">'
+            f'<div style="font-family: \'Merriweather\', serif; font-style: italic; color: #2C2C2C; font-size: 1rem; line-height: 1.7;">'
+            f'{script_html}'
+            f'</div>'
+            f'</div>'
+        )
+        
+        return (
+            f'<div class="zona1-bloco" style="margin: 2rem 0 1.5rem 0;">'
+            f'  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">'
+            f'      <span style="font-size: 1.2rem;">🎧</span>'
+            f'      <h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: #3A4A40; font-weight: 700; margin: 0;">Áudio-Script (Somente para o Pai)</h3>'
+            f'  </div>'
+            f'  {options_html}'
+            f'  {script_box}'
+            f'</div>'
+        )
+
     html_content = re.sub(
         r'<h2>🎧 2\. (?:\[AUDIO-SCRIPT\]|Áudio-Script) \(.*?\)</h2.*?>\s*(?:<blockquote>)?(.*?)(?:</blockquote>)?(?=<div|<h2)',
-        r'<div class="zona1-bloco" style="background: rgba(107, 122, 111, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid #6B7A6F;">'
-        r'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: #6B7A6F; margin-bottom: 1rem;">🎧 Áudio-Script (Somente para o Pai)</h3>'
-        r'<div class="audio-content">\1</div>'
-        r'</div>',
+        format_audio,
         html_content, flags=re.DOTALL
     )
 
@@ -322,12 +367,27 @@ def parse_markdown_v3(filepath):
             f'</div>'
         )
 
+    # === ZONE 1 EXTRACTION ===
+    # Extract all "zona1-bloco" divs to move them to the {{ zona_preparacao }} placeholder
+    zona1_blocks = []
+    
+    def extract_zona1(match):
+        zona1_blocks.append(match.group(0))
+        return "" # Remove from main body
+        
     html_content = re.sub(
-        r'<p>\s*<img alt="CARD: ([^"]+)" src="([^"]+)"\s*/>\s*</p>',
-        replace_card,
-        html_content
+        r'<div class="zona1-bloco".*?</div>',
+        extract_zona1,
+        html_content, flags=re.DOTALL
     )
     
+    metadata['zona_preparacao'] = "\n".join(zona1_blocks)
+    
+    # Cleanup stray closing divs that might remain after extraction
+    html_content = html_content.strip()
+    if html_content.startswith("</div>"):
+        html_content = html_content[6:].strip()
+        
     return metadata, html_content
 
 def render_lab_v3_lesson(meta, body_html, prev_url, next_url):
@@ -349,7 +409,10 @@ def render_lab_v3_lesson(meta, body_html, prev_url, next_url):
     # Placeholder content for structured parts
     html = html.replace("{{ objetivo }}", meta.get("meta", "Explorar a ideia viva do dia."))
     html = html.replace("{{ materiais }}", "Vela, sementes, Passaporte do Reino")
-    html = html.replace("{{ dica_dia }}", "Respire fundo antes de começar. A jornada é curta, mas profunda.")
+    # html = html.replace("{{ dica_dia }}", "Respire fundo antes de começar. A jornada é curta, mas profunda.")
+    
+    # Inject Zone 1 Content
+    html = html.replace("{{ zona_preparacao }}", meta.get('zona_preparacao', ''))
     
     # Main content goes to fluid zone
     html = html.replace("{{ conteudo_fluido }}", body_html)
