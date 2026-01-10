@@ -220,6 +220,96 @@ def parse_markdown_v3(filepath):
         
         wrapped_catedra = f'<div class="catedra-pais">\n{catedra_clean}</div>'
         html_content = html_content[:catedra_match.start()] + wrapped_catedra + html_content[catedra_match.end():]
+
+    # === NEW: ZONA 1 RICH BLOCKS ===
+    # Transform "Para o Pai/Mãe", "A Bancada", "Áudio-Script" into styled blocks
+    
+    # 1. Para o Pai/Mãe (Green)
+    html_content = re.sub(
+        r'<blockquote>\s*<p>\s*<strong>Para o Pai/Mãe.*?</strong>(.*?)</p>\s*<p>\s*<strong>Protocolo de Impecabilidade:</strong>(.*?)</p>\s*</blockquote>',
+        r'<div class="zona1-bloco" style="background: rgba(58, 74, 64, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-green);">'
+        r'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-green); margin-bottom: 1rem;">💚 Para o Pai/Mãe (Leia antes de tudo)</h3>'
+        r'<p style="margin-bottom: 1rem;">\1</p>'
+        r'<p style="color: var(--color-ink-soft); font-size: 0.9rem;"><strong>Protocolo de Impecabilidade:</strong>\2</p>'
+        r'</div>',
+        html_content, flags=re.DOTALL
+    )
+
+    # 2. A Bancada (Gold)
+    # This one is tricky because it has H2 before it. We target H2 + Blockquote
+    html_content = re.sub(
+        r'<h2>📜 1\. A Bancada \(Mise-en-place\)</h2>\s*<blockquote>(.*?)</blockquote>',
+        r'<div class="zona1-bloco" style="background: rgba(184, 160, 96, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-gold);">'
+        r'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-gold); margin-bottom: 1rem;">📜 A Bancada (Mise-en-place)</h3>'
+        r'\1'
+        r'</div>',
+        html_content, flags=re.DOTALL
+    )
+
+    # 3. Áudio-Script (Grey-Green)
+    html_content = re.sub(
+        r'<h2>🎧 2\. (?:\[AUDIO-SCRIPT\]|Áudio-Script) \(.*?\)</h2.*?>\s*(?:<blockquote>)?(.*?)(?:</blockquote>)?(?=<div|<h2)',
+        r'<div class="zona1-bloco" style="background: rgba(107, 122, 111, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid #6B7A6F;">'
+        r'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: #6B7A6F; margin-bottom: 1rem;">🎧 Áudio-Script (Somente para o Pai)</h3>'
+        r'<div class="audio-content">\1</div>'
+        r'</div>',
+        html_content, flags=re.DOTALL
+    )
+
+    # === NEW: GUARDIAN CARDS ===
+    # Convert <img alt="CARD: Name" src="..."> to Rich Cards
+    
+    def replace_card(match):
+        alt_text = match.group(1)
+        src = match.group(2)
+        
+        # Determine Guardian and Color
+        if "Melquior" in alt_text:
+            name = "Melquior"
+            role = "O Leão"
+            color = "#B89B5E"
+            shadow = "rgba(184, 155, 94, 0.15)"
+        elif "Noé" in alt_text:
+            name = "Noé"
+            role = "A Coruja"
+            color = "#6B7A6F"
+            shadow = "rgba(107, 122, 111, 0.15)"
+        elif "Celeste" in alt_text:
+            name = "Celeste"
+            role = "A Raposa"
+            color = "#D4784A"
+            shadow = "rgba(212, 120, 74, 0.15)"
+        elif "Bernardo" in alt_text:
+            name = "Bernardo"
+            role = "O Urso"
+            color = "#8B6D4C"
+            shadow = "rgba(139, 109, 76, 0.15)"
+        elif "Íris" in alt_text:
+            name = "Íris"
+            role = "A Pardal"
+            color = "#7AA874"
+            shadow = "rgba(122, 168, 116, 0.15)"
+        else:
+            name = "Guardião"
+            role = "O Guia"
+            color = "#3A4A40"
+            shadow = "rgba(0, 0, 0, 0.1)"
+
+        return (
+            f'<div style="border-color: {color}; padding-top: 0; overflow: hidden; background: #fdfbf7; '
+            f'border: 2px solid {color}; border-radius: 12px; padding: 1rem; margin: 2rem auto; '
+            f'text-align: center; box-shadow: 0 8px 20px {shadow}; max-width: 200px;">'
+            f'<img src="{src}" alt="{name}" style="width: 100%; height: auto; display: block; margin-bottom: 0.5rem; border-radius: 8px;">'
+            f'<span style="font-family: \'Merriweather\', serif; font-size: 1.1rem; color: #3A4A40; font-weight: bold; display: block;">{name}</span>'
+            f'<span style="font-size: 0.8rem; color: {color}; text-transform: uppercase; letter-spacing: 1px;">{role}</span>'
+            f'</div>'
+        )
+
+    html_content = re.sub(
+        r'<p>\s*<img alt="CARD: ([^"]+)" src="([^"]+)"\s*/>\s*</p>',
+        replace_card,
+        html_content
+    )
     
     return metadata, html_content
 
