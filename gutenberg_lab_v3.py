@@ -332,7 +332,7 @@ def render_lab_v3_lesson(meta, body_html, prev_url, next_url):
     # Placeholder content for structured parts
     html = html.replace("{{ objetivo }}", meta.get("meta", "Explorar a ideia viva do dia."))
     html = html.replace("{{ materiais }}", "Vela, sementes, Passaporte do Reino")
-    html = html.replace("{{ dica_dia }}", "Respire fundo antes de começar. A jornada é curta, mas profunda.")
+    # html = html.replace("{{ dica_dia }}", "Respire fundo antes de começar. A jornada é curta, mas profunda.")
     
     # Main content goes to fluid zone
     html = html.replace("{{ conteudo_fluido }}", body_html)
