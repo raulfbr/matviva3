@@ -244,8 +244,10 @@ def parse_markdown_v3(filepath):
         content = re.sub(r'([^\n])\s*•?\s*☐', r'\1<br>☐', content)
         
         # Style the list items
+        # Handle cases where "1. " might be inside <strong> or preceded by it
+        # Pattern: ☐ <possible tags> 1. <content>
         content = re.sub(
-            r'☐\s*(\d+\..*?)(?=<br>|$)', 
+            r'☐\s*(?:<[^>]+>)*\s*(\d+\..*?)(?=<br>|<\/p|$)', 
             r'<div style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>☐</span><span>\1</span></div>', 
             content
         )
