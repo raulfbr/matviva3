@@ -84,6 +84,10 @@ def parse_markdown_v3(filepath):
     
     # === ZONA PROCESSING ===
     
+    # New Architecture: Collect Zona 1 blocks as we find them
+    # This avoids the "nested div extraction" bug.
+    zona1_blocks = []
+
     # 1. Remove first H1 (duplicate of title)
     html_content = re.sub(r'^<h1[^>]*>.*?</h1>\s*', '', html_content, count=1)
     
@@ -146,21 +150,8 @@ def parse_markdown_v3(filepath):
     # Section 12 stays as is (will go to details in template)
     
     h2_pattern = r'<h2>([^<]+)</h2>'
-    
     # Find all H2 for analysis
     h2_matches = list(re.finditer(h2_pattern, html_content))
-    
-    # Define section markers
-    section_markers = {
-        '3': 'Ritual de Entrada',
-        '4': 'A Jornada', 
-        '5': 'A Ideia Viva',
-        '6': 'Caminho Dourado',
-        '7': 'Se Quiser Voar',
-        '8': 'Momento de Conversa',
-        '9': 'Despedida',
-        '10': 'Ritual de Encerramento',
-    }
     
     # Process from last to first to preserve indices
     for i, match in enumerate(reversed(h2_matches)):
@@ -191,14 +182,12 @@ def parse_markdown_v3(filepath):
             pass
     
     # 8. Wrap hora-fazer around sections 3-10
-    # Find "Ritual de Entrada" scene marker and wrap from there to "Ritual de Encerramento"
     ritual_entrada_match = re.search(r'(<p class="scene-marker">— (?:O )?Ritual de Entrada[^<]*</p>)', html_content)
     ritual_encerramento_match = re.search(r'(<p class="scene-marker">— Ritual de Encerramento[^<]*</p>.*?</blockquote>)', html_content, re.DOTALL)
     
     if ritual_entrada_match and ritual_encerramento_match:
         start_pos = ritual_entrada_match.start()
         end_pos = ritual_encerramento_match.end()
-        
         hora_fazer_content = html_content[start_pos:end_pos]
         html_content = (
             html_content[:start_pos] + 
@@ -212,89 +201,90 @@ def parse_markdown_v3(filepath):
     catedra_match = re.search(r'(<h2>[^<]*(?:importa|Cátedra)[^<]*</h2>.*?)(?=<h2>|$)', html_content, re.DOTALL | re.IGNORECASE)
     if catedra_match:
         catedra_content = catedra_match.group(1)
-        # Clean the H2 for catedra
         catedra_clean = re.sub(r'<h2>[^<]*11\.\s*', '<h2>🏛️ ', catedra_content)
-        # Clean internal blockquote for cleaner UI (Box-in-Box removal)
         catedra_clean = re.sub(r'<blockquote>\s*', '', catedra_clean)
         catedra_clean = re.sub(r'\s*</blockquote>', '', catedra_clean)
-        
         wrapped_catedra = f'<div class="catedra-pais">\n{catedra_clean}</div>'
         html_content = html_content[:catedra_match.start()] + wrapped_catedra + html_content[catedra_match.end():]
 
-    # === NEW: ZONA 1 RICH BLOCKS ===
-    # Transform "Para o Pai/Mãe", "A Bancada", "Áudio-Script" into styled blocks
+    # === NEW: ZONA 1 RICH BLOCKS & GUARDIAN CARDS ===
     
     # 1. Para o Pai/Mãe (Green)
+    def extract_pai_mae(match):
+        content = match.group(1)
+        protocol = match.group(2)
+        block = (
+            f'<div class="zona1-bloco" style="background: rgba(58, 74, 64, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-green);">'
+            f'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-green); margin-bottom: 1rem;">💚 Para o Pai/Mãe (Leia antes de tudo)</h3>'
+            f'<p style="margin-bottom: 1rem;">{content}</p>'
+            f'<p style="color: var(--color-ink-soft); font-size: 0.9rem;"><strong>Protocolo de Impecabilidade:</strong>{protocol}</p>'
+            f'</div>'
+        )
+        zona1_blocks.append(block)
+        return "" # Remove from main body
+
     html_content = re.sub(
         r'<blockquote>\s*<p>\s*<strong>Para o Pai/Mãe.*?</strong>(.*?)</p>\s*<p>\s*<strong>Protocolo de Impecabilidade:</strong>(.*?)</p>\s*</blockquote>',
-        r'<div class="zona1-bloco" style="background: rgba(58, 74, 64, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-green);">'
-        r'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-green); margin-bottom: 1rem;">💚 Para o Pai/Mãe (Leia antes de tudo)</h3>'
-        r'<p style="margin-bottom: 1rem;">\1</p>'
-        r'<p style="color: var(--color-ink-soft); font-size: 0.9rem;"><strong>Protocolo de Impecabilidade:</strong>\2</p>'
-        r'</div>',
+        extract_pai_mae,
         html_content, flags=re.DOTALL
     )
 
     # 2. A Bancada (Gold)
-    # Refined regex to capture list items better and force block display
-    def format_bancada(match):
+    def extract_bancada(match):
         content = match.group(1)
-        # Transform inline list items (• ☐, ☐, etc) into block paragraphs or list items
-        # First, ensure newline breaks before checkboxes if they are inline
+        # Transform inline list items
         content = re.sub(r'([^\n])\s*•?\s*☐', r'\1<br>☐', content)
         
         # Style the list items
-        # Handle cases where "1. " might be inside <strong> or preceded by it
-        # Pattern: ☐ <possible tags> 1. <content>
+        # Regex to capture individual checkbox items
+        # Pattern: ☐ followed by anything until next <br> or </p>
+        def style_item(m):
+            item_text = m.group(1)
+            return f'<div style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>☐</span><span>{item_text}</span></div>'
+        
+        # We process line by line or split by <br> to be safer
+        # Or simple regex replacement for the ☐ pattern works if we are capturing text
         content = re.sub(
-            r'☐\s*(?:<[^>]+>)*\s*(\d+\..*?)(?=<br>|<\/p|$)', 
-            r'<div style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>☐</span><span>\1</span></div>', 
-            content
+            r'☐\s*(.*?)(?=<br>|<\/p|$)', 
+            style_item, 
+            content, flags=re.DOTALL
         )
         
-        return (
+        block = (
             f'<div class="zona1-bloco" style="background: rgba(184, 160, 96, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-gold);">'
             f'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-gold); margin-bottom: 1rem;">📜 A Bancada (Mise-en-place)</h3>'
             f'{content}'
             f'</div>'
         )
+        zona1_blocks.append(block)
+        return ""
 
     html_content = re.sub(
         r'<h2>📜 1\. A Bancada \(Mise-en-place\)</h2>\s*<blockquote>(.*?)</blockquote>',
-        format_bancada,
+        extract_bancada,
         html_content, flags=re.DOTALL
     )
 
     # 3. Áudio-Script (Style Clean / Focus on Writing)
-    def format_audio(match):
+    def extract_audio(match):
         raw_content = match.group(1)
-        
         options_html = ""
         script_html = raw_content
         
-        # Attempt to isolate the "Options" paragraph (usually the first one)
-        # Look for "Opção A" or typical instruction start
         opt_match = re.search(r'(<p>.*?Opção A.*?</p>)', raw_content, re.DOTALL | re.IGNORECASE)
         if opt_match:
             options_html = opt_match.group(1)
-            # Remove options from script content
             script_html = raw_content.replace(options_html, "")
         
-        # Clean script content for the box
-        # Remove potential inner blockquotes from markdown parsing
         script_html = re.sub(r'<blockquote>(.*?)</blockquote>', r'\1', script_html, flags=re.DOTALL)
         script_html = script_html.strip()
         
-        # Style the options (Small, Italic, Secondary Color)
-        # We strip the original <p> tag to apply our own style if possible, or just replace attributes
         options_html = re.sub(
             r'<p>', 
             r'<p style="font-size: 0.85rem; color: #5C5C5C; margin-bottom: 0.75rem; font-style: italic; line-height: 1.4;">', 
             options_html
         )
         
-        # Style the Script Box (Paper background, Serif, Focused)
-        # Using a very light warm background #F9F9F7 close to the image reference
         script_box = (
             f'<div style="background: #F9F9F7; padding: 1.5rem; border-radius: 8px; border: 1px solid #EAE5D5;">'
             f'<div style="font-family: \'Merriweather\', serif; font-style: italic; color: #2C2C2C; font-size: 1.05rem; line-height: 1.8;">'
@@ -303,7 +293,7 @@ def parse_markdown_v3(filepath):
             f'</div>'
         )
         
-        return (
+        block = (
             f'<div class="zona1-bloco" style="margin: 2rem 0 1.5rem 0;">'
             f'  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">'
             f'      <span style="font-size: 1.2rem;">🎧</span>'
@@ -313,51 +303,58 @@ def parse_markdown_v3(filepath):
             f'  {script_box}'
             f'</div>'
         )
+        zona1_blocks.append(block)
+        return ""
 
     html_content = re.sub(
         r'<h2>🎧 2\. (?:\[AUDIO-SCRIPT\]|Áudio-Script) \(.*?\)</h2.*?>\s*(?:<blockquote>)?(.*?)(?:</blockquote>)?(?=<div|<h2)',
-        format_audio,
+        extract_audio,
         html_content, flags=re.DOTALL
     )
 
-    # === NEW: GUARDIAN CARDS ===
-    # Convert <img alt="CARD: Name" src="..."> to Rich Cards
+    # === GUARDIAN CARDS ===
+    # Convert <img ... alt="CARD: ..." ...> to Rich Cards
+    # Robust method: Match img tag, verify alt attribute in Python
     
     def replace_card(match):
-        alt_text = match.group(1)
-        src = match.group(2)
+        attrs = match.group(1)
+        
+        # Check if it's a card
+        # Regex matches just the value part to be safer with quotes
+        alt_match = re.search(r'alt=["\']CARD:\s*([^"\']+)["\']', attrs, re.IGNORECASE)
+        if not alt_match:
+            return match.group(0) # Not a card, return original
+            
+        alt_text = alt_match.group(1)
+        
+        src_match = re.search(r'src=["\']([^"\']+)["\']', attrs, re.IGNORECASE)
+        src = src_match.group(1) if src_match else ""
         
         # Determine Guardian and Color
         if "Melquior" in alt_text:
             name = "Melquior"
             role = "O Leão"
             color = "#B89B5E"
-            shadow = "rgba(184, 155, 94, 0.15)"
         elif "Noé" in alt_text:
             name = "Noé"
             role = "A Coruja"
             color = "#6B7A6F"
-            shadow = "rgba(107, 122, 111, 0.15)"
         elif "Celeste" in alt_text:
             name = "Celeste"
             role = "A Raposa"
             color = "#D4784A"
-            shadow = "rgba(212, 120, 74, 0.15)"
         elif "Bernardo" in alt_text:
             name = "Bernardo"
             role = "O Urso"
             color = "#8B6D4C"
-            shadow = "rgba(139, 109, 76, 0.15)"
         elif "Íris" in alt_text:
             name = "Íris"
             role = "A Pardal"
             color = "#7AA874"
-            shadow = "rgba(122, 168, 116, 0.15)"
         else:
             name = "Guardião"
             role = "O Guia"
             color = "#3A4A40"
-            shadow = "rgba(0, 0, 0, 0.1)"
 
         return (
             f'<div style="background: #ffffff; border: 1px solid {color}; border-radius: 12px; padding: 1rem; margin: 1.5rem auto; '
@@ -370,23 +367,18 @@ def parse_markdown_v3(filepath):
             f'</div>'
         )
 
-    # === ZONE 1 EXTRACTION ===
-    # Extract all "zona1-bloco" divs to move them to the {{ zona_preparacao }} placeholder
-    zona1_blocks = []
-    
-    def extract_zona1(match):
-        zona1_blocks.append(match.group(0))
-        return "" # Remove from main body
-        
+    # Match any img tag and let the function decide based on attributes
+    # <p> wrapper optional
     html_content = re.sub(
-        r'<div class="zona1-bloco".*?</div>',
-        extract_zona1,
-        html_content, flags=re.DOTALL
+        r'(?:<p>\s*)?<img\s+([^>]+)>(?:\s*<\/p>)?', 
+        replace_card, 
+        html_content
     )
     
+    # Store accumulated Zone 1 blocks
     metadata['zona_preparacao'] = "\n".join(zona1_blocks)
     
-    # Cleanup stray closing divs that might remain after extraction
+    # Cleanup stray closing divs that might remain after removals
     html_content = html_content.strip()
     if html_content.startswith("</div>"):
         html_content = html_content[6:].strip()

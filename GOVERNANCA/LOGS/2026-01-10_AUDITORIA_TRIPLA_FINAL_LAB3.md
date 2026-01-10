@@ -35,7 +35,13 @@ Responsável: Antigravity Agent
 - [x] **O Bom:** Sequência de preparação (Zona 1) clara e sem ruídos (Dica do Dia removida).
 - [x] **A Verdade:** Audio-script destaca a fala ("chamado") do pai, separando instruções operacionais.
 
+## 4. Soluções Técnicas Implementadas (Engine v3.1)
+
+- [x] **Refatoração de Extração:** Substituição de regex frágil por coleta direta de blocos (`zona1_blocks`) durante o parsing, garantindo integridade de HTML aninhado (Vivência).
+- [x] **Robustez dos Cards:** Implementação de parsing de atributos em Python em vez de Regex guloso, permitindo variações na ordem `src`/`alt`.
+- [x] **Limpeza de Fluxo:** Funções de formatação agora retornam string vazia para o corpo principal, evitando duplicidade e resíduos de layout.
+
 ---
 
 ## Veredito Final
-**[APROVADO]** - O sistema Lab V3 atingiu a paridade visual e estrutural com o "Gold Standard" desejado, integrando feedbacks precisos de refinamento.
+**[APROVADO & VALIDADO TÉCNICAMENTE]** - O sistema Lab V3 atingiu a paridade visual e estrutural com o "Gold Standard", com engine robusto contra variações de markup.
