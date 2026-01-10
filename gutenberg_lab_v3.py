@@ -236,13 +236,30 @@ def parse_markdown_v3(filepath):
     )
 
     # 2. A Bancada (Gold)
-    # This one is tricky because it has H2 before it. We target H2 + Blockquote
+    # Refined regex to capture list items better and force block display
+    def format_bancada(match):
+        content = match.group(1)
+        # Transform inline list items (• ☐, ☐, etc) into block paragraphs or list items
+        # First, ensure newline breaks before checkboxes if they are inline
+        content = re.sub(r'([^\n])\s*•?\s*☐', r'\1<br>☐', content)
+        
+        # Style the list items
+        content = re.sub(
+            r'☐\s*(\d+\..*?)(?=<br>|$)', 
+            r'<div style="margin-bottom: 0.5rem; display: flex; gap: 8px;"><span>☐</span><span>\1</span></div>', 
+            content
+        )
+        
+        return (
+            f'<div class="zona1-bloco" style="background: rgba(184, 160, 96, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-gold);">'
+            f'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-gold); margin-bottom: 1rem;">📜 A Bancada (Mise-en-place)</h3>'
+            f'{content}'
+            f'</div>'
+        )
+
     html_content = re.sub(
         r'<h2>📜 1\. A Bancada \(Mise-en-place\)</h2>\s*<blockquote>(.*?)</blockquote>',
-        r'<div class="zona1-bloco" style="background: rgba(184, 160, 96, 0.04); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 3px solid var(--color-gold);">'
-        r'<h3 style="font-family: \'Outfit\', sans-serif; font-size: 1rem; color: var(--color-gold); margin-bottom: 1rem;">📜 A Bancada (Mise-en-place)</h3>'
-        r'\1'
-        r'</div>',
+        format_bancada,
         html_content, flags=re.DOTALL
     )
 
@@ -332,7 +349,7 @@ def render_lab_v3_lesson(meta, body_html, prev_url, next_url):
     # Placeholder content for structured parts
     html = html.replace("{{ objetivo }}", meta.get("meta", "Explorar a ideia viva do dia."))
     html = html.replace("{{ materiais }}", "Vela, sementes, Passaporte do Reino")
-    # html = html.replace("{{ dica_dia }}", "Respire fundo antes de começar. A jornada é curta, mas profunda.")
+    html = html.replace("{{ dica_dia }}", "Respire fundo antes de começar. A jornada é curta, mas profunda.")
     
     # Main content goes to fluid zone
     html = html.replace("{{ conteudo_fluido }}", body_html)
