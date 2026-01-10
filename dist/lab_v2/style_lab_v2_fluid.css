@@ -1,162 +1,128 @@
 /* 
-   LAB v2.1 FLUID — Modo Kindle (Fluidez Máxima)
-   TESTE: Removendo H2s das seções narrativas
+   LAB v2.2 FLUID — Modo Kindle AGRESSIVO
+   APLICA: Imersão Total para Zona de Ritual
    
-   Este CSS é uma CAMADA DE TESTE sobre o style_lab_v2.css
-   Use: <link rel="stylesheet" href="../style_lab_v2_fluid.css">
+   REGRA: Esconder TODOS os H2 e labels redundantes
+   O Portador lê como um livro, sem interrupções.
 */
 
 /* ======================================
-   ZONA 2: RITUAL (FLUIDEZ MÁXIMA)
-   Seções 3-10: Entrada → Encerramento
+   1. ESCONDER TODOS OS H2 NA ZONA RITUAL
 ====================================== */
 
-/* Esconder H2s das seções narrativas */
-.prose h2:nth-of-type(n+3):nth-of-type(-n+10) {
-    display: none;
-}
-
-/* Alternativa: H2s sutis (não esconde, apenas minimiza) */
-/*
+/* Esconde TODOS os H2 dentro de .prose */
 .prose h2 {
-    font-size: 0.65rem;
-    color: var(--color-gold);
-    opacity: 0.5;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 4rem 0 1rem;
-    text-align: center;
+    display: none !important;
 }
-*/
 
-/* Esconder labels redundantes em blockquotes */
+/* ======================================
+   2. ESCONDER LABELS DE BLOCKQUOTE
+====================================== */
+
+/* O primeiro <strong> dentro do primeiro <p> de qualquer blockquote */
 blockquote>p:first-child>strong:first-child {
-    display: none;
+    display: none !important;
 }
 
-/* Alternativa: Labels como marcadores laterais discretos */
-/*
-blockquote > p:first-child > strong:first-child {
-    position: absolute;
-    left: -2rem;
-    font-size: 1.2rem;
-    opacity: 0.3;
-}
-*/
+/* ======================================
+   3. HR SUBSTITUÍDO POR ESPAÇO EM BRANCO
+====================================== */
 
-/* Substituir HR por espaço em branco generoso */
 .prose hr {
-    border: none;
-    height: 4rem;
-    margin: 0;
-    background: transparent;
+    border: none !important;
+    height: 3rem !important;
+    margin: 0 !important;
+    background: transparent !important;
 }
 
-/* ======================================
-   STAGE DIRECTIONS (Ações, tons, pausas)
-====================================== */
-
-/* [Ação: ...] como direções de palco */
-.prose em:has(+ p),
-.prose p>em:first-child {
+/* Adiciona um separador sutil */
+.prose hr::after {
+    content: '·';
     display: block;
-    font-size: 0.85em;
-    color: var(--color-ink-soft);
-    margin: 2rem 0 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--color-gold);
-    opacity: 0.7;
-}
-
-/* [tom de...] como indicação sutil */
-.prose code {
-    font-family: var(--font-ui);
-    font-size: 0.75rem;
+    text-align: center;
     color: var(--color-gold);
-    background: none;
-    padding: 0;
-    display: inline-block;
-    margin-bottom: 0.5rem;
+    opacity: 0.3;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* ======================================
-   DIÁLOGOS E NARRAÇÃO
+   4. BLOCKQUOTES FLUIDOS (SEM BORDA)
 ====================================== */
 
-/* Falas entre aspas - destaque sutil */
-.prose p {
-    text-indent: 0;
-}
-
-/* Nomes dos personagens em destaque */
-.prose strong:first-child {
-    color: var(--color-green);
-    font-weight: 700;
-}
-
-/* Falas em itálico - mais espaço */
-.prose em {
-    line-height: 2.2;
-}
-
-/* ======================================
-   ZONA 1: PRÉ-RITUAL (Com estrutura)
-====================================== */
-
-/* Primeiros 2 H2s mantêm estilo normal */
-.prose h2:nth-of-type(1),
-.prose h2:nth-of-type(2) {
-    display: block !important;
-    font-size: 1.3rem;
-    color: var(--color-green);
-    margin: 3rem 0 1.5rem;
-}
-
-/* ======================================
-   ZONA 3: PÓS-RITUAL (Com estrutura)
-====================================== */
-
-/* Últimos 2 H2s mantêm estilo normal */
-.prose h2:nth-of-type(n+11) {
-    display: block !important;
-    font-size: 1.3rem;
-    color: var(--color-green);
-    margin: 3rem 0 1.5rem;
-}
-
-/* ======================================
-   BLOCKQUOTES FLUIDOS
-====================================== */
-
-/* Remover borda lateral para fluidez */
 blockquote {
-    border-left: none;
-    padding-left: 0;
-    background: transparent;
-    margin: 2rem 0;
+    border-left: none !important;
+    padding-left: 0 !important;
+    background: transparent !important;
+    margin: 2rem 0 !important;
 }
 
-/* Manter apenas um acento sutil no topo */
+/* Marcador sutil no topo de cada blockquote */
 blockquote::before {
     content: '';
     display: block;
-    width: 40px;
+    width: 30px;
     height: 2px;
     background: var(--color-gold);
     margin-bottom: 1.5rem;
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 /* ======================================
-   RESPIRAÇÃO VISUAL
+   5. STAGE DIRECTIONS (Ações e tons)
 ====================================== */
 
-/* Mais espaço entre seções */
-.prose>*+h2 {
-    margin-top: 5rem;
+/* [Ação: ...], [pausa], [tom] em estilo teatro */
+.prose code {
+    font-family: var(--font-ui) !important;
+    font-size: 0.7rem !important;
+    color: var(--color-ink-soft) !important;
+    background: none !important;
+    padding: 0 !important;
+    display: block !important;
+    margin: 0.5rem 0 !important;
+    opacity: 0.6 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
 }
 
-/* Parágrafos mais espaçados na zona de diálogo */
-.prose blockquote p+p {
-    margin-top: 1.5rem;
+/* Itálicos como direções de cena */
+.prose em {
+    /* Mantém itálico mas não compete com o texto principal */
 }
+
+/* ======================================
+   6. RESPIRAÇÃO VISUAL
+====================================== */
+
+/* Mais espaço entre parágrafos */
+.prose blockquote p+p {
+    margin-top: 1.8rem;
+}
+
+/* ======================================
+   7. NOMES DOS PERSONAGENS
+====================================== */
+
+/* Celeste:, Melquior:, etc. com destaque sutil */
+.prose blockquote p>strong:first-child {
+    color: var(--color-gold) !important;
+    font-size: 0.85em !important;
+    display: block !important;
+    margin-bottom: 0.3rem !important;
+}
+
+/* ======================================
+   8. AUDITORIA E CÁTEDRA (Opcional: manter visíveis)
+   Descomente se quiser mostrar H2 nas seções 11-12
+====================================== */
+
+/*
+.prose h2:nth-last-of-type(1),
+.prose h2:nth-last-of-type(2) {
+    display: block !important;
+    font-size: 1rem !important;
+    color: var(--color-ink-soft) !important;
+    margin: 3rem 0 1rem !important;
+}
+*/

@@ -223,31 +223,135 @@ Criar `layout_lab_v2_fluid.html` com estrutura diferente para as zonas narrativa
 
 ---
 
-## ❓ PERGUNTAS PARA O MAESTRO
+## ❓ PERGUNTAS + RESPOSTAS + RECOMENDAÇÕES
 
-1. **Qual proposta prefere?**
-   - A) Kindle Mode (radical — sem H2)
-   - B) Marcadores Sutis (moderado — H2 pequenos)
-   - C) Colapsável (interativo — requer JS)
+### 1. Qual proposta prefere?
 
-2. **As zonas estão corretas?**
-   - Zona 1 (1-2): Preparação — com títulos
-   - Zona 2 (3-10): Ritual — fluido
-   - Zona 3 (11-12): Reflexão — com títulos
+| Opção | Descrição | Resultado do Teste |
+|:------|:----------|:-------------------|
+| **A) Kindle Mode** | Remover TODOS os H2 das seções 3-10 | ✅ **TESTADO** — Fluidez máxima |
+| B) Marcadores Sutis | H2 como ícones pequenos | Não testado |
+| C) Colapsável | Requer JavaScript | Complexidade extra |
 
-3. **Tags técnicas ([Ação], [tom]) devem:**
-   - A) Permanecer em itálico sutil
-   - B) Ser estilizadas como "stage directions" de teatro
-   - C) Ser removidas completamente
-
-4. **Testar em arquivo separado primeiro ou aplicar em todas as lições?**
+> **🏆 Recomendação: Opção A (Kindle Mode)**  
+> *Base:* O teste visual confirmou que remover os H2 das seções narrativas (3-10) cria uma experiência de "livro" muito superior. O Portador pode ler continuamente sem precisar pular números ou títulos técnicos.
 
 ---
 
-## 📋 PRÓXIMOS PASSOS
+### 2. As zonas estão corretas?
 
-1. Maestro escolhe proposta (A, B, ou C)
-2. Criar CSS de teste ou modificar Python
-3. Gerar uma lição de teste (ex: 001_NUMEROS)
-4. Revisar fluidez visualmente
-5. Se aprovado, aplicar a todas as lições
+| Zona | Seções | Conteúdo | H2 Visíveis? |
+|:-----|:-------|:---------|:-------------|
+| 1. Preparação | 1-2 | Bancada + Audio-Script | ✅ Sim (pai se prepara) |
+| 2. Ritual | 3-10 | Entrada → Encerramento | ❌ Não (leitura fluida) |
+| 3. Reflexão | 11-12 | Cátedra + Auditoria | ✅ Sim (pai reflete) |
+
+> **🏆 Recomendação: Zonas confirmadas**  
+> *Base:* Charlotte Mason ensina "curtos períodos de atenção plena". A Zona 2 (Ritual) é o momento de **imersão total** — qualquer interrupção visual quebra o encanto. As Zonas 1 e 3 são momentos de **preparação/reflexão** onde a estrutura ajuda.
+
+---
+
+### 3. Tags técnicas ([Ação], [tom], [pausa])
+
+| Opção | Descrição | Exemplo Visual |
+|:------|:----------|:---------------|
+| A) Itálico sutil | Manter como está | *[Ação: Acenda a vela...]* |
+| **B) Stage directions** | Estilo teatro | <em style="color:gray">[Ação: Acenda a vela...]</em> |
+| C) Remover | Sem direções | (vazio) |
+
+> **🏆 Recomendação: Opção B (Stage directions)**  
+> *Base:* Steve Schoger ensina: "diferenciação visual sem peso". As tags [Ação], [tom], [pausa] são essenciais para o Portador saber o que fazer, mas devem ser visualmente **secundárias** ao texto narrativo. Cor cinza + fonte menor = diferenciam sem competir.
+
+---
+
+### 4. Testar em arquivo separado primeiro?
+
+| Opção | Descrição |
+|:------|:----------|
+| **A) Arquivo de teste** | Criar `001_FLUID_TEST.html` ✅ JÁ FEITO |
+| B) Aplicar em tudo | Modificar todas as 31 lições |
+
+> **🏆 Recomendação: Já testado!**  
+> O arquivo `001_NUMEROS_GOLD_FLUID_TEST.html` já existe para você testar no navegador.
+
+---
+
+## 💡 IDEIAS ADICIONAIS
+
+### Ideia 1: Modo "Teatro" com Rubricas Colapsáveis
+
+As direções de palco ([Ação], [tom], [pausa]) poderiam ser:
+- **Visíveis** na primeira leitura (pai aprendendo)
+- **Ocultas** após o pai se familiarizar (toggle JS)
+
+```javascript
+// Exemplo: Esconder rubricas após 3 leituras
+localStorage.experienceLevel = localStorage.experienceLevel || 0;
+if (localStorage.experienceLevel > 3) {
+  document.querySelectorAll('.stage-direction').forEach(el => el.style.display = 'none');
+}
+```
+
+### Ideia 2: Indicador de Voz (Quem está falando)
+
+Em vez de `**Celeste:**` antes de cada fala, usar um **marcador lateral discreto**:
+
+```css
+.speaker-celeste::before {
+  content: '🦊';
+  position: absolute;
+  left: -2rem;
+  opacity: 0.5;
+}
+```
+
+Resultado: O emoji aparece na margem, não interrompe o fluxo.
+
+### Ideia 3: Separadores de Cena (em vez de HR)
+
+Em vez de `<hr />`, usar **espaço + marcador sutil**:
+
+```css
+.scene-break {
+  height: 3rem;
+  text-align: center;
+}
+.scene-break::after {
+  content: '·';
+  color: var(--color-gold);
+  opacity: 0.3;
+}
+```
+
+Resultado: Um pontinho dourado quase invisível marca a transição.
+
+### Ideia 4: Versículo de Transição
+
+Entre seções narrativas, inserir um **versículo bíblico bem curto** como "respiro":
+
+```html
+<p class="breath-verse">"Num instante, num abrir e fechar de olhos..."</p>
+```
+
+*Base teológica:* CM e Lewis valorizam "momentos de graça" entre atividades.
+
+---
+
+## 🧪 PRÓXIMOS PASSOS (Após Teste do Maestro)
+
+1. **Teste manual:** Abra `dist/lab_v2/sementes/001_NUMEROS_GOLD_FLUID_TEST.html` no celular
+2. **Compare:** Com a versão original `001_NUMEROS_GOLD.html`
+3. **Decida:** Kindle Mode permanente ou ajustes?
+4. **Se aprovado:** Aplicar CSS fluid a todas as lições
+
+---
+
+## 📁 ARQUIVOS PARA TESTAR
+
+| Arquivo | Tipo |
+|:--------|:-----|
+| `dist/lab_v2/sementes/001_NUMEROS_GOLD.html` | Original (com H2 visíveis) |
+| `dist/lab_v2/sementes/001_NUMEROS_GOLD_FLUID_TEST.html` | **Teste Fluid** (H2 ocultos) |
+| `dist/lab_v2/style_lab_v2_fluid.css` | CSS adicional para modo fluido |
+
+**Commit:** `fba074e` — Já no GitHub!
