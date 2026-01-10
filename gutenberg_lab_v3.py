@@ -294,8 +294,8 @@ def parse_markdown_v3(filepath):
         # Style the Script Box (Paper background, Serif, Focused)
         # Using a very light warm background #F9F9F7 close to the image reference
         script_box = (
-            f'<div style="background: #F9F9F7; padding: 1.25rem; border-radius: 6px; border-left: 2px solid #E0D8C3;">'
-            f'<div style="font-family: \'Merriweather\', serif; font-style: italic; color: #2C2C2C; font-size: 1rem; line-height: 1.7;">'
+            f'<div style="background: #F9F9F7; padding: 1.5rem; border-radius: 8px; border: 1px solid #EAE5D5;">'
+            f'<div style="font-family: \'Merriweather\', serif; font-style: italic; color: #2C2C2C; font-size: 1.05rem; line-height: 1.8;">'
             f'{script_html}'
             f'</div>'
             f'</div>'
@@ -358,12 +358,13 @@ def parse_markdown_v3(filepath):
             shadow = "rgba(0, 0, 0, 0.1)"
 
         return (
-            f'<div style="border-color: {color}; padding-top: 0; overflow: hidden; background: #fdfbf7; '
-            f'border: 2px solid {color}; border-radius: 12px; padding: 1rem; margin: 2rem auto; '
-            f'text-align: center; box-shadow: 0 8px 20px {shadow}; max-width: 200px;">'
-            f'<img src="{src}" alt="{name}" style="width: 100%; height: auto; display: block; margin-bottom: 0.5rem; border-radius: 8px;">'
-            f'<span style="font-family: \'Merriweather\', serif; font-size: 1.1rem; color: #3A4A40; font-weight: bold; display: block;">{name}</span>'
-            f'<span style="font-size: 0.8rem; color: {color}; text-transform: uppercase; letter-spacing: 1px;">{role}</span>'
+            f'<div style="background: #ffffff; border: 1px solid {color}; border-radius: 12px; padding: 1rem; margin: 1.5rem auto; '
+            f'text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 160px;">'
+            f'<div style="overflow: hidden; border-radius: 8px; margin-bottom: 0.75rem;">'
+            f'<img src="{src}" alt="{name}" style="width: 100%; height: auto; display: block;">'
+            f'</div>'
+            f'<span style="font-family: \'Merriweather\', serif; font-size: 1rem; color: #3A4A40; font-weight: bold; display: block; margin-bottom: 0.25rem;">{name}</span>'
+            f'<span style="font-family: \'Outfit\', sans-serif; font-size: 0.65rem; color: {color}; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">{role}</span>'
             f'</div>'
         )
 
